@@ -139,3 +139,12 @@ $('.slider-novedades').slick({
         }
     ]
 });
+
+
+$('.marquee-with-options').marquee({
+    speed: 30000,
+    gap: 50,
+    delayBeforeStart: 0,
+    direction: 'left',
+    duplicated: true,
+});

@@ -761,3 +761,61 @@ section.tarjeta-contacto {
         font-weight: 700;
         font-size: 40px;
         color: #fff; }
+
+section.fondo-socios {
+  height: 43vw; }
+  section.fondo-socios img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -3; }
+  section.fondo-socios .content {
+    padding-top: 253px;
+    display: flex; }
+    section.fondo-socios .content .part1 {
+      width: 50%; }
+      section.fondo-socios .content .part1 h1 {
+        font-family: var(--fuente-Exo);
+        font-weight: 700;
+        font-size: 60px;
+        color: var(--color-celeste); }
+      section.fondo-socios .content .part1 p {
+        padding-top: 15px; }
+    section.fondo-socios .content .part2 {
+      width: 50%; }
+
+section.respaldo {
+  padding-bottom: 100px; }
+  section.respaldo .content {
+    display: flex; }
+    section.respaldo .content .part1 {
+      width: 50%;
+      padding-right: 90px;
+      text-align: center; }
+      section.respaldo .content .part1 img {
+        margin-top: 40px; }
+      section.respaldo .content .part1 h2, section.respaldo .content .part1 p {
+        text-align: start; }
+    section.respaldo .content .part2 {
+      width: 50%;
+      padding-left: 40px;
+      text-align: center; }
+      section.respaldo .content .part2 img {
+        margin-bottom: 40px; }
+      section.respaldo .content .part2 p {
+        text-align: start; }
+
+section.aliados {
+  padding: 100px 0; }
+  section.aliados .marquee-with-options {
+    padding-top: 10px;
+    width: 100%;
+    overflow: hidden; }
+    section.aliados .marquee-with-options .text {
+      display: flex;
+      align-items: center; }
+    section.aliados .marquee-with-options .js-marquee {
+      margin: 0 !important; }
+    section.aliados .marquee-with-options .item {
+      margin: 0 45px; }

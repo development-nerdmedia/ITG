@@ -988,3 +988,81 @@ section.tarjeta-contacto{
         }
     }
 }
+
+section.fondo-socios{
+    height: 43vw;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -3;
+    }  
+    .content{
+        padding-top: 253px;
+        display: flex;
+        .part1{
+            width: 50%;
+            h1{
+                font-family: var(--fuente-Exo);
+                font-weight: 700;
+                font-size: 60px;
+                color: var(--color-celeste);
+            }
+            p{
+                padding-top: 15px;
+            }
+        }
+        .part2{
+            width: 50%;
+        }
+    }
+}
+
+section.respaldo{
+    padding-bottom: 100px;
+    .content{
+        display: flex;
+        .part1{            
+            width: 50%;
+            padding-right: 90px;
+            text-align: center;
+            img{
+                margin-top: 40px;
+            }
+            h2,p{
+                text-align: start;
+            }
+        }
+        .part2{            
+            width: 50%;
+            padding-left: 40px;
+            text-align: center;
+            img{
+                margin-bottom: 40px;
+            }
+            p{
+                text-align: start;
+            }
+        }
+    }
+}
+
+section.aliados{
+    padding: 100px 0;
+    .marquee-with-options {
+        padding-top: 10px;
+        width: 100%;
+        overflow: hidden;
+        .text{
+            display: flex;
+            align-items: center;
+        }
+        .js-marquee {
+            margin: 0 !important;
+        }
+        .item{
+            margin: 0 45px;
+        }
+    }
+}
