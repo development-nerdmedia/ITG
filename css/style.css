@@ -108,7 +108,7 @@ header {
           header nav .navigation ul li.fex ul li {
             background-color: #fff;
             display: inline-block;
-            padding: 0 53px;
+            padding: 0 0px;
             border-left: 3px solid #E7F3F9; }
             header nav .navigation ul li.fex ul li p {
               text-align: center;
@@ -117,11 +117,13 @@ header {
               font-size: 16px;
               color: var(--color-celeste); }
             header nav .navigation ul li.fex ul li a {
-              padding: 22px 10px;
+              padding: 22px 53px;
               width: 100%;
               display: flex;
               flex-direction: column;
-              align-items: center; }
+              align-items: center;
+              width: 220px;
+              height: 100%; }
               header nav .navigation ul li.fex ul li a img {
                 margin-bottom: 10px; }
           header nav .navigation ul li.fex ul li:first-child {
