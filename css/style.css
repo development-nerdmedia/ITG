@@ -421,7 +421,10 @@ footer {
         width: 510px;
         height: 58px;
         border-radius: 10px;
-        border: 3px solid var(--color-celeste); }
+        border: 3px solid var(--color-celeste);
+        background-color: transparent;
+        outline: none !important;
+        appearance: none; }
       footer .part1 form label {
         position: absolute;
         left: 20px;
@@ -605,110 +608,147 @@ section.home-servicios-interna .content {
       padding-top: 10px; }
   section.home-servicios-interna .content .part2 {
     width: 50%; }
-    section.home-servicios-interna .content .part2 .formulario {
-      background-color: var(--color-celeste);
-      border-radius: 10px;
-      padding: 40px 50px; }
-    section.home-servicios-interna .content .part2 h3 {
-      font-family: var(--fuente-Exo);
-      font-style: normal;
-      font-weight: 700;
-      font-size: 40px;
-      color: #fff; }
-    section.home-servicios-interna .content .part2 form {
-      margin-top: 40px; }
-      section.home-servicios-interna .content .part2 form .form-group {
-        position: relative;
-        margin-bottom: 25px;
-        margin-left: 50px; }
-        section.home-servicios-interna .content .part2 form .form-group span {
-          font-style: inherit;
-          font-weight: inherit;
-          background-color: #fff;
-          bottom: 0;
-          content: "";
-          height: 4px;
-          left: 0;
-          position: absolute;
-          right: 0;
-          -webkit-transform: scaleX(0);
-          -ms-transform: scaleX(0);
-          transform: scaleX(0);
-          -webkit-transform-origin: center left;
-          -ms-transform-origin: center left;
-          transform-origin: center left;
-          -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
-          transition: -webkit-transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
-          -o-transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
-          transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
-          transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1), -webkit-transform 0.7s cubic-bezier(0.77, 0, 0.175, 1); }
-        section.home-servicios-interna .content .part2 form .form-group span.animacion {
-          -webkit-transform: scaleX(1);
-          -ms-transform: scaleX(1);
-          transform: scaleX(1); }
-        section.home-servicios-interna .content .part2 form .form-group::before {
-          content: '';
-          background-image: url(../icons/vineta-input.svg);
-          background-repeat: no-repeat;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: -46px;
-          width: 31px;
-          height: 11.35px; }
-        section.home-servicios-interna .content .part2 form .form-group label {
-          font-family: var(--fuente-Ubuntu);
-          font-weight: 400;
-          font-size: 20px;
-          color: #fff;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          transition: 0.1s linear; }
-        section.home-servicios-interna .content .part2 form .form-group input {
-          background-color: transparent;
-          height: 48px;
-          font-family: var(--fuente-Ubuntu);
-          font-weight: 400;
-          font-size: 20px;
-          color: #fff;
-          width: 100%;
-          border: 0;
-          position: relative;
-          border: 0;
-          outline: none !important;
-          appearance: none;
-          -webkit-box-shadow: inset 0 -4px 0 0 rgba(255, 255, 255, 0.2);
-          box-shadow: inset 0 -4px 0 0 rgba(255, 255, 255, 0.2); }
-      section.home-servicios-interna .content .part2 form .form-group.focusin label,
-      section.home-servicios-interna .content .part2 form .form-group.ok label {
-        font-size: 14px;
-        top: 3px; }
-      section.home-servicios-interna .content .part2 form .checkbox-box {
-        display: flex;
-        align-items: center;
-        margin-left: 50px; }
-        section.home-servicios-interna .content .part2 form .checkbox-box input {
-          margin-right: 10px;
-          background-color: var(--color-celeste) !important; }
-        section.home-servicios-interna .content .part2 form .checkbox-box p {
-          font-family: var(--fuente-Ubuntu);
-          font-weight: 400;
-          font-size: 20px;
-          color: #fff; }
-          section.home-servicios-interna .content .part2 form .checkbox-box p a {
-            color: #fff; }
-      section.home-servicios-interna .content .part2 form button {
-        margin-top: 50px;
-        padding: 17px 58px;
-        background-color: var(--color-anaranjado);
-        border-radius: 20px;
-        font-family: var(--fuente-Ubuntu);
-        font-weight: 500;
+
+.formulario {
+  background-color: var(--color-celeste);
+  border-radius: 10px;
+  padding: 40px 50px; }
+  .formulario h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    font-family: var(--fuente-Exo); }
+  .formulario form {
+    margin-top: 40px; }
+    .formulario form .form-group {
+      margin-bottom: 25px;
+      margin-left: 50px;
+      position: relative; }
+      .formulario form .form-group span {
+        font-weight: inherit;
+        background-color: #fff;
+        bottom: 0;
+        content: "";
+        height: 4px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: center left;
+        -ms-transform-origin: center left;
+        transform-origin: center left;
+        -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+        transition: -webkit-transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+        -o-transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+        transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+        transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1), -webkit-transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+        font-style: inherit; }
+      .formulario form .form-group span.animacion {
+        -ms-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1); }
+      .formulario form .form-group::before {
+        background-image: url(../icons/vineta-input.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 20px;
+        left: -46px;
+        width: 31px;
+        height: 11.35px;
+        content: ''; }
+      .formulario form .form-group label {
+        font-weight: 400;
         font-size: 20px;
-        border: 0;
         color: #fff;
-        cursor: pointer; }
+        position: absolute;
+        top: 13px;
+        transition: 0.1s linear;
+        font-family: var(--fuente-Ubuntu); }
+      .formulario form .form-group input {
+        height: 48px;
+        font-family: var(--fuente-Ubuntu);
+        font-weight: 400;
+        font-size: 20px;
+        color: #fff;
+        width: 100%;
+        border: 0;
+        position: relative;
+        border: 0;
+        outline: none !important;
+        appearance: none;
+        -webkit-box-shadow: inset 0 -4px 0 0 rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0 -4px 0 0 rgba(255, 255, 255, 0.2);
+        background-color: transparent; }
+      .formulario form .form-group textarea {
+        padding-top: 10px;
+        background-color: transparent;
+        position: relative;
+        appearance: none;
+        border: 0;
+        outline: none !important;
+        font-family: var(--fuente-Ubuntu);
+        font-weight: 400;
+        font-size: 20px;
+        width: 100%;
+        color: #fff;
+        -webkit-box-shadow: inset 0 -4px 0 0 rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0 -4px 0 0 rgba(255, 255, 255, 0.2);
+        height: 130px; }
+        .formulario form .form-group textarea span {
+          position: absolute;
+          bottom: 50px; }
+    .formulario form .form-group.focusin label,
+    .formulario form .form-group.ok label {
+      font-size: 14px;
+      top: -3px; }
+    .formulario form .form-group.formmensaje.focusin label,
+    .formulario form .form-group.formmensaje.ok label {
+      font-size: 14px;
+      top: -7px; }
+    .formulario form .archivo {
+      display: flex;
+      flex-direction: column; }
+      .formulario form .archivo p {
+        font-family: var(--fuente-Ubuntu);
+        font-weight: 400;
+        font-size: 20px;
+        color: #fff;
+        padding-top: 13px;
+        white-space: nowrap;
+        margin-right: 10px; }
+      .formulario form .archivo input {
+        padding-top: 13px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        height: auto; }
+    .formulario form .checkbox-box {
+      display: flex;
+      margin-left: 50px;
+      align-items: center; }
+      .formulario form .checkbox-box input {
+        background-color: var(--color-celeste) !important;
+        margin-right: 10px; }
+      .formulario form .checkbox-box p {
+        font-weight: 400;
+        font-size: 20px;
+        color: #fff;
+        font-family: var(--fuente-Ubuntu); }
+        .formulario form .checkbox-box p a {
+          color: #fff; }
+    .formulario form button {
+      padding: 17px 58px;
+      background-color: var(--color-anaranjado);
+      border-radius: 20px;
+      font-family: var(--fuente-Ubuntu);
+      font-weight: 500;
+      font-size: 20px;
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 50px; }
 
 section.beneficios {
   padding-bottom: 100px; }
@@ -876,3 +916,187 @@ section.competencias {
       right: 0; }
     section.competencias .slider-competencias .slick-prev, section.competencias .slider-competencias .slick-next {
       top: -76px; }
+
+section.trabajo .content {
+  padding-top: 250px;
+  display: flex; }
+  section.trabajo .content .part1 {
+    width: 50%;
+    padding-right: 70px; }
+    section.trabajo .content .part1 h1 {
+      font-family: var(--fuente-Exo);
+      font-weight: 700;
+      font-size: 60px;
+      color: var(--color-celeste); }
+    section.trabajo .content .part1 p {
+      padding-top: 20px; }
+    section.trabajo .content .part1 .img {
+      display: flex;
+      justify-content: center;
+      padding-top: 75px; }
+    section.trabajo .content .part1 img {
+      position: relative;
+      width: 60%;
+      z-index: initial; }
+  section.trabajo .content .part2 {
+    width: 50%; }
+
+section.proteccion {
+  padding-bottom: 280px; }
+  section.proteccion .container {
+    width: 40%; }
+  section.proteccion .content {
+    padding-top: 250px; }
+    section.proteccion .content h1 {
+      font-family: var(--fuente-Ubuntu);
+      font-weight: 700;
+      font-size: 60px;
+      color: var(--color-celeste);
+      text-align: center; }
+    section.proteccion .content p {
+      padding-top: 30px;
+      text-align: center; }
+
+section.thanks-page {
+  padding: 73px 0;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(180deg, #E7F3F9 0%, rgba(231, 243, 249, 0) 63.02%); }
+  section.thanks-page .container {
+    height: 100%; }
+  section.thanks-page .fondo {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+  section.thanks-page .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative; }
+  section.thanks-page .top {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  section.thanks-page h1 {
+    font-family: var(--fuente-Ubuntu);
+    font-weight: 700;
+    font-size: 60px;
+    color: var(--color-celeste); }
+  section.thanks-page p {
+    padding: 20px 0;
+    padding-bottom: 37px; }
+
+section.contact-page {
+  background: linear-gradient(180deg, #E7F3F9 0%, rgba(231, 243, 249, 0) 63.02%);
+  padding-bottom: 100px; }
+  section.contact-page .container {
+    width: 42%; }
+  section.contact-page .content {
+    padding-top: 250px; }
+    section.contact-page .content h1 {
+      font-family: var(--fuente-Ubuntu);
+      font-weight: 700;
+      font-size: 60px;
+      color: var(--color-celeste);
+      text-align: center; }
+    section.contact-page .content p {
+      padding-top: 15px;
+      text-align: center; }
+    section.contact-page .content .formulario {
+      background-color: transparent;
+      display: flex;
+      justify-content: center; }
+    section.contact-page .content form {
+      width: 84%; }
+    section.contact-page .content label {
+      color: var(--color-celeste); }
+    section.contact-page .content input, section.contact-page .content textarea {
+      color: var(--color-celeste);
+      -webkit-box-shadow: inset 0 -4px 0 0 rgba(51, 142, 205, 0.39);
+      box-shadow: inset 0 -4px 0 0 rgba(51, 142, 205, 0.39); }
+    section.contact-page .content P {
+      color: var(--color-gris);
+      padding-top: 0; }
+      section.contact-page .content P a {
+        color: var(--color-gris); }
+    section.contact-page .content select {
+      height: 48px;
+      width: 100%;
+      border: 0;
+      appearance: none;
+      outline: none !important;
+      -webkit-box-shadow: inset 0 -4px 0 0 rgba(51, 142, 205, 0.39);
+      box-shadow: inset 0 -4px 0 0 rgba(51, 142, 205, 0.39);
+      font-family: var(--fuente-Ubuntu);
+      font-weight: 400;
+      font-size: 20px;
+      color: var(--color-celeste);
+      position: relative;
+      background-color: transparent; }
+      section.contact-page .content select option {
+        padding-left: 10px !important; }
+    section.contact-page .content .formmotivo, section.contact-page .content .formasunto {
+      position: relative; }
+      section.contact-page .content .formmotivo::after, section.contact-page .content .formasunto::after {
+        content: '';
+        background-image: url("../icons/flecha-select.svg");
+        position: absolute;
+        top: 21px;
+        right: 7px;
+        width: 16px;
+        height: 12px;
+        z-index: -2; }
+    section.contact-page .content .btn {
+      display: flex;
+      justify-content: center; }
+
+section.footer-contacto {
+  padding-top: 100px;
+  position: relative; }
+  section.footer-contacto img.fondo {
+    position: absolute;
+    bottom: 45px;
+    z-index: -3; }
+  section.footer-contacto h3 {
+    font-family: var(--fuente-Ubuntu);
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-celeste);
+    position: relative; }
+    section.footer-contacto h3::before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 4px;
+      background-color: var(--color-verde);
+      top: 50%;
+      left: -20px;
+      transform: translateY(-50%); }
+  section.footer-contacto .flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    padding-bottom: 30px; }
+    section.footer-contacto .flex p {
+      padding-top: 20px; }
+    section.footer-contacto .flex .oficina {
+      width: 700px; }
+    section.footer-contacto .flex .info {
+      display: flex;
+      justify-content: space-between; }
+    section.footer-contacto .flex .redes img {
+      margin: 0 15px; }
+    section.footer-contacto .flex .redes img:first-child {
+      margin-left: 0; }
+    section.footer-contacto .flex .redes img:last-child {
+      margin-right: 0; }
+  section.footer-contacto .pie {
+    display: flex;
+    border-top: 1px solid var(--color-celeste); }
+    section.footer-contacto .pie .content {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0; }
