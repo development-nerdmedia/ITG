@@ -424,7 +424,14 @@ footer {
         border: 3px solid var(--color-celeste);
         background-color: transparent;
         outline: none !important;
-        appearance: none; }
+        appearance: none;
+        padding-left: 17px;
+        padding-right: 46px;
+        font-family: var(--fuente-Ubuntu);
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--color-celeste);
+        padding-top: 6px; }
       footer .part1 form label {
         position: absolute;
         left: 20px;
@@ -432,14 +439,22 @@ footer {
         transform: translateY(-50%);
         font-family: var(--fuente-Ubuntu);
         font-weight: 500;
-        font-size: 20px; }
+        font-size: 20px;
+        transition: 0.2s linear; }
+      footer .part1 form .form-group {
+        position: relative; }
+      footer .part1 form .form-group.focusin label,
+      footer .part1 form .form-group.ok label {
+        font-size: 14px;
+        top: 14px; }
       footer .part1 form button {
         border: none;
         position: absolute;
         background-color: transparent;
         right: 12px;
         top: 50%;
-        transform: translateY(-50%); }
+        transform: translateY(-50%);
+        cursor: pointer; }
   footer .part2 {
     max-width: 290px; }
   footer ul {
@@ -942,7 +957,12 @@ section.trabajo .content {
     width: 50%; }
 
 section.proteccion {
-  padding-bottom: 280px; }
+  padding-bottom: 280px;
+  position: relative; }
+  section.proteccion .fondo {
+    position: absolute;
+    bottom: -245px;
+    z-index: -3; }
   section.proteccion .container {
     width: 40%; }
   section.proteccion .content {
@@ -1011,6 +1031,8 @@ section.contact-page {
       justify-content: center; }
     section.contact-page .content form {
       width: 84%; }
+      section.contact-page .content form .form-group span {
+        background-color: var(--color-celeste); }
     section.contact-page .content label {
       color: var(--color-celeste); }
     section.contact-page .content input, section.contact-page .content textarea {
