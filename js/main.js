@@ -236,6 +236,31 @@ MyApp = {
                 }
             })
         }
+    } ,
+    category: {
+        init: function () {
+            document.querySelector("#categorias li a").classList.add("select");            
+            $(`.destaado`).hide();
+            const enlaces = document.querySelectorAll('#categorias a');//original
+            enlaces.forEach((elemento) => {
+                elemento.addEventListener('click', (evento) => {
+                    evento.preventDefault();
+                    enlaces.forEach((enlace) => enlace.classList.remove('select'));
+                    evento.target.classList.add('select');
+                    var categoria = evento.target.innerHTML; /* para saber la categoria del menu donde estas*/
+                    console.log(categoria);
+                    $(`.item`).not(`[data-categoria="${categoria}"]`).hide();
+                    $(`.item[data-categoria="${categoria}"]`).show();
+                    $(`.destaado`).hide();
+                    if (categoria === "Todo") {
+                        $(`.item`).show();  
+                    }
+                    if (categoria === "Caso de éxito") {
+                        $(`.destaado`).show();  
+                    }
+                })
+            })
+        }
     } 
 }
 
@@ -257,6 +282,10 @@ if ($('.contact-page').length > 0) {
 
 if ($('footer .form-group').length > 0) {
     MyApp.footerlabelcontactopage.init();
+}
+
+if ($('.categorias').length > 0) {
+    MyApp.category.init();
 }
 
 $('.slider-novedades').slick({
