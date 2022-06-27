@@ -23,6 +23,10 @@ section.blog .content .item:hover, section.blog .content .item a:hover{
     cursor: url(../img/leermas.png) 52 52, pointer !important;
 }
 
+li.fex{
+    display: none;
+}
+
 /*boton de contactanos*/
 a.contacto{
     text-decoration: none;
@@ -40,14 +44,14 @@ h2{
     font-weight: 700;
     font-size: 40px;
     color: var(--color-celeste);
-    padding-bottom: 55px;
+    padding-bottom: 25px;
     position: relative;
     &::before{
         content: url(../icons/title-rayas.svg);
         width: 103px;
         height: 26.11px;
         position: absolute;
-        bottom: 45px;
+        bottom: 14px;
         left: -23px;
     }
 }
@@ -101,6 +105,13 @@ header{
                         text-decoration: none;
                         color: #338ECD;
                     }
+                    a.select{
+                        position: relative;
+                        // border-bottom: 3px solid var(--color-verde);
+                        &::before{
+                            right: 0;
+                        }
+                    }
                 }
                 li.contacto{
                     padding-right: 0;
@@ -115,7 +126,7 @@ header{
                     position: relative;     
                     &::after{
                         content: '';
-                        display: none;
+                        opacity: 0;
                         height: 0;
                         width: 0;
                         bottom: -65px;
@@ -124,17 +135,22 @@ header{
                         border-bottom: 50px solid #fff;
                         position: absolute;
                         left: 50%;
-                        transform: translateX(-50%);
+                        transform: translateX(-50%) translateY(15px);
+                        transition: 0.3s linear;
+                        pointer-events: none;
                     }
                     ul{
-                        display: none;
+                        opacity: 0;
+                        display: flex;
                         position: absolute;
                         list-style: none;
                         // display: flex;
                         left: 50%;
-                        transform: translateX(-44%);
+                        transform: translateX(-44%) translateY(15px);
+                        transition: 0.3s linear;
                         padding-top: 40px;
                         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                        pointer-events: none;
                         li{                            
                             background-color: #fff;
                             display: inline-block;
@@ -161,6 +177,12 @@ header{
                                 height: 100%;
                                 img{
                                     margin-bottom: 10px;
+                                    transition: 0.2s linear;
+                                }                                
+                                &:hover{
+                                    img{                                      
+                                        transform: translateY(-5px);
+                                    }   
                                 }
                             }
                         }
@@ -174,34 +196,38 @@ header{
                     }
                     &:hover{
                         &::after{
-                            display: block;
+                            opacity: 1;
+                            transform: translateX(-50%) translateY(0px);
+                            pointer-events: initial;
                         }
                         ul{
-                            display: flex;
+                            opacity: 1;
+                            transform: translateX(-44%) translateY(0px);
+                            pointer-events: initial;
                         }
                     }
                 }
-                li.select{
-                    a{
-                        position: relative;
-                        &::before{
-                            content: '';
-                            position: absolute;
-                            width: 100%;
-                            height: 3px;
-                            background-color: var(--color-verde);
-                            bottom: -5px;
-                            border-radius: 5px;
-                        }
-                    }
-                    ul{
-                        li{
-                            a::before {
-                                content: none;
-                            }  
-                        }
-                    }
-                }
+                // li.select{
+                //     a{
+                //         position: relative;
+                //         &::before{
+                //             content: '';
+                //             position: absolute;
+                //             width: 100%;
+                //             height: 3px;
+                //             background-color: var(--color-verde);
+                //             bottom: -5px;
+                //             border-radius: 5px;
+                //         }
+                //     }
+                //     ul{
+                //         li{
+                //             a::before {
+                //                 content: none;
+                //             }  
+                //         }
+                //     }
+                // }
             }
         }
     }
@@ -259,7 +285,7 @@ header::before {
   }
 
 section.home{
-    height: 63vw;
+    height: 53.5vw;
     lottie-player{       
         position: absolute !important;
         width: 100% !important;
@@ -292,7 +318,7 @@ section.home{
         h1{
             font-family: var(--fuente-Exo);
             font-weight: 700;
-            font-size: 60px;
+            font-size: 67px;
             color: var(--color-celeste);
             span{
                 color: var(--color-verde);
@@ -300,8 +326,8 @@ section.home{
         }
         p{
             width: 58%;
-            padding: 30px 0;
-            padding-bottom: 60px;
+            padding: 50px 0;
+            padding-bottom: 65px;
             span{
                 font-weight: 700;
             }
@@ -316,38 +342,44 @@ section.home{
 }
 
 section.somos{
-    padding: 100px 0;
-    padding-top: 0;
+    padding: 140px 0;
     .content{
-        h2{
-            padding-bottom: 55px;
-        }
+        // h2{
+        //     padding-bottom: 55px;
+        // }
+        // p:first-child{
+        //     padding-top: 50px;
+        // }
         p{
-            padding: 17px 0;
+            padding: 15px 0;
         }
-        p:first-child{
-            padding-top: 0;
+        p:nth-child(1n){
+            padding-top: 50px;
+        }
+        p:last-child{
+            padding: 15px 0;
         }
     }
 }
 
 section.confian{
     background-color: #E7F3F9;
-    padding: 100px 0;
+    padding: 140px 0;
     background-image: url(../img/lineas-fondo.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
-    h2 {
-        padding-bottom: 55px;
-    }
+    // h2 {
+    //     padding-bottom: 25px;
+    // }
     .grid-empresas{
         display: grid;   
         grid-template-columns: repeat(5, 1fr);
         padding: 0 80px;     
-        grid-gap: 90px;
+        grid-gap: 75px;
+        column-gap: 78px;
         align-items: center;        
-        padding-top: 40px;
+        padding-top: 100px;
         .item{
             display: flex;
             justify-content: center;
@@ -364,14 +396,15 @@ section.confian{
 }
 
 section.socios{
-    padding: 100px 0;
+    padding: 140px 0;
+    padding-bottom: 70px;
     .content{
-        padding-top: 20px;
+        padding-top: 50px;
         display: flex;        
         justify-content: center;
         .card{
             width: 336px;
-            padding: 47px 35px;
+            padding: 50px 35px;
             background-color: var(--color-celeste);
             border-radius: 10px;
             display: flex;
@@ -414,14 +447,14 @@ section.socios{
 }
 
 section.soluciones{
-    padding: 100px 0;
+    padding: 70px 0;
     .grid-soluciones{
         display: grid;   
         grid-template-columns: repeat(5, 1fr);
         padding: 0 80px;     
         grid-gap: 50px;
         align-items: flex-start;        
-        padding-top: 40px;
+        padding-top: 50px;
         .item{
             lottie-player{
                 width: auto !important;
@@ -486,7 +519,7 @@ section.soluciones{
 }
 
 section.novedades{  
-    padding: 100px 0;
+    padding: 70px 0;
     .slider-novedades{
         padding-left: 180px;
         padding-top: 20px;
@@ -538,6 +571,15 @@ section.novedades{
                     align-items: center;
                     img{
                         margin-right: 8px;
+                        position: relative;
+                        left: -10px;
+                        transition: 0.2s linear;
+                    }
+                    &:hover{
+                        opacity: 0.7;
+                        img{
+                            left: -1px;
+                        }
                     }
                 }
             }
@@ -557,9 +599,10 @@ section.novedades{
             right: 304px;
             left: inherit;
             transform: rotate(180deg) translateY(50%);
-            // &:hover{
-            //     background-image: url(../icons/flechaizqhover.svg);
-            // }
+            transition: background-image 0.2s linear !important;
+            &:hover{
+                background-image: url(../icons/flecha-slider-hover.svg);
+            }
         }
         .slick-next {
             left: -18.5vw;
@@ -570,7 +613,7 @@ section.novedades{
             height: 51px;
             right: 225px;
             left: inherit;
-            transition: 1s linear !important;
+            transition: background-image 0.2s linear !important;
             &:hover{
                 // display: none !important;
                 background-image: url(../icons/flecha-slider-hover.svg);
@@ -584,11 +627,24 @@ section.novedades{
         .slick-prev, .slick-next{
             top: -82.5px;
         }
+        .slick-prev.slick-disabled{
+            opacity: 0.6;
+            background-image: url(../icons/flecha-slider.svg);
+        }
+        .slick-next.slick-disabled{
+            opacity: 0.6;
+            &:hover{
+                // display: none !important;
+                background-image: url(../icons/flecha-slider.svg);
+                // transform: rotate(180deg) translateY(50%);
+                // opacity: 0.2 !important;
+            }
+        }
     }
 }
 
 footer{
-    padding-top: 100px;    
+    padding-top: 70px;    
     color: var(--color-celeste);
     position: relative;
     // z-index: 2;
@@ -604,7 +660,7 @@ footer{
     .content{
         display: flex;
         justify-content: space-between;        
-        padding-bottom: 40px;
+        padding-bottom: 50px;
     }
     .part1{     
         max-width: 510px;
@@ -694,6 +750,9 @@ footer{
                     }
                 }
             }
+            li:last-child{
+                padding-bottom: 0;
+            }
         }
     .part3{
         max-width: 380px;
@@ -714,6 +773,9 @@ footer{
         }
         p:first-child{
             padding-top: 0;
+        }
+        p:last-child{
+            padding-bottom: 0;
         }
     }
 
@@ -825,7 +887,7 @@ section.valores{
         grid-gap: 47px;
         .item{
             lottie-player{
-                width: 100%;
+                width: 85%;
                 height: auto;
                 margin-bottom: 10px;
                 position: relative;
@@ -1270,6 +1332,10 @@ section.competencias{
             transform: rotate(180deg) translateY(50%);
             left: initial;
             right: 78px;
+            transition: 0.2s linear;
+            &:hover{
+                background-image: url(../icons/flecha-slider-hover.svg);
+            }
         }
         .slick-next {
             // left: -18.5vw;
@@ -1280,9 +1346,26 @@ section.competencias{
             height: 51px;
             left: initial;
             right: 0;
+            transition: 0.2s linear;
+            &:hover{
+                background-image: url(../icons/flecha-slider-hover.svg);
+            }
         }
         .slick-prev, .slick-next{
             top: -76px;
+        }
+        .slick-prev.slick-disabled{
+            opacity: 0.6;
+            background-image: url(../icons/flecha-slider.svg);
+        }
+        .slick-next.slick-disabled{
+            opacity: 0.6;
+            &:hover{
+                // display: none !important;
+                background-image: url(../icons/flecha-slider.svg);
+                // transform: rotate(180deg) translateY(50%);
+                // opacity: 0.2 !important;
+            }
         }
     }
 }
