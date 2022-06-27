@@ -82,6 +82,7 @@ header {
         font-weight: 500;
         font-size: 20px; }
         header nav .navigation ul li a {
+          padding: 4px 0;
           text-decoration: none;
           color: #338ECD; }
       header nav .navigation ul li.contacto {
@@ -174,9 +175,43 @@ header::before {
   transition: transform 0.1s ease;
   transform: translateY(-100%); }
 
+/* Underline From Left */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden; }
+
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: var(--color-verde);
+  height: 3px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0; }
+
 section.home {
   height: 63vw; }
   section.home lottie-player {
+    position: absolute !important;
+    width: 100% !important;
+    height: auto !important;
+    z-index: -3; }
+  section.home img.fondo {
     position: absolute !important;
     width: 100% !important;
     height: auto !important;
@@ -241,6 +276,10 @@ section.confian {
     section.confian .grid-empresas .item {
       display: flex;
       justify-content: center; }
+      section.confian .grid-empresas .item img {
+        transition: 0.2s linear; }
+      section.confian .grid-empresas .item:hover img {
+        transform: translateY(-10px); }
 
 section.socios {
   padding: 100px 0; }
@@ -342,7 +381,7 @@ section.soluciones {
 section.novedades {
   padding: 100px 0; }
   section.novedades .slider-novedades {
-    padding-left: 200px;
+    padding-left: 180px;
     padding-top: 20px; }
     section.novedades .slider-novedades .item {
       width: 425px !important;
@@ -408,7 +447,10 @@ section.novedades {
       width: 51px;
       height: 51px;
       right: 225px;
-      left: inherit; }
+      left: inherit;
+      transition: 1s linear !important; }
+      section.novedades .slider-novedades .slick-next:hover {
+        background-image: url(../icons/flecha-slider-hover.svg); }
     section.novedades .slider-novedades .slick-prev:before, section.novedades .slider-novedades .slick-next:before {
       display: none; }
     section.novedades .slider-novedades .slick-prev, section.novedades .slider-novedades .slick-next {
@@ -419,8 +461,9 @@ footer {
   color: var(--color-celeste);
   position: relative; }
   footer .bg-footer {
+    display: flex;
     position: absolute;
-    bottom: -4px;
+    bottom: 0px;
     z-index: -3; }
     footer .bg-footer img {
       width: 100%; }
@@ -605,7 +648,8 @@ section.valores {
         content: '';
         background-color: var(--color-verde);
         width: 100%;
-        height: 6px;
+        height: 4px;
+        border-radius: 10px;
         position: absolute;
         bottom: -16px;
         left: 0;
@@ -1184,7 +1228,8 @@ section.main-article .content2 {
       border-radius: 10px;
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
       section.main-article .content2 .part1 .redes p {
         color: var(--color-celeste); }
       section.main-article .content2 .part1 .redes img {
@@ -1195,8 +1240,6 @@ section.main-article .content2 {
     width: 83%; }
     section.main-article .content2 .part2 p {
       padding-bottom: 35px; }
-    section.main-article .content2 .part2 p:last-child {
-      padding-bottom: 0px; }
 
 section.blog {
   height: auto;

@@ -97,6 +97,7 @@ header{
                     font-weight: 500;
                     font-size: 20px;
                     a{
+                        padding: 4px 0;
                         text-decoration: none;
                         color: #338ECD;
                     }
@@ -227,9 +228,45 @@ header::before {
     transform: translateY(-100%);
 }
 
+/* Underline From Left */
+.hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: var(--color-verde);
+    height: 3px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+    right: 0;
+  }
+
 section.home{
     height: 63vw;
     lottie-player{       
+        position: absolute !important;
+        width: 100% !important;
+        height: auto !important;
+        z-index: -3;
+    }
+    img.fondo{
         position: absolute !important;
         width: 100% !important;
         height: auto !important;
@@ -314,6 +351,14 @@ section.confian{
         .item{
             display: flex;
             justify-content: center;
+            img{
+                transition: 0.2s linear;
+            }
+            &:hover{
+                img{
+                    transform: translateY(-10px);
+                }
+            }
         }
     }
 }
@@ -443,7 +488,7 @@ section.soluciones{
 section.novedades{  
     padding: 100px 0;
     .slider-novedades{
-        padding-left: 200px;
+        padding-left: 180px;
         padding-top: 20px;
         .item{
             width: 425px !important;
@@ -525,9 +570,13 @@ section.novedades{
             height: 51px;
             right: 225px;
             left: inherit;
-            // &:hover{
-            //     background-image: url(../icons/flechaderhover.svg);
-            // }
+            transition: 1s linear !important;
+            &:hover{
+                // display: none !important;
+                background-image: url(../icons/flecha-slider-hover.svg);
+                // transform: rotate(180deg) translateY(50%);
+                // opacity: 0.2 !important;
+            }
         }
         .slick-prev:before, .slick-next:before{
             display: none;
@@ -544,8 +593,9 @@ footer{
     position: relative;
     // z-index: 2;
     .bg-footer{
+        display: flex;
         position: absolute;
-        bottom: -4px;
+        bottom: 0px;
         z-index: -3;
         img{
             width: 100%;
@@ -784,7 +834,8 @@ section.valores{
                     content: '';
                     background-color: var(--color-verde);
                     width: 100%;
-                    height: 6px;
+                    height: 4px;
+                    border-radius: 10px;
                     position: absolute;
                     bottom: -16px;
                     left: 0;
@@ -1490,7 +1541,7 @@ section.footer-contacto{
     }
 }
 
-section.main-article{
+section.main-article{   
     .content{
         padding-top: 250px;
         display: flex;
@@ -1537,6 +1588,7 @@ section.main-article{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 p{
                     color: var(--color-celeste);
                 }
@@ -1553,9 +1605,9 @@ section.main-article{
             p{
                 padding-bottom: 35px;
             }
-            p:last-child{
-                padding-bottom: 0px;
-            }
+            // p:last-child{
+            //     padding-bottom: 0px;
+            // }
         }
     }
 }
