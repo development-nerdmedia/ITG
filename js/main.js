@@ -1,9 +1,17 @@
 
-// document.addEventListener("click", (e) => {
-//     if (e.target.closest(".fex a")) {
-//         e.preventDefault();
-//     }
-// })
+document.addEventListener("click", (e) => {
+    if (e.target.closest(".formmotivo select")) {
+        document.querySelector(".formmotivo").classList.add("open");
+    }else{
+        document.querySelector(".formmotivo").classList.remove("open");
+    }       
+
+    if (e.target.closest(".formasunto select")) {
+        document.querySelector(".formasunto").classList.add("open");
+    }else{
+        document.querySelector(".formasunto").classList.remove("open");
+    }      
+})
 
 MyApp = {
     scroll: {
