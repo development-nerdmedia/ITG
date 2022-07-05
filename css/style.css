@@ -39,7 +39,7 @@ h2 {
   color: var(--color-celeste);
   padding-bottom: 25px;
   position: relative;
-  margin-bottom: 50px; }
+  margin-bottom: 30px; }
   h2::before {
     content: url(../icons/title-rayas.svg);
     width: 103px;
@@ -288,6 +288,8 @@ section.confian {
 section.socios {
   padding: 140px 0;
   padding-bottom: 70px; }
+  section.socios h2 {
+    margin-bottom: 50px; }
   section.socios .content {
     display: flex;
     justify-content: center; }
@@ -330,6 +332,8 @@ section.socios {
 
 section.soluciones {
   padding: 70px 0; }
+  section.soluciones h2 {
+    margin-bottom: 50px; }
   section.soluciones .grid-soluciones {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -359,7 +363,7 @@ section.soluciones {
       color: var(--color-celeste);
       padding-top: 17px; }
     section.soluciones .grid-soluciones .item p {
-      line-height: 178.5%;
+      padding-top: 10px;
       padding-bottom: 15px; }
     section.soluciones .grid-soluciones .item a {
       text-decoration: none;
@@ -384,6 +388,8 @@ section.soluciones {
 
 section.novedades {
   padding: 70px 0; }
+  section.novedades h2 {
+    margin-bottom: 50px; }
   section.novedades .slider-novedades {
     padding-left: 180px; }
     section.novedades .slider-novedades .item {
@@ -566,7 +572,8 @@ footer {
         list-style: none; }
         footer ul li ul li {
           padding: 0;
-          font-weight: 500; }
+          font-weight: 500;
+          line-height: 1.5; }
           footer ul li ul li::after {
             content: none; }
     footer ul li:last-child {
@@ -589,7 +596,8 @@ footer {
       font-weight: 500;
       font-size: 20px;
       color: var(--color-celeste);
-      padding: 13px 0; }
+      padding: 13px 0;
+      line-height: 139.4%; }
     footer .part3 p:first-child {
       padding-top: 0; }
     footer .part3 p:last-child {
@@ -683,6 +691,8 @@ section.mision-vision {
 section.valores {
   padding: 70px 0;
   padding-bottom: 260px; }
+  section.valores h2 {
+    margin-bottom: 50px; }
   section.valores .grid-valores {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -712,8 +722,7 @@ section.valores {
       padding-top: 17px;
       position: relative; }
     section.valores .grid-valores .item p {
-      padding-top: 10px;
-      line-height: 170.02%; }
+      padding-top: 10px; }
 
 section.home-servicios-interna .content {
   display: flex;
@@ -900,7 +909,7 @@ section.beneficios {
         section.beneficios .content .part2 ul li {
           position: relative;
           font-family: var(--fuente-Ubuntu);
-          font-weight: 500;
+          font-weight: 400;
           font-size: 20px;
           color: #727070;
           margin: 45px 0;
@@ -924,7 +933,7 @@ section.tarjeta-contacto {
     align-items: center;
     justify-content: space-between;
     background-color: var(--color-celeste);
-    padding: 70px 100px;
+    padding: 50px 150px;
     border-radius: 10px; }
     section.tarjeta-contacto .content .part1 {
       width: 60%; }
@@ -981,6 +990,8 @@ section.respaldo {
 
 section.aliados {
   padding: 70px 0; }
+  section.aliados h2 {
+    margin-bottom: 50px; }
   section.aliados .marquee-with-options {
     padding-top: 0px;
     width: 100%;
@@ -995,6 +1006,8 @@ section.aliados {
 
 section.competencias {
   padding: 70px 0; }
+  section.competencias h2 {
+    margin-bottom: 50px; }
   section.competencias .slider-competencias {
     margin-top: 20px; }
     section.competencias .slider-competencias .item {
@@ -1370,7 +1383,11 @@ section.blog {
             font-weight: 500;
             font-size: 20px;
             border-radius: 20px;
-            border: 1px solid var(--color-celeste); }
+            border: 1px solid var(--color-celeste);
+            transition: 0.2s linear; }
+            section.blog .content .categorias ul li a:hover {
+              background-color: var(--color-celeste);
+              color: #fff; }
           section.blog .content .categorias ul li a.select {
             background-color: var(--color-celeste);
             color: #fff; }
