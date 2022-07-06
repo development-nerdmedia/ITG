@@ -269,7 +269,19 @@ MyApp = {
                 })
             })
         }
-    } 
+    },
+    scrollRedes:{
+        init: function () {
+            $(document).ready(function (argument) {
+                // AOS.init();
+                if ($('.scroll').length > 0) {
+                    $(".scroll").stick_in_parent({
+                        offset_top: 180
+                    });
+                }   
+            })
+        }
+    },
 }
 
 if ($('header').length > 0) {
@@ -294,6 +306,10 @@ if ($('footer .form-group').length > 0) {
 
 if ($('.categorias').length > 0) {
     MyApp.category.init();
+}
+
+if ($('.main-article .redes').length > 0) {
+    MyApp.scrollRedes.init();
 }
 
 $('.slider-novedades').slick({

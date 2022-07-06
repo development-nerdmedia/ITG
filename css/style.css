@@ -25,7 +25,7 @@ li.fex {
 a.contacto {
   text-decoration: none;
   background-color: var(--color-anaranjado);
-  padding: 17px 47px;
+  padding: 15px 25px;
   color: #fff;
   border-radius: 20px;
   font-family: var(--fuente-Ubuntu);
@@ -75,7 +75,16 @@ header {
     align-items: center;
     justify-content: space-between; }
     header nav .logo img {
-      width: 90%; }
+      width: 80%; }
+    header nav .logo lottie-player {
+      width: 80%;
+      display: none; }
+    header nav .logo a {
+      display: flex; }
+    header nav .logo a:hover img {
+      display: none; }
+    header nav .logo a:hover lottie-player {
+      display: block; }
     header nav .navigation ul {
       list-style: none; }
       header nav .navigation ul li {
@@ -97,7 +106,7 @@ header {
         padding-right: 0; }
         header nav .navigation ul li.contacto a {
           background-color: var(--color-anaranjado);
-          padding: 17px 47px;
+          padding: 15px 25px;
           color: #fff;
           border-radius: 20px; }
       header nav .navigation ul li.fex {
@@ -176,12 +185,13 @@ header::before {
   position: fixed;
   left: 0;
   top: 0;
-  height: 120px;
+  height: 112.8px;
   width: 100%;
   background: #fff;
   z-index: -2;
   transition: transform 0.1s ease;
-  transform: translateY(-100%); }
+  transform: translateY(-135%);
+  filter: drop-shadow(0px 4px 39px rgba(51, 142, 205, 0.39)); }
 
 /* Underline From Left */
 .hvr-underline-from-left {
@@ -213,7 +223,7 @@ header::before {
   right: 0; }
 
 section.home {
-  height: 53.5vw; }
+  height: 50vw; }
   section.home lottie-player {
     position: absolute !important;
     width: 100% !important;
@@ -327,7 +337,7 @@ section.socios {
         transform: translateX(-50%);
         bottom: 20px;
         z-index: 3;
-        padding: 17px 24px;
+        padding: 15px 25px;
         white-space: nowrap; }
 
 section.soluciones {
@@ -340,28 +350,38 @@ section.soluciones {
     padding: 0 80px;
     grid-gap: 50px;
     align-items: flex-start; }
-    section.soluciones .grid-soluciones .item lottie-player {
-      width: auto !important;
-      height: auto !important;
+    section.soluciones .grid-soluciones .item img {
+      width: 100%;
       margin-bottom: 10px;
       position: relative; }
-      section.soluciones .grid-soluciones .item lottie-player::after {
-        content: '';
-        background-color: var(--color-verde);
-        width: 100%;
-        height: 3px;
-        border-radius: 10px;
-        position: absolute;
-        bottom: -14px;
-        left: 0;
-        z-index: 3; }
+    section.soluciones .grid-soluciones .item lottie-player {
+      display: none;
+      width: auto !important;
+      height: auto !important;
+      margin-bottom: 14px;
+      position: relative; }
+    section.soluciones .grid-soluciones .item:hover img {
+      display: none; }
+    section.soluciones .grid-soluciones .item:hover lottie-player {
+      display: block; }
     section.soluciones .grid-soluciones .item h3 {
       font-family: var(--fuente-Exo);
       font-style: normal;
       font-weight: 700;
       font-size: 25px;
       color: var(--color-celeste);
-      padding-top: 17px; }
+      padding-top: 17px;
+      position: relative; }
+      section.soluciones .grid-soluciones .item h3::after {
+        content: '';
+        background-color: var(--color-verde);
+        width: 100%;
+        height: 3px;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3; }
     section.soluciones .grid-soluciones .item p {
       padding-top: 10px;
       padding-bottom: 15px; }
@@ -376,11 +396,13 @@ section.soluciones {
         font-weight: 500;
         font-size: 20px; }
       section.soluciones .grid-soluciones .item a img {
+        width: auto;
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        transition: 0.2s linear; }
+        transition: 0.2s linear;
+        display: block !important; }
       section.soluciones .grid-soluciones .item a:hover span {
         opacity: 0.7; }
       section.soluciones .grid-soluciones .item a:hover img {
@@ -748,7 +770,7 @@ section.home-servicios-interna .content {
 .formulario {
   background-color: var(--color-celeste);
   border-radius: 10px;
-  padding: 40px 50px; }
+  padding: 30px; }
   .formulario h3 {
     font-style: normal;
     font-weight: 700;
@@ -781,7 +803,8 @@ section.home-servicios-interna .content {
         -o-transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
         transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
         transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1), -webkit-transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
-        font-style: inherit; }
+        font-style: inherit;
+        border-radius: 20px; }
       .formulario form .form-group span.animacion {
         -ms-transform: scaleX(1);
         transform: scaleX(1);
@@ -874,7 +897,7 @@ section.home-servicios-interna .content {
         .formulario form .checkbox-box p a {
           color: #fff; }
     .formulario form button {
-      padding: 17px 58px;
+      padding: 15px 50px;
       background-color: var(--color-anaranjado);
       border-radius: 20px;
       font-family: var(--fuente-Ubuntu);
@@ -883,7 +906,7 @@ section.home-servicios-interna .content {
       border: 0;
       color: #fff;
       cursor: pointer;
-      margin-top: 50px; }
+      margin-top: 30px; }
 
 section.beneficios {
   padding-top: 140px;
@@ -901,6 +924,11 @@ section.beneficios {
         margin-bottom: 10px; }
         section.beneficios .content .part1 h2:before {
           bottom: 5px; }
+      section.beneficios .content .part1 lottie-player {
+        height: auto;
+        width: auto;
+        width: 63%;
+        margin-bottom: 20px; }
     section.beneficios .content .part2 {
       width: 50%;
       padding-left: 46px; }
@@ -951,6 +979,12 @@ section.fondo-socios {
     left: 0;
     width: 100%;
     z-index: -3; }
+  section.fondo-socios lottie-player {
+    position: absolute !important;
+    width: 100% !important;
+    height: auto !important;
+    z-index: -3;
+    top: 0; }
   section.fondo-socios .content {
     padding-top: 241.39px;
     display: flex; }
@@ -977,6 +1011,10 @@ section.respaldo {
       text-align: center; }
       section.respaldo .content .part1 img {
         margin-top: 50px; }
+      section.respaldo .content .part1 lottie-player {
+        height: auto;
+        width: auto;
+        margin-top: 50px; }
       section.respaldo .content .part1 h2, section.respaldo .content .part1 p {
         text-align: start; }
     section.respaldo .content .part2 {
@@ -987,6 +1025,10 @@ section.respaldo {
         margin-bottom: 50px; }
       section.respaldo .content .part2 p {
         text-align: start; }
+      section.respaldo .content .part2 lottie-player {
+        height: auto;
+        width: auto;
+        margin-bottom: 50px; }
 
 section.aliados {
   padding: 70px 0; }
@@ -1014,13 +1056,13 @@ section.competencias {
       margin: 0 30px;
       border-radius: 10px;
       border: 3px solid var(--color-celeste);
-      padding: 50px 0px; }
+      padding: 30px 0; }
       section.competencias .slider-competencias .item img {
-        padding: 0 33px;
-        padding-bottom: 29px;
+        padding: 0 30px;
+        padding-bottom: 30px;
         width: 100%; }
       section.competencias .slider-competencias .item .info {
-        padding: 30px 33px;
+        padding: 30px;
         padding-bottom: 0;
         position: relative; }
         section.competencias .slider-competencias .item .info::after {
@@ -1084,7 +1126,7 @@ section.trabajo {
     display: flex; }
     section.trabajo .content .part1 {
       width: 50%;
-      padding-right: 70px; }
+      padding-right: 100px; }
       section.trabajo .content .part1 h1 {
         font-family: var(--fuente-Exo);
         font-weight: 700;
@@ -1095,7 +1137,9 @@ section.trabajo {
       section.trabajo .content .part1 .img {
         display: flex;
         justify-content: center;
-        padding-top: 75px; }
+        padding-top: 85px; }
+        section.trabajo .content .part1 .img lottie-player {
+          width: 80%; }
       section.trabajo .content .part1 img {
         position: relative;
         width: 60%;
