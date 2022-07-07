@@ -351,15 +351,18 @@ section.soluciones {
     grid-gap: 50px;
     align-items: flex-start; }
     section.soluciones .grid-soluciones .item img {
-      width: 100%;
+      width: 80%;
       margin-bottom: 10px;
       position: relative; }
     section.soluciones .grid-soluciones .item lottie-player {
+      width: 80% !important;
       display: none;
-      width: auto !important;
       height: auto !important;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       position: relative; }
+    section.soluciones .grid-soluciones .item .images {
+      display: flex;
+      justify-content: center; }
     section.soluciones .grid-soluciones .item:hover img {
       display: none; }
     section.soluciones .grid-soluciones .item:hover lottie-player {
@@ -432,14 +435,20 @@ section.novedades {
         justify-content: space-between;
         align-items: center;
         padding-bottom: 30px; }
-        section.novedades .slider-novedades .item .info span {
+        section.novedades .slider-novedades .item .info a {
+          text-decoration: none;
           font-family: var(--fuente-Ubuntu);
           font-weight: 500;
           font-size: 20px;
           padding: 7px 19px;
           border: 1px solid var(--color-celeste);
           border-radius: 20px;
-          color: var(--color-celeste); }
+          color: var(--color-celeste);
+          cursor: pointer;
+          transition: 0.2s linear; }
+          section.novedades .slider-novedades .item .info a:hover {
+            background-color: var(--color-celeste);
+            color: #fff; }
         section.novedades .slider-novedades .item .info p {
           font-family: var(--fuente-Ubuntu);
           font-weight: 500;
@@ -518,7 +527,7 @@ footer {
   footer .content {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 50px; }
+    padding-bottom: 30px; }
   footer .part1 {
     max-width: 510px; }
     footer .part1 h2 {
@@ -578,7 +587,7 @@ footer {
     footer ul li {
       font-family: var(--fuente-Ubuntu);
       font-weight: 700;
-      font-size: 20px;
+      font-size: 18px;
       padding: 13px 0;
       position: relative; }
       footer ul li::after {
@@ -616,7 +625,7 @@ footer {
     footer .part3 p {
       font-family: var(--fuente-Ubuntu);
       font-weight: 500;
-      font-size: 20px;
+      font-size: 18px;
       color: var(--color-celeste);
       padding: 13px 0;
       line-height: 139.4%; }
@@ -669,11 +678,11 @@ section.home-nosotros .content {
       padding: 17px 0; }
     section.home-nosotros .content .part1 p:first-child(1) {
       padding-top: 0; }
-    section.home-nosotros .content .part1 lottie-player {
-      width: auto !important;
-      height: auto !important; }
   section.home-nosotros .content .part2 {
     width: 55%; }
+    section.home-nosotros .content .part2 lottie-player {
+      width: 91.395%;
+      float: right; }
 
 section.filosofia {
   padding: 140px;
@@ -690,7 +699,7 @@ section.mision-vision {
     section.mision-vision .container .content {
       display: flex; }
       section.mision-vision .container .content lottie-player {
-        margin-top: 45px; }
+        margin: 45px auto 0 auto; }
       section.mision-vision .container .content .part1 {
         width: 50%;
         padding-right: 100px;
@@ -705,10 +714,14 @@ section.mision-vision {
           right: 0;
           background-color: var(--color-gris);
           border-radius: 20px; }
+        section.mision-vision .container .content .part1 lottie-player {
+          width: 74.645%; }
       section.mision-vision .container .content .part2 {
         width: 50%;
         padding-left: 100px;
         height: 100%; }
+        section.mision-vision .container .content .part2 lottie-player {
+          width: 79.1%; }
 
 section.valores {
   padding: 70px 0;
@@ -720,21 +733,10 @@ section.valores {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 47px; }
     section.valores .grid-valores .item lottie-player {
-      width: 100%;
+      width: 58.87%;
       height: auto;
-      margin-bottom: 10px;
-      position: relative;
-      padding: 0 70px; }
-      section.valores .grid-valores .item lottie-player::after {
-        content: '';
-        background-color: var(--color-verde);
-        width: 100%;
-        height: 3px;
-        border-radius: 10px;
-        position: absolute;
-        bottom: -16px;
-        left: 0;
-        z-index: 3; }
+      margin: 0 auto 10px auto;
+      position: relative; }
     section.valores .grid-valores .item h3 {
       font-family: var(--fuente-Exo);
       font-style: normal;
@@ -743,6 +745,19 @@ section.valores {
       color: var(--color-celeste);
       padding-top: 17px;
       position: relative; }
+      section.valores .grid-valores .item h3::after {
+        content: '';
+        background-color: var(--color-verde);
+        width: 100%;
+        height: 3px;
+        border-radius: 10px;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        z-index: 3; }
+      section.valores .grid-valores .item h3 p {
+        line-height: 178.5%;
+        padding-bottom: 15px; }
     section.valores .grid-valores .item p {
       padding-top: 10px; }
 
@@ -770,7 +785,9 @@ section.home-servicios-interna .content {
 .formulario {
   background-color: var(--color-celeste);
   border-radius: 10px;
-  padding: 30px; }
+  padding: 30px;
+  max-width: 675px;
+  margin: 0 auto; }
   .formulario h3 {
     font-style: normal;
     font-weight: 700;
@@ -926,8 +943,7 @@ section.beneficios {
           bottom: 5px; }
       section.beneficios .content .part1 lottie-player {
         height: auto;
-        width: auto;
-        width: 63%;
+        width: 61.69%;
         margin-bottom: 20px; }
     section.beneficios .content .part2 {
       width: 50%;
@@ -1013,8 +1029,8 @@ section.respaldo {
         margin-top: 50px; }
       section.respaldo .content .part1 lottie-player {
         height: auto;
-        width: auto;
-        margin-top: 50px; }
+        margin: 50px auto 0 auto;
+        width: 85.153%; }
       section.respaldo .content .part1 h2, section.respaldo .content .part1 p {
         text-align: start; }
     section.respaldo .content .part2 {
@@ -1028,7 +1044,8 @@ section.respaldo {
       section.respaldo .content .part2 lottie-player {
         height: auto;
         width: auto;
-        margin-bottom: 50px; }
+        margin: auto auto 50px auto;
+        width: 85.153%; }
 
 section.aliados {
   padding: 70px 0; }
@@ -1139,7 +1156,7 @@ section.trabajo {
         justify-content: center;
         padding-top: 85px; }
         section.trabajo .content .part1 .img lottie-player {
-          width: 80%; }
+          width: 70%; }
       section.trabajo .content .part1 img {
         position: relative;
         width: 60%;
@@ -1203,7 +1220,7 @@ section.contact-page {
   background: linear-gradient(180deg, #E7F3F9 0%, rgba(231, 243, 249, 0) 63.02%);
   padding-bottom: 30px; }
   section.contact-page .container {
-    width: 42%; }
+    max-width: 800px; }
   section.contact-page .content {
     padding-top: 241.39px; }
     section.contact-page .content h1 {
@@ -1218,7 +1235,9 @@ section.contact-page {
     section.contact-page .content .formulario {
       background-color: transparent;
       display: flex;
-      justify-content: center; }
+      justify-content: center;
+      width: 100%;
+      max-width: 100%; }
     section.contact-page .content form {
       margin-top: 20px;
       width: 84%; }
@@ -1262,7 +1281,7 @@ section.contact-page {
         width: 16px;
         height: 12px;
         z-index: -2;
-        transform: rotate(-90deg); }
+        transform: rotate(-180deg); }
     section.contact-page .content .formmotivo.open::after, section.contact-page .content .formasunto.open::after {
       transform: rotate(0deg); }
     section.contact-page .content .btn {
@@ -1279,7 +1298,7 @@ section.footer-contacto {
   section.footer-contacto h3 {
     font-family: var(--fuente-Ubuntu);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     color: var(--color-celeste);
     position: relative; }
     section.footer-contacto h3::before {
@@ -1298,7 +1317,8 @@ section.footer-contacto {
     padding: 0 40px;
     padding-bottom: 30px; }
     section.footer-contacto .flex p {
-      padding-top: 20px; }
+      padding-top: 20px;
+      font-size: 18px; }
     section.footer-contacto .flex .oficina {
       width: 700px; }
     section.footer-contacto .flex .info {
@@ -1360,7 +1380,11 @@ section.main-article {
           font-family: var(--fuente-Ubuntu);
           font-weight: 500;
           font-size: 20px;
-          color: var(--color-celeste); }
+          color: var(--color-celeste);
+          transition: 0.2s linear; }
+          section.main-article .content .part2 .category span:hover {
+            background-color: var(--color-celeste);
+            color: #fff; }
       section.main-article .content .part2 h2 {
         padding-top: 50px; }
   section.main-article .content2 {
@@ -1435,7 +1459,7 @@ section.blog {
           section.blog .content .categorias ul li a.select {
             background-color: var(--color-celeste);
             color: #fff; }
-    section.blog .content .destaado {
+    section.blog .content .destacado {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 58px;

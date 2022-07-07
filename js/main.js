@@ -1,18 +1,4 @@
 
-document.addEventListener("click", (e) => {
-    if (e.target.closest(".formmotivo select")) {
-        document.querySelector(".formmotivo").classList.add("open");
-    }else{
-        document.querySelector(".formmotivo").classList.remove("open");
-    }       
-
-    if (e.target.closest(".formasunto select")) {
-        document.querySelector(".formasunto").classList.add("open");
-    }else{
-        document.querySelector(".formasunto").classList.remove("open");
-    }      
-})
-
 MyApp = {
     scroll: {
         init: function () {
@@ -223,6 +209,17 @@ MyApp = {
                         document.querySelector(".formmensaje").classList.add("ok");
                     }
                 }
+                if (e.target.closest(".formmotivo select")) {
+                    document.querySelector(".formmotivo").classList.add("open");
+                }else{
+                    document.querySelector(".formmotivo").classList.remove("open");
+                }       
+            
+                if (e.target.closest(".formasunto select")) {
+                    document.querySelector(".formasunto").classList.add("open");
+                }else{
+                    document.querySelector(".formasunto").classList.remove("open");
+                }   
             })
         }
     },
@@ -244,12 +241,54 @@ MyApp = {
                 }
             })
         }
-    } ,
+    } ,    
+    slider_novedades_home: {
+        init: function () {
+            document.addEventListener("click", function (e) {
+                if (e.target.closest(".slider-novedades .item .info a")) {
+                    const titleService = e.target.textContent;
+                    localStorage.setItem('CatNovedad', `${titleService}`);
+                }
+            })
+        }
+    },
     category: {
         init: function () {
             document.querySelector("#categorias li a").classList.add("select");            
-            $(`.destaado`).hide();
-            const enlaces = document.querySelectorAll('#categorias a');//original
+            $(`.destacado`).hide();
+            var categoriaNovedad = localStorage.getItem("CatNovedad");
+            if (categoriaNovedad == "none") {
+                document.querySelector("#categorias li a").classList.add("select");
+            }
+            let listaTitle = [];
+            const enlaces = document.querySelectorAll('#categorias a');
+            for (let i = 0; i < enlaces.length; i++) {
+                textoitem = enlaces[i].textContent;
+                listaTitle.push(textoitem);
+            }
+            if (listaTitle.includes(categoriaNovedad)) {
+                for (let y = 0; y < enlaces.length; y++) {
+                    if (categoriaNovedad === enlaces[y].textContent) {
+                        document.querySelector("#categorias a").classList.remove("select");
+                        enlaces[y].classList.add('select')
+                    }
+                }
+            }
+
+            $('.items-category .item').hide();
+            const categoryMain = document.querySelector('#categorias a.select').innerHTML;
+            console.log(categoryMain);
+            if (categoryMain === "Todo") {
+                $(`.item`).show(0);
+            }else{                
+                $(`.item[data-categoria="${categoryMain}"]`).show(0);
+            }
+            
+            if (categoryMain === "Caso de éxito") {
+                $(`.destacado`).show();  
+            }
+
+            // enlaces = document.querySelectorAll('#categorias a');//original
             enlaces.forEach((elemento) => {
                 elemento.addEventListener('click', (evento) => {
                     evento.preventDefault();
@@ -259,12 +298,12 @@ MyApp = {
                     console.log(categoria);
                     $(`.item`).not(`[data-categoria="${categoria}"]`).hide();
                     $(`.item[data-categoria="${categoria}"]`).show();
-                    $(`.destaado`).hide();
+                    $(`.destacado`).hide();
                     if (categoria === "Todo") {
                         $(`.item`).show();  
                     }
                     if (categoria === "Caso de éxito") {
-                        $(`.destaado`).show();  
+                        $(`.destacado`).show();  
                     }
                 })
             })
@@ -280,6 +319,17 @@ MyApp = {
                     });
                 }   
             })
+        }
+    },
+    slider_aliados: {
+        init: function () {            
+            $('.marquee-with-options').marquee({
+                speed: 30000,
+                gap: 50,
+                delayBeforeStart: 0,
+                direction: 'left',
+                duplicated: true,
+            });
         }
     },
 }
@@ -311,6 +361,20 @@ if ($('.categorias').length > 0) {
 if ($('.main-article .redes').length > 0) {
     MyApp.scrollRedes.init();
 }
+
+if ($('.slider-novedades').length > 0) {
+    MyApp.slider_novedades_home.init();
+}
+
+if ($('.aliados').length > 0) {
+    MyApp.slider_aliados.init();
+}
+
+document.addEventListener("click", (e) => {
+    if (e.target.closest("li a")) {
+        localStorage.setItem('CatNovedad', "none");
+    }
+})
 
 $('.slider-novedades').slick({
     infinite: false,
@@ -421,11 +485,3 @@ $('.slider-competencias').slick({
     ]
 });
 
-
-$('.marquee-with-options').marquee({
-    speed: 30000,
-    gap: 50,
-    delayBeforeStart: 0,
-    direction: 'left',
-    duplicated: true,
-});
