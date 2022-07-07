@@ -457,16 +457,20 @@ section.soluciones{
         // padding-top: 50px;
         .item{            
             img{
-                width: 100%;
+                width: 80%;
                 margin-bottom: 10px;
                 position: relative;
             }
             lottie-player{
+                width: 80% !important;
                 display: none;
-                width: auto !important;
                 height: auto !important;
-                margin-bottom: 14px;
+                margin-bottom: 10px;
                 position: relative;
+            }
+            .images{
+                display: flex;
+                justify-content: center;
             }
             &:hover{
                 img{
@@ -562,7 +566,8 @@ section.novedades{
                 justify-content: space-between;
                 align-items: center;
                 padding-bottom: 30px;
-                span{
+                a{
+                    text-decoration: none;
                     font-family: var(--fuente-Ubuntu);
                     font-weight: 500;
                     font-size: 20px;
@@ -570,6 +575,12 @@ section.novedades{
                     border: 1px solid var(--color-celeste);
                     border-radius: 20px;
                     color: var(--color-celeste);
+                    cursor: pointer;
+                    transition: 0.2s linear;
+                    &:hover{
+                        background-color: var(--color-celeste);
+                        color: #fff;
+                    }
                 }
                 p{
                     font-family: var(--fuente-Ubuntu);
@@ -680,7 +691,7 @@ footer{
     .content{
         display: flex;
         justify-content: space-between;        
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
     .part1{     
         max-width: 510px;
@@ -756,7 +767,7 @@ footer{
             li{
                 font-family: var(--fuente-Ubuntu);
                 font-weight: 700;
-                font-size: 20px;
+                font-size: 18px;
                 padding: 13px 0;
                 position: relative;
                 &::after{
@@ -806,7 +817,7 @@ footer{
         p{
             font-family: var(--fuente-Ubuntu);
             font-weight: 500;
-            font-size: 20px;
+            font-size: 18px;
             color: var(--color-celeste);
             padding: 13px 0;
             line-height: 139.4%;
@@ -881,14 +892,13 @@ section.home-nosotros{
             p:first-child(1){
                 padding-top: 0;
             }
-            lottie-player{
-                width: auto !important;
-            height: auto !important;
-            }
-
         }
         .part2{
-            width: 55%;
+            width: 55%;     
+            lottie-player{
+                width: 91.395%;  
+                float: right;           
+            }
         }
     }
 }
@@ -911,7 +921,7 @@ section.mision-vision{
         .content{
             display: flex;
             lottie-player{
-                margin-top: 45px;
+                margin: 45px auto 0 auto;
             }
             .part1{
                 width: 50%;
@@ -928,11 +938,17 @@ section.mision-vision{
                     background-color: var(--color-gris);
                     border-radius: 20px;
                 }
+                lottie-player{
+                    width: 74.645%;
+                }
             }
             .part2{
                 width: 50%;
                 padding-left: 100px;
                 height: 100%;
+                lottie-player{
+                    width: 79.1%;
+                }
             }
         }
     }
@@ -950,22 +966,21 @@ section.valores{
         grid-gap: 47px;
         .item{
             lottie-player{
-                width: 100%;
+                width: 58.87%;
                 height: auto;
-                margin-bottom: 10px;
+                margin: 0 auto 10px auto;
                 position: relative;
-                padding: 0 70px;
-                &::after{
-                    content: '';
-                    background-color: var(--color-verde);
-                    width: 100%;
-                    height: 3px;
-                    border-radius: 10px;
-                    position: absolute;
-                    bottom: -16px;
-                    left: 0;
-                    z-index: 3;
-                }
+                // &::after{
+                //     content: '';
+                //     background-color: var(--color-verde);
+                //     width: 100%;
+                //     height: 3px;
+                //     border-radius: 10px;
+                //     position: absolute;
+                //     bottom: -16px;
+                //     left: 0;
+                //     z-index: 3;
+                // }
             }
             h3 {
                 font-family: var(--fuente-Exo);
@@ -976,20 +991,21 @@ section.valores{
                 // width: 70%;
                 padding-top: 17px;
                 position: relative;
-                // &::after {
-                //     content: '';
-                //     background-color: var(--color-verde);
-                //     width: 100%;
-                //     height: 6px;
-                //     position: absolute;
-                //     top: 0px;
-                //     left: 0;
-                //     z-index: 3;
-                // }
-                // p {
-                //     line-height: 178.5%;
-                //     padding-bottom: 15px;
-                // }
+                &::after {
+                    content: '';
+                    background-color: var(--color-verde);
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 10px;
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                    z-index: 3;
+                }
+                p {
+                    line-height: 178.5%;
+                    padding-bottom: 15px;
+                }
             }   
             p{
                 padding-top: 10px;
@@ -1033,7 +1049,8 @@ section.home-servicios-interna{
     background-color: var(--color-celeste);
     border-radius: 10px;
     padding: 30px;
-    
+    max-width: 675px;
+    margin: 0 auto;
     h3{
         font-style: normal;
         font-weight: 700;
@@ -1225,8 +1242,7 @@ section.beneficios{
             }       
             lottie-player{
                 height: auto;
-                width: auto;
-                width: 63%;
+                width: 61.69%;
                 margin-bottom: 20px;
             }
         }
@@ -1335,8 +1351,8 @@ section.respaldo{
             }
             lottie-player{
                 height: auto;
-                width: auto;
-                margin-top: 50px;
+                margin: 50px auto 0 auto;
+                width: 85.153%;
             }
             h2,p{
                 text-align: start;
@@ -1355,7 +1371,8 @@ section.respaldo{
             lottie-player{
                 height: auto;
                 width: auto;
-                margin-bottom: 50px;
+                margin: auto auto 50px auto;
+                width: 85.153%;
             }
         }
     }
@@ -1502,7 +1519,7 @@ section.trabajo{
                 justify-content: center;
                 padding-top: 85px;
                 lottie-player{
-                    width: 80%;
+                    width: 70%;
                 }
             }
             img{
@@ -1591,7 +1608,7 @@ section.contact-page{
     background: linear-gradient(180deg, #E7F3F9 0%, rgba(231, 243, 249, 0) 63.02%);
     padding-bottom: 30px;    
     .container{
-        width: 42%;
+       max-width: 800px;
     }
     .content{
         // padding-top: 250px; 
@@ -1610,7 +1627,9 @@ section.contact-page{
         .formulario{
             background-color: transparent;    
             display: flex;
-            justify-content: center;        
+            justify-content: center;    
+            width: 100%;   
+            max-width: 100%; 
         }
         form{
             margin-top: 20px;
@@ -1665,7 +1684,7 @@ section.contact-page{
                 width: 16px;
                 height: 12px;   
                 z-index: -2;
-                transform: rotate(-90deg);
+                transform: rotate(-180deg);
             }
         }
         .formmotivo.open, .formasunto.open{
@@ -1691,7 +1710,7 @@ section.footer-contacto{
     h3{
         font-family: var(--fuente-Ubuntu);
         font-weight: 500;
-        font-size: 20px;
+        font-size: 18px;
         color: var(--color-celeste);
         position: relative;
         &::before{
@@ -1713,6 +1732,7 @@ section.footer-contacto{
         padding-bottom: 30px;        
         p{
             padding-top: 20px;
+            font-size: 18px;
         }
         .oficina{
             width: 700px;
@@ -1801,6 +1821,11 @@ section.main-article{
                     font-weight: 500;
                     font-size: 20px;
                     color: var(--color-celeste);
+                    transition: 0.2s linear;
+                    &:hover{
+                        background-color: var(--color-celeste);
+                        color: #fff;
+                    }
                 }
             }
             h2{
@@ -1900,7 +1925,7 @@ section.blog{
                 }
             }
         }
-        .destaado{
+        .destacado{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 58px;
