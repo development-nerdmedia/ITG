@@ -29,14 +29,57 @@ li.fex{
 
 /*boton de contactanos*/
 a.contacto{
-    text-decoration: none;
-    background-color: var(--color-anaranjado);
-    padding: 15px 25px;
-    color: #fff;
-    border-radius: 20px;  
-    font-family: var(--fuente-Ubuntu);
-    font-weight: 500;
-    font-size: 20px;
+    span{
+        position: relative;
+        z-index: 3;
+    }
+    button{
+        text-decoration: none;
+        background-color: var(--color-anaranjado);
+        padding: 15px 25px;
+        color: #fff;
+        border-radius: 20px;  
+        font-family: var(--fuente-Ubuntu);
+        font-weight: 500;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 20px;  
+        position: relative;                         
+        overflow: hidden;  
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+        &::after {
+            content: "";
+            position: absolute;
+            top: calc(var(--y, 0) * 1px - 50px);
+            left: calc(var(--x, 0) * 1px - 50px);
+            width: 100px;
+            height: 100px;
+            background: #d88a5f85;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.5s;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: calc(var(--y, 0) * 1px - 30px);
+            left: calc(var(--x, 0) * 1px - 30px);
+            width: 60px;
+            height: 60px;
+            background: #d9a08185;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.5s;
+          }
+        &:hover::after{
+            opacity: 1;
+        }
+        &:hover::before{
+            opacity: 1;
+        }
+    }
 }
 
 h2{
@@ -131,11 +174,53 @@ header{
                 }
                 li.contacto{
                     padding-right: 0;
-                    a{
+                    span{
+                        position: relative;
+                        z-index: 3;
+                    }
+                    button{
                         background-color: var(--color-anaranjado);
                         padding: 15px 25px;
                         color: #fff;
-                        border-radius: 20px;     
+                        border-radius: 20px;  
+                        position: relative;                         
+                        overflow: hidden;  
+                        border: none;
+                        font-family: var(--fuente-Ubuntu);
+                        font-weight: 500;
+                        font-size: 20px;
+                        cursor: pointer;
+                        z-index: 2;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: calc(var(--y, 0) * 1px - 50px);
+                            left: calc(var(--x, 0) * 1px - 50px);
+                            width: 100px;
+                            height: 100px;
+                            background: #d88a5f85;
+                            border-radius: 50%;
+                            opacity: 0;
+                            transition: opacity 0.5s;
+                          }
+                          &::before {
+                            content: "";
+                            position: absolute;
+                            top: calc(var(--y, 0) * 1px - 30px);
+                            left: calc(var(--x, 0) * 1px - 30px);
+                            width: 60px;
+                            height: 60px;
+                            background: #d9a08185;
+                            border-radius: 50%;
+                            opacity: 0;
+                            transition: opacity 0.5s;
+                          }
+                        &:hover::after{
+                            opacity: 1;
+                        }
+                        &:hover::before{
+                            opacity: 1;
+                        }
                     }
                 }
                 li.fex{          
@@ -269,6 +354,7 @@ header::before {
     bottom: 0;
     background: var(--color-verde);
     height: 3px;
+    border-radius: 10px;
     -webkit-transition-property: right;
     transition-property: right;
     -webkit-transition-duration: 0.3s;
@@ -323,7 +409,7 @@ section.home{
         p{
             width: 58%;
             padding: 50px 0;
-            padding-bottom: 65px;
+            // padding-bottom: 65px;
             span{
                 font-weight: 700;
             }
@@ -458,7 +544,7 @@ section.soluciones{
         .item{            
             img{
                 width: 80%;
-                margin-bottom: 10px;
+                margin-bottom: 9px;
                 position: relative;
             }
             lottie-player{
@@ -1216,6 +1302,42 @@ section.home-servicios-interna{
             color: #fff;
             cursor: pointer;
             margin-top: 30px;
+            position: relative;                         
+            overflow: hidden;  
+            span{
+                position: relative;
+                z-index: 3;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: calc(var(--y, 0) * 1px - 50px);
+                left: calc(var(--x, 0) * 1px - 50px);
+                width: 100px;
+                height: 100px;
+                background: #d88a5f85;
+                border-radius: 50%;
+                opacity: 0;
+                transition: opacity 0.5s;
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                top: calc(var(--y, 0) * 1px - 30px);
+                left: calc(var(--x, 0) * 1px - 30px);
+                width: 60px;
+                height: 60px;
+                background: #d9a08185;
+                border-radius: 50%;
+                opacity: 0;
+                transition: opacity 0.5s;
+              }
+            &:hover::after{
+                opacity: 1;
+            }
+            &:hover::before{
+                opacity: 1;
+            }
         }
     }
 }

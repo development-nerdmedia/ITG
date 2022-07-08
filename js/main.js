@@ -1,4 +1,42 @@
 
+// var button = document.querySelector(".shiny");
+// var button2 = document.querySelector(".shiny2");
+// var button3 = document.querySelector(".shiny3");
+
+// button.addEventListener("mousemove", (e) => {
+//   const { x, y } = button.getBoundingClientRect();
+//   button.style.setProperty("--x", e.clientX - x);
+//   button.style.setProperty("--y", e.clientY - y);
+// });
+
+// button2.addEventListener("mousemove", (e) => {
+//   const { x, y } = button2.getBoundingClientRect();
+//   button2.style.setProperty("--x", e.clientX - x);
+//   button2.style.setProperty("--y", e.clientY - y);
+// });
+
+// button3.addEventListener("mousemove", (e) => {
+//     const { x, y } = button3.getBoundingClientRect();
+//     button3.style.setProperty("--x", e.clientX - x);
+//     button3.style.setProperty("--y", e.clientY - y);
+// });
+
+
+function hoverStyle(event){
+    event.addEventListener("mousemove", (e) => {
+      const { x, y } = event.getBoundingClientRect();
+      event.style.setProperty("--x", e.clientX - x);
+      event.style.setProperty("--y", e.clientY - y);
+    });
+  }
+  
+  
+var shiny = document.querySelectorAll('.shiny');
+  shiny.forEach(function(shinyItem) {
+    hoverStyle(shinyItem);
+});
+
+
 MyApp = {
     scroll: {
         init: function () {
