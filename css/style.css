@@ -22,7 +22,11 @@ li.fex {
   display: none; }
 
 /*boton de contactanos*/
-a.contacto {
+a.contacto span {
+  position: relative;
+  z-index: 3; }
+
+a.contacto button {
   text-decoration: none;
   background-color: var(--color-anaranjado);
   padding: 15px 25px;
@@ -30,7 +34,40 @@ a.contacto {
   border-radius: 20px;
   font-family: var(--fuente-Ubuntu);
   font-weight: 500;
-  font-size: 20px; }
+  font-size: 20px;
+  color: #fff;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  z-index: 2; }
+  a.contacto button::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--y, 0) * 1px - 50px);
+    left: calc(var(--x, 0) * 1px - 50px);
+    width: 100px;
+    height: 100px;
+    background: #d88a5f85;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s; }
+  a.contacto button::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--y, 0) * 1px - 30px);
+    left: calc(var(--x, 0) * 1px - 30px);
+    width: 60px;
+    height: 60px;
+    background: #d9a08185;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s; }
+  a.contacto button:hover::after {
+    opacity: 1; }
+  a.contacto button:hover::before {
+    opacity: 1; }
 
 h2 {
   font-family: var(--fuente-Exo);
@@ -104,11 +141,48 @@ header {
             right: 0; }
       header nav .navigation ul li.contacto {
         padding-right: 0; }
-        header nav .navigation ul li.contacto a {
+        header nav .navigation ul li.contacto span {
+          position: relative;
+          z-index: 3; }
+        header nav .navigation ul li.contacto button {
           background-color: var(--color-anaranjado);
           padding: 15px 25px;
           color: #fff;
-          border-radius: 20px; }
+          border-radius: 20px;
+          position: relative;
+          overflow: hidden;
+          border: none;
+          font-family: var(--fuente-Ubuntu);
+          font-weight: 500;
+          font-size: 20px;
+          cursor: pointer;
+          z-index: 2; }
+          header nav .navigation ul li.contacto button::after {
+            content: "";
+            position: absolute;
+            top: calc(var(--y, 0) * 1px - 50px);
+            left: calc(var(--x, 0) * 1px - 50px);
+            width: 100px;
+            height: 100px;
+            background: #d88a5f85;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.5s; }
+          header nav .navigation ul li.contacto button::before {
+            content: "";
+            position: absolute;
+            top: calc(var(--y, 0) * 1px - 30px);
+            left: calc(var(--x, 0) * 1px - 30px);
+            width: 60px;
+            height: 60px;
+            background: #d9a08185;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.5s; }
+          header nav .navigation ul li.contacto button:hover::after {
+            opacity: 1; }
+          header nav .navigation ul li.contacto button:hover::before {
+            opacity: 1; }
       header nav .navigation ul li.fex {
         position: relative; }
         header nav .navigation ul li.fex::after {
@@ -212,6 +286,7 @@ header::before {
   bottom: 0;
   background: var(--color-verde);
   height: 3px;
+  border-radius: 10px;
   -webkit-transition-property: right;
   transition-property: right;
   -webkit-transition-duration: 0.3s;
@@ -257,8 +332,7 @@ section.home {
         color: var(--color-verde); }
     section.home .content p {
       width: 58%;
-      padding: 50px 0;
-      padding-bottom: 65px; }
+      padding: 50px 0; }
       section.home .content p span {
         font-weight: 700; }
 
@@ -352,7 +426,7 @@ section.soluciones {
     align-items: flex-start; }
     section.soluciones .grid-soluciones .item img {
       width: 80%;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       position: relative; }
     section.soluciones .grid-soluciones .item lottie-player {
       width: 80% !important;
@@ -923,7 +997,38 @@ section.home-servicios-interna .content {
       border: 0;
       color: #fff;
       cursor: pointer;
-      margin-top: 30px; }
+      margin-top: 30px;
+      position: relative;
+      overflow: hidden; }
+      .formulario form button span {
+        position: relative;
+        z-index: 3; }
+      .formulario form button::after {
+        content: "";
+        position: absolute;
+        top: calc(var(--y, 0) * 1px - 50px);
+        left: calc(var(--x, 0) * 1px - 50px);
+        width: 100px;
+        height: 100px;
+        background: #d88a5f85;
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.5s; }
+      .formulario form button::before {
+        content: "";
+        position: absolute;
+        top: calc(var(--y, 0) * 1px - 30px);
+        left: calc(var(--x, 0) * 1px - 30px);
+        width: 60px;
+        height: 60px;
+        background: #d9a08185;
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.5s; }
+      .formulario form button:hover::after {
+        opacity: 1; }
+      .formulario form button:hover::before {
+        opacity: 1; }
 
 section.beneficios {
   padding-top: 140px;
