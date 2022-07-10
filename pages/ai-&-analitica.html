@@ -70,9 +70,11 @@
             <div class="container">
                 <div class="content">
                     <div class="part1">
-                        <lottie-player src="../json/Servicio4interna_nuevo.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+                        <div class="contenido">
+                            <lottie-player src="../json/Servicio4interna_nuevo.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
                         <h1>AI & Analítica</h1>
                         <p>Con nuestro servicio de AI & Analítica ayudamos a las empresas a conocer el valor real de sus datos para tomar decisiones efectivas, mediante el análisis de grandes volúmenes de datos. De esta manera, podrá construir modelos predictivos con análisis estadísticos, mediante soluciones de optimización y machine learning.</p>
+                        </div>                        
                     </div>
                     <div class="part2">
                         <div class="formulario">
@@ -80,29 +82,29 @@
                             <form action="thanks.html" method="">
                                 <div class="form-group formname">
                                     <label for="name">Nombres y Apellidos:</label>
-                                    <input type="text" required="true" name="name" id="name">
+                                    <input type="text" required="true" name="name" id="name" class="input_text">
                                     <span></span>
                                 </div>
                                 <div class="form-group formaempresa">
                                     <label for="name-empresa">Empresa:</label>
-                                    <input type="text" required="true" name="name-empresa" id="name-empresa">
+                                    <input type="text" required="true" name="name-empresa" id="name-empresa" class="input_text">
                                     <span></span>
                                 </div>
                                 <div class="form-group formcorreo">
                                     <label for="email">Email:</label>
-                                    <input type="text" required="true" name="email" id="email">
+                                    <input type="text" required="true" name="email" id="email" class="input_text">
                                     <span></span>
                                 </div>
                                 <div class="form-group formtel">
                                     <label for="telephone">Teléfono:</label>
-                                    <input type="text" required="true" name="telephone" id="telephone">
+                                    <input type="text" required="true" name="telephone" id="telephone" class="input_text">
                                     <span></span>
                                 </div>
                                 <div class="checkbox-box">                        
                                     <input type="checkbox" required=""> 
                                     <p>Acepto los <a href="proteccion-de-datos.html">términos y condiciones</a> legales.</p>
                                 </div> 
-                                <button class="shiny"><span>Enviar</span></button>
+                                <button class="shiny enviar" type="submit"><span>Enviar</span></button>
                             </form>
                         </div>
                     </div>

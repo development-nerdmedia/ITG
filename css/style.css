@@ -493,7 +493,7 @@ section.novedades {
     padding-left: 180px; }
     section.novedades .slider-novedades .item {
       width: 425px !important;
-      border: 3px solid #338ECD;
+      border: 2px solid #338ECD;
       border-radius: 10px;
       padding: 30px;
       margin: 0 30px;
@@ -548,8 +548,6 @@ section.novedades {
             opacity: 0.7; }
             section.novedades .slider-novedades .item .btn a:hover img {
               left: -1px; }
-    section.novedades .slider-novedades .slick-track .item:first-child {
-      margin-left: 0 !important; }
     section.novedades .slider-novedades .slick-prev {
       left: -22.5vw;
       background-image: url(../icons/flecha-slider.svg);
@@ -616,7 +614,7 @@ footer {
         width: 510px;
         height: 58px;
         border-radius: 10px;
-        border: 3px solid var(--color-celeste);
+        border: 2px solid var(--color-celeste);
         background-color: transparent;
         outline: none !important;
         appearance: none;
@@ -841,7 +839,7 @@ section.home-servicios-interna .content {
   padding-top: 241.39px; }
   section.home-servicios-interna .content .part1 {
     width: 50%;
-    padding-right: 120px; }
+    padding-right: 50px; }
     section.home-servicios-interna .content .part1 lottie-player {
       width: 228px !important;
       height: auto !important; }
@@ -853,6 +851,9 @@ section.home-servicios-interna .content {
       padding-top: 20px; }
     section.home-servicios-interna .content .part1 p {
       padding-top: 10px; }
+    section.home-servicios-interna .content .part1 .contenido {
+      max-width: 630px;
+      margin: 0 auto; }
   section.home-servicios-interna .content .part2 {
     width: 50%; }
 
@@ -1049,6 +1050,7 @@ section.beneficios {
       section.beneficios .content .part1 lottie-player {
         height: auto;
         width: 61.69%;
+        margin: 0 auto 0 39px;
         margin-bottom: 20px; }
     section.beneficios .content .part2 {
       width: 50%;
@@ -1078,6 +1080,7 @@ section.beneficios {
 section.tarjeta-contacto {
   padding: 70px 0; }
   section.tarjeta-contacto .content {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1177,7 +1180,7 @@ section.competencias {
     section.competencias .slider-competencias .item {
       margin: 0 30px;
       border-radius: 10px;
-      border: 3px solid var(--color-celeste);
+      border: 2px solid var(--color-celeste);
       padding: 30px 0; }
       section.competencias .slider-competencias .item img {
         padding: 0 30px;
@@ -1190,7 +1193,7 @@ section.competencias {
         section.competencias .slider-competencias .item .info::after {
           content: '';
           width: 100%;
-          height: 2.5px;
+          height: 2px;
           position: absolute;
           top: 0;
           background-color: var(--color-celeste);
@@ -1275,7 +1278,8 @@ section.proteccion {
   section.proteccion .fondo {
     position: absolute;
     bottom: -245px;
-    z-index: -3; }
+    z-index: -3;
+    opacity: 0.5; }
   section.proteccion .container {
     width: 40%; }
   section.proteccion .content {
@@ -1301,7 +1305,8 @@ section.thanks-page {
   section.thanks-page .fondo {
     position: absolute;
     bottom: 0;
-    width: 100%; }
+    width: 100%;
+    opacity: 0.5; }
   section.thanks-page .content {
     display: flex;
     justify-content: center;
@@ -1399,7 +1404,8 @@ section.footer-contacto {
   section.footer-contacto img.fondo {
     position: absolute;
     bottom: 45px;
-    z-index: -3; }
+    z-index: -3;
+    opacity: 0.5; }
   section.footer-contacto h3 {
     font-family: var(--fuente-Ubuntu);
     font-weight: 500;
@@ -1488,6 +1494,19 @@ section.main-article {
           color: var(--color-celeste);
           transition: 0.2s linear; }
           section.main-article .content .part2 .category span:hover {
+            background-color: var(--color-celeste);
+            color: #fff; }
+        section.main-article .content .part2 .category a {
+          text-decoration: none;
+          padding: 10px 19px;
+          border-radius: 20px;
+          border: 1px solid var(--color-celeste);
+          font-family: var(--fuente-Ubuntu);
+          font-weight: 500;
+          font-size: 20px;
+          color: var(--color-celeste);
+          transition: 0.2s linear; }
+          section.main-article .content .part2 .category a:hover {
             background-color: var(--color-celeste);
             color: #fff; }
       section.main-article .content .part2 h2 {

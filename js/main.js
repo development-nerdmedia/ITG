@@ -1,38 +1,15 @@
 
-// var button = document.querySelector(".shiny");
-// var button2 = document.querySelector(".shiny2");
-// var button3 = document.querySelector(".shiny3");
-
-// button.addEventListener("mousemove", (e) => {
-//   const { x, y } = button.getBoundingClientRect();
-//   button.style.setProperty("--x", e.clientX - x);
-//   button.style.setProperty("--y", e.clientY - y);
-// });
-
-// button2.addEventListener("mousemove", (e) => {
-//   const { x, y } = button2.getBoundingClientRect();
-//   button2.style.setProperty("--x", e.clientX - x);
-//   button2.style.setProperty("--y", e.clientY - y);
-// });
-
-// button3.addEventListener("mousemove", (e) => {
-//     const { x, y } = button3.getBoundingClientRect();
-//     button3.style.setProperty("--x", e.clientX - x);
-//     button3.style.setProperty("--y", e.clientY - y);
-// });
-
-
-function hoverStyle(event){
+function hoverStyle(event) {
     event.addEventListener("mousemove", (e) => {
-      const { x, y } = event.getBoundingClientRect();
-      event.style.setProperty("--x", e.clientX - x);
-      event.style.setProperty("--y", e.clientY - y);
+        const { x, y } = event.getBoundingClientRect();
+        event.style.setProperty("--x", e.clientX - x);
+        event.style.setProperty("--y", e.clientY - y);
     });
-  }
-  
-  
+}
+
+
 var shiny = document.querySelectorAll('.shiny');
-  shiny.forEach(function(shinyItem) {
+shiny.forEach(function (shinyItem) {
     hoverStyle(shinyItem);
 });
 
@@ -65,7 +42,7 @@ MyApp = {
                     } else {
                         document.querySelector(".formname").classList.add("ok");
                     }
-                }                
+                }
                 if (e.target.closest(".formcorreo")) {
                     document.querySelector(".formcorreo").classList.add("focusin");
                     document.querySelector(".formcorreo span").classList.add("animacion");
@@ -105,6 +82,15 @@ MyApp = {
                         document.querySelector(".formaempresa").classList.add("ok");
                     }
                 }
+                // if (e.target.closest(".enviar")) {
+                //     e.preventDefault();
+                //     inputText = document.getElementsByClassName('input_text').value;
+                //     if (!inputText) {
+                //         console.log("falta");
+                //     } else {
+                //         console.log("esta listo");
+                //     }
+                // }
             })
         }
     },
@@ -123,7 +109,7 @@ MyApp = {
                     } else {
                         document.querySelector(".formname").classList.add("ok");
                     }
-                }                
+                }
                 if (e.target.closest(".formcorreo")) {
                     document.querySelector(".formcorreo").classList.add("focusin");
                     document.querySelector(".formcorreo span").classList.add("animacion");
@@ -181,7 +167,7 @@ MyApp = {
                     } else {
                         document.querySelector(".formname").classList.add("ok");
                     }
-                }     
+                }
                 if (e.target.closest(".formaempresa")) {
                     document.querySelector(".formaempresa").classList.add("focusin");
                     document.querySelector(".formaempresa span").classList.add("animacion");
@@ -194,7 +180,7 @@ MyApp = {
                     } else {
                         document.querySelector(".formaempresa").classList.add("ok");
                     }
-                } 
+                }
                 if (e.target.closest(".formcargo")) {
                     document.querySelector(".formcargo").classList.add("focusin");
                     document.querySelector(".formcargo span").classList.add("animacion");
@@ -207,7 +193,7 @@ MyApp = {
                     } else {
                         document.querySelector(".formcargo").classList.add("ok");
                     }
-                }           
+                }
                 if (e.target.closest(".formcorreo")) {
                     document.querySelector(".formcorreo").classList.add("focusin");
                     document.querySelector(".formcorreo span").classList.add("animacion");
@@ -249,15 +235,15 @@ MyApp = {
                 }
                 if (e.target.closest(".formmotivo select")) {
                     document.querySelector(".formmotivo").classList.add("open");
-                }else{
+                } else {
                     document.querySelector(".formmotivo").classList.remove("open");
-                }       
-            
+                }
+
                 if (e.target.closest(".formasunto select")) {
                     document.querySelector(".formasunto").classList.add("open");
-                }else{
+                } else {
                     document.querySelector(".formasunto").classList.remove("open");
-                }   
+                }
             })
         }
     },
@@ -279,11 +265,11 @@ MyApp = {
                 }
             })
         }
-    } ,    
+    },
     slider_novedades_home: {
         init: function () {
             document.addEventListener("click", function (e) {
-                if (e.target.closest(".slider-novedades .item .info a")) {
+                if (e.target.closest(".slider-novedades .item .info a") || e.target.closest(".main-article .category a")) {
                     const titleService = e.target.textContent;
                     localStorage.setItem('CatNovedad', `${titleService}`);
                 }
@@ -292,7 +278,7 @@ MyApp = {
     },
     category: {
         init: function () {
-            document.querySelector("#categorias li a").classList.add("select");            
+            document.querySelector("#categorias li a").classList.add("select");
             $(`.destacado`).hide();
             var categoriaNovedad = localStorage.getItem("CatNovedad");
             if (categoriaNovedad == "none") {
@@ -318,12 +304,12 @@ MyApp = {
             console.log(categoryMain);
             if (categoryMain === "Todo") {
                 $(`.item`).show(0);
-            }else{                
+            } else {
                 $(`.item[data-categoria="${categoryMain}"]`).show(0);
             }
-            
+
             if (categoryMain === "Caso de éxito") {
-                $(`.destacado`).show();  
+                $(`.destacado`).show();
             }
 
             // enlaces = document.querySelectorAll('#categorias a');//original
@@ -338,16 +324,16 @@ MyApp = {
                     $(`.item[data-categoria="${categoria}"]`).show();
                     $(`.destacado`).hide();
                     if (categoria === "Todo") {
-                        $(`.item`).show();  
+                        $(`.item`).show();
                     }
                     if (categoria === "Caso de éxito") {
-                        $(`.destacado`).show();  
+                        $(`.destacado`).show();
                     }
                 })
             })
         }
     },
-    scrollRedes:{
+    scrollRedes: {
         init: function () {
             $(document).ready(function (argument) {
                 // AOS.init();
@@ -355,12 +341,12 @@ MyApp = {
                     $(".scroll").stick_in_parent({
                         offset_top: 180
                     });
-                }   
+                }
             })
         }
     },
     slider_aliados: {
-        init: function () {            
+        init: function () {
             $('.marquee-with-options').marquee({
                 speed: 30000,
                 gap: 50,
@@ -400,7 +386,7 @@ if ($('.main-article .redes').length > 0) {
     MyApp.scrollRedes.init();
 }
 
-if ($('.slider-novedades').length > 0) {
+if ($('.slider-novedades').length > 0 || $('.main-article').length > 0) {
     MyApp.slider_novedades_home.init();
 }
 
@@ -415,9 +401,10 @@ document.addEventListener("click", (e) => {
 })
 
 $('.slider-novedades').slick({
-    infinite: false,
+    infinite: true,
     speed: 300,
     dots: false,
+    autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
@@ -427,7 +414,7 @@ $('.slider-novedades').slick({
                 slidesToShow: 3,/* 1.94 */
                 slidesToScroll: 1,
             }
-        },        
+        },
         {
             breakpoint: 1440,
             settings: {
@@ -472,7 +459,7 @@ $('.slider-competencias').slick({
     infinite: true,
     speed: 300,
     dots: false,
-    autoplay: true,    
+    autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
@@ -482,7 +469,7 @@ $('.slider-competencias').slick({
                 slidesToShow: 3,/* 1.94 */
                 slidesToScroll: 1,
             }
-        },        
+        },
         {
             breakpoint: 1440,
             settings: {
