@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>ITG | Contacto</title>
 </head>
@@ -69,9 +70,11 @@
         <section class="contact-page">
             <div class="container">
                 <div class="content">
-                    <h1>¿Cómo podemos ayudarte?</h1>
-                    <p>Para poder ofrecer la solución de TI adecuada para su negocio, complete este formulario y nos pondremos en contacto lo más pronto posible. </p>
-                    <div class="formulario">
+                    <div data-aos="fade-right" data-aos-once="true">
+                        <h1>¿Cómo podemos ayudarte?</h1>
+                        <p>Para poder ofrecer la solución de TI adecuada para su negocio, complete este formulario y nos pondremos en contacto lo más pronto posible. </p>
+                    </div>
+                    <div class="formulario" data-aos="fade-left" data-aos-once="true">
                         <form action="thanks.html" method="">
                             <div class="form-group formname">
                                 <label for="name">Nombres y Apellidos:</label>
@@ -100,19 +103,19 @@
                             </div>
                             <div class="form-group formmotivo">
                                 <select name="motivo" id="motivo">
-                                    <option value="">Motivo:</option>
-                                    <option value="">Motivo1</option>
-                                    <option value="">Motivo2</option>
-                                    <option value="">Motivo3</option>
+                                    <option value="0">Motivo:</option>
+                                    <option value="Motivo1">Motivo1</option>
+                                    <option value="Motivo2">Motivo2</option>
+                                    <option value="Motivo3">Motivo3</option>
                                 </select>
                                 <span></span>
                             </div>
                             <div class="form-group formasunto">
                                 <select name="asunto" id="asunto">
-                                    <option value="">Asunto:</option>
-                                    <option value="">Asunto1</option>
-                                    <option value="">Asunto2</option>
-                                    <option value="">Asunto3</option>
+                                    <option value="0">Asunto:</option>
+                                    <option value="Asunto1">Asunto1</option>
+                                    <option value="Asunto2">Asunto2</option>
+                                    <option value="Asunto3">Asunto3</option>
                                 </select>
                                 <span></span>
                             </div>
@@ -123,11 +126,11 @@
                                 <span></span>
                             </div>
                             <div class="checkbox-box">                        
-                                <input type="checkbox" required=""> 
+                                <input type="checkbox" required="" id="terminos"> 
                                 <p>Acepto los <a href="proteccion-de-datos.html">términos y condiciones</a> legales.</p>
                             </div> 
                             <div class="btn">                                
-                                <button class="shiny"><span>Enviar</span></button>
+                                <button class="shiny enviar" type="submit"><span>Enviar</span></button>
                             </div>
                         </form>
                     </div>                    
@@ -138,9 +141,9 @@
             <img class="fondo" src="../img/lineas-fondo.png" alt="">
             <div class="container">
                 <div class="content">                    
-                    <h2>Crezcamos juntos</h2>
+                    <h2 data-aos="fade-right" data-aos-once="true">Crezcamos juntos</h2>
                     <div class="flex">
-                        <div class="oficina">
+                        <div class="oficina" data-aos="fade-right" data-aos-once="true">
                             <h3>Oficina</h3>
                             <div class="info">
                                 <div>
@@ -154,12 +157,12 @@
                                 </div>
                             </div>                            
                         </div>
-                        <div class="soporte">
+                        <div class="soporte" data-aos="fade-left" data-aos-once="true">
                             <h3>Soporte</h3>
                             <p>986 649 371</p>
                             <p>24 / 7</p>
                         </div>
-                        <div class="redes">
+                        <div class="redes" data-aos="fade-left" data-aos-once="true">
                             <a href="">
                                 <img src="../icons/facebook.svg" alt="">
                             </a>
@@ -176,8 +179,8 @@
             <div class="pie">
                 <div class="container">
                     <div class="content">
-                        <p>2022 Todos lo derechos reservados </p>
-                        <div class="creditos">
+                        <p data-aos="fade-right" data-aos-once="true" data-aos-offset="10">2022 Todos lo derechos reservados </p>
+                        <div class="creditos" data-aos="fade-left" data-aos-once="true" data-aos-offset="10">
                             <p>Hecho con amor</p>
                             <img class="corazon" src="../icons/corazon.svg" alt="">
                             <a href="https://www.nerdmedia.pe/" target="_blank">
@@ -198,6 +201,7 @@
     defer=""
     src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
   ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/leafo/sticky-kit@v1.1.2/jquery.sticky-kit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>

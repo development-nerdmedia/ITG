@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
     <title>ITG | Seguridad</title>
   </head>
@@ -86,7 +87,7 @@
         <img src="../img/fondo-internas.png" alt="" />
         <div class="container">
           <div class="content">
-            <div class="part1">
+            <div class="part1" data-aos="fade-right" data-aos-once="true">
               <div class="contenido">
                 <lottie-player
                   src="../json/Servicio3interna_nuevo.json"
@@ -109,7 +110,7 @@
                 </p>
               </div>
             </div>
-            <div class="part2">
+            <div class="part2" data-aos="fade-left" data-aos-once="true">
               <div class="formulario">
                 <h3>Estamos para ayudarte</h3>
                 <form action="thanks.html" method="">
@@ -149,7 +150,7 @@
                     <span></span>
                   </div>
                   <div class="checkbox-box">
-                    <input type="checkbox" required="" />
+                    <input type="checkbox" required="" id="terminos"/>
                     <p>
                       Acepto los
                       <a href="proteccion-de-datos.html"
@@ -158,7 +159,7 @@
                       legales.
                     </p>
                   </div>
-                  <button class="shiny"><span>Enviar</span></button>
+                  <button class="shiny enviar" type="submit"><span>Enviar</span></button>
                 </form>
               </div>
             </div>
@@ -168,7 +169,7 @@
       <section class="beneficios">
         <div class="container">
           <div class="content">
-            <div class="part1">
+            <div class="part1" data-aos="fade-right" data-aos-once="true">
               <!-- <img src="../img/beneficios-seguridad.png" alt=""> -->
               <lottie-player
                 src="../json/Servicio3_interna_main.json"
@@ -179,7 +180,7 @@
               ></lottie-player>
               <h2>Nuestros beneficios están pensados en tu negocio.</h2>
             </div>
-            <div class="part2">
+            <div class="part2" data-aos="fade-left" data-aos-once="true">
               <ul>
                 <li>Protege tu servidor web de ataques cibernéticos.</li>
                 <li>
@@ -211,7 +212,7 @@
       </section>
       <section class="tarjeta-contacto">
         <div class="container">
-          <div class="content">
+          <div class="content" data-aos="fade-right" data-aos-once="true">
             <div class="part1">
               <h3>Tenemos la solución tecnológica ideal para tu empresa</h3>
             </div>
@@ -230,7 +231,7 @@
       </div>
       <div class="container">
         <div class="content">
-          <div class="part1">
+          <div class="part1" data-aos="fade-right" data-aos-once="true">
             <h2>¿Interesado? Déjanos tu correo y conversemos</h2>
             <form action="">
               <div class="form-group formemail">
@@ -247,7 +248,7 @@
               </button>
             </form>
           </div>
-          <div class="part2">
+          <div class="part2" data-aos="fade-left" data-aos-once="true">
             <ul>
               <li>Socios</li>
               <li>
@@ -263,14 +264,23 @@
               <li>Trabaja con nosotros</li>
             </ul>
           </div>
-          <div class="part3">
+          <div class="part3" data-aos="fade-left" data-aos-once="true">
             <ul>
               <li>Datos de contacto</li>
             </ul>
             <div class="redes">
-              <img src="../icons/facebook.svg" alt="" />
-              <img src="../icons/linkedin.svg" alt="" />
-              <img src="../icons/twitter.svg" alt="" />
+              <a href="#" target="_blank">
+                <img src="../icons/facebook.svg" alt="" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/itg-solutions/"
+                target="_blank"
+              >
+                <img src="../icons/linkedin.svg" alt="" />
+              </a>
+              <a href="#" target="_blank">
+                <img src="../icons/twitter.svg" alt="" />
+              </a>
             </div>
             <p>servicioalcliente@itgsolutions.com.pe</p>
             <p>
@@ -284,19 +294,12 @@
       <div class="pie">
         <div class="container">
           <div class="content">
-            <p>2022 Todos lo derechos reservados</p>
-            <div class="redes">
-              <a href="#" target="_blank">
-                <img src="../icons/facebook.svg" alt="" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/itg-solutions/"
-                target="_blank"
-              >
-                <img src="../icons/linkedin.svg" alt="" />
-              </a>
-              <a href="#" target="_blank">
-                <img src="../icons/twitter.svg" alt="" />
+            <p data-aos="fade-right" data-aos-once="true" data-aos-offset="10">2022 Todos lo derechos reservados</p>
+            <div class="creditos" data-aos="fade-left" data-aos-once="true" data-aos-offset="10">
+              <p>Hecho con amor</p>
+              <img class="corazon" src="../icons/corazon.svg" alt="" />
+              <a href="https://www.nerdmedia.pe/" target="_blank">
+                <img src="../icons/logonerd.svg" alt="" />
               </a>
             </div>
           </div>
@@ -312,6 +315,7 @@
       defer=""
       src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/leafo/sticky-kit@v1.1.2/jquery.sticky-kit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>

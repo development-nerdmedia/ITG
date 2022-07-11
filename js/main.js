@@ -1,4 +1,4 @@
-
+AOS.init();
 function hoverStyle(event) {
     event.addEventListener("mousemove", (e) => {
         const { x, y } = event.getBoundingClientRect();
@@ -48,9 +48,9 @@ MyApp = {
                     document.querySelector(".formcorreo span").classList.add("animacion");
                 } else {
                     document.querySelector(".formcorreo").classList.remove("focusin");
-                    asunto = document.getElementById('email').value;
+                    email = document.getElementById('email').value;
                     document.querySelector(".formcorreo span").classList.remove("animacion");
-                    if (!asunto) {
+                    if (!email) {
                         document.querySelector(".formcorreo").classList.remove("ok");
                     } else {
                         document.querySelector(".formcorreo").classList.add("ok");
@@ -61,9 +61,9 @@ MyApp = {
                     document.querySelector(".formtel span").classList.add("animacion");
                 } else {
                     document.querySelector(".formtel").classList.remove("focusin");
-                    textarea = document.getElementById('telephone').value;
+                    tel = document.getElementById('telephone').value;
                     document.querySelector(".formtel span").classList.remove("animacion");
-                    if (!textarea) {
+                    if (!tel) {
                         document.querySelector(".formtel").classList.remove("ok");
                     } else {
                         document.querySelector(".formtel").classList.add("ok");
@@ -74,23 +74,54 @@ MyApp = {
                     document.querySelector(".formaempresa span").classList.add("animacion");
                 } else {
                     document.querySelector(".formaempresa").classList.remove("focusin");
-                    email = document.getElementById('name-empresa').value;
+                    empresa = document.getElementById('name-empresa').value;
                     document.querySelector(".formaempresa span").classList.remove("animacion");
-                    if (!email) {
+                    if (!empresa) {
                         document.querySelector(".formaempresa").classList.remove("ok");
                     } else {
                         document.querySelector(".formaempresa").classList.add("ok");
                     }
                 }
-                // if (e.target.closest(".enviar")) {
-                //     e.preventDefault();
-                //     inputText = document.getElementsByClassName('input_text').value;
-                //     if (!inputText) {
-                //         console.log("falta");
-                //     } else {
-                //         console.log("esta listo");
-                //     }
-                // }
+                if (e.target.closest(".enviar")) {      
+                    valorNombre = 0;
+                    valorEmpresa = 0;
+                    valorEmail = 0;
+                    valorTelefono = 0;
+                    valorCheckbox = 0;
+                    if (!document.getElementById('name').value) {
+                        document.querySelector(".formname span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorNombre = 1;
+                    }
+                    if (!document.getElementById('email').value) {
+                        document.querySelector(".formcorreo span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorEmail = 1;
+                    }
+                    if (!document.getElementById('telephone').value) {
+                        document.querySelector(".formtel span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorTelefono = 1;
+                    }
+                    if (!document.getElementById('name-empresa').value) {
+                        document.querySelector(".formaempresa span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorEmpresa = 1;
+                    }
+                    if ($('#terminos').is(':checked')) {   
+                        valorCheckbox = 1;                     
+                    }else{
+                        document.querySelector(".checkbox-box").classList.add("falto");
+                    }
+                    if (valorCheckbox * valorEmail * valorEmpresa * valorNombre * valorTelefono == 1) {
+                        document.querySelector("form").submit();    
+                        document.querySelector("form").reset();    
+                    }                    
+                }
             })
         }
     },
@@ -148,6 +179,46 @@ MyApp = {
                     } else {
                         document.querySelector(".formmensaje").classList.add("ok");
                     }
+                }
+
+                if (e.target.closest(".enviar")) {      
+                    valorNombre = 0;
+                    valorEmail = 0;
+                    valorTelefono = 0;
+                    valorMensaje = 0;
+                    if (!document.getElementById('name').value) {
+                        document.querySelector(".formname span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorNombre = 1;
+                    }
+                    if (!document.getElementById('email').value) {
+                        document.querySelector(".formcorreo span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorEmail = 1;
+                    }
+                    if (!document.getElementById('telephone').value) {
+                        document.querySelector(".formtel span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorTelefono = 1;
+                    }
+                    if (!document.getElementById('mensaje').value) {
+                        document.querySelector(".formmensaje span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorEmpresa = 1;
+                    }
+                    if ($('#terminos').is(':checked')) {   
+                        valorCheckbox = 1;                     
+                    }else{
+                        document.querySelector(".checkbox-box").classList.add("falto");
+                    }
+                    if (valorCheckbox * valorEmail * valorEmpresa * valorNombre * valorTelefono == 1) {
+                        document.querySelector("form").submit();    
+                        document.querySelector("form").reset();    
+                    }                    
                 }
             })
         }
@@ -235,14 +306,85 @@ MyApp = {
                 }
                 if (e.target.closest(".formmotivo select")) {
                     document.querySelector(".formmotivo").classList.add("open");
+                    document.querySelector(".formmotivo span").classList.add("animacion");
                 } else {
                     document.querySelector(".formmotivo").classList.remove("open");
+                    document.querySelector(".formmotivo span").classList.remove("animacion");
                 }
 
                 if (e.target.closest(".formasunto select")) {
                     document.querySelector(".formasunto").classList.add("open");
+                    document.querySelector(".formasunto span").classList.add("animacion");
                 } else {
                     document.querySelector(".formasunto").classList.remove("open");
+                    document.querySelector(".formasunto span").classList.remove("animacion");
+                }
+
+                if (e.target.closest(".enviar")) {      
+                    valorNombre = 0;
+                    valorEmpresa = 0;
+                    valorCargo = 0;
+                    valorEmail = 0;
+                    valorTelefono = 0;
+                    valorCheckbox = 0;
+                    valorMotivo = 0;
+                    valorAsunto = 0;
+                    valorMensaje = 0;   
+                    let opcionMotivo = document.getElementById('motivo').value;
+                    let opcionAsunto = document.getElementById('asunto').value;
+                    console.log(opcionMotivo);
+                    if (!document.getElementById('name').value) {
+                        document.querySelector(".formname span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorNombre = 1;
+                    }
+                    if (!document.getElementById('cargo').value) {
+                        document.querySelector(".formcargo span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorCargo = 1;
+                    }
+                    if (!document.getElementById('email').value) {
+                        document.querySelector(".formcorreo span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorEmail = 1;
+                    }
+                    if (!document.getElementById('telephone').value) {
+                        document.querySelector(".formtel span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorTelefono = 1;
+                    }
+                    if (!document.getElementById('name-empresa').value) {
+                        document.querySelector(".formaempresa span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorEmpresa = 1;
+                    }
+                    if (!document.getElementById('mensaje').value) {
+                        document.querySelector(".formmensaje span").classList.add("falto");
+                        e.preventDefault();              
+                    }else{
+                        valorEmpresa = 1;
+                    }
+                    if (opcionMotivo == '0') {                        
+                        document.querySelector(".formmotivo span").classList.add("falto");
+                    }
+                    if (opcionAsunto == '0') {                        
+                        document.querySelector(".formasunto span").classList.add("falto");
+                    }
+                    if ($('#terminos').is(':checked')) {   
+                        valorCheckbox = 1;                     
+                    }else{
+                        document.querySelector(".checkbox-box").classList.add("falto");
+                    }
+                    if (valorCheckbox * valorCargo * valorEmail * valorEmpresa * valorNombre * valorTelefono == 1) {
+                        document.querySelector("form").submit();    
+                        document.querySelector("form").reset();    
+                    }
+                    
                 }
             })
         }

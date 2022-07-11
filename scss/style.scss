@@ -1183,6 +1183,12 @@ section.home-servicios-interna{
                 transform: scaleX(1);
                 -webkit-transform: scaleX(1);
             }
+            span.falto{
+                background-color: var(--color-anaranjado);
+                -ms-transform: scaleX(1);
+                transform: scaleX(1);
+                -webkit-transform: scaleX(1);
+            }
             &::before{
                 background-image: url(../icons/vineta-input.svg);
                 background-repeat: no-repeat;
@@ -1295,6 +1301,15 @@ section.home-servicios-interna{
                 }
             }
         }
+        .checkbox-box.falto{
+            p{
+                color: var(--color-anaranjado);                
+                a{
+                    color: var(--color-anaranjado);
+                }
+            }
+        }
+
         button{
             padding: 15px 50px;
             background-color: var(--color-anaranjado);
@@ -1768,6 +1783,9 @@ section.contact-page{
             .form-group span{
                 background-color: var(--color-celeste);
             }
+            .form-group span.falto{
+                background-color: var(--color-anaranjado);
+            }
         }
         label{
             color: var(--color-celeste);
@@ -1778,13 +1796,21 @@ section.contact-page{
             box-shadow: inset 0 -4px 0 0 rgba(51, 142, 205, 0.39);
         }
         .checkbox-box{            
-        P{
-            color: var(--color-gris);
-            padding-top: 0;
-            a{
+            P{
                 color: var(--color-gris);
+                padding-top: 0;
+                a{
+                    color: var(--color-gris);
+                }
             }
         }
+        .checkbox-box.falto{            
+            P{
+                color: var(--color-anaranjado);
+                a{
+                    color: var(--color-anaranjado);
+                }
+            }
         }
         select{
             height: 48px;

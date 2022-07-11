@@ -901,6 +901,11 @@ section.home-servicios-interna .content {
         -ms-transform: scaleX(1);
         transform: scaleX(1);
         -webkit-transform: scaleX(1); }
+      .formulario form .form-group span.falto {
+        background-color: var(--color-anaranjado);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1); }
       .formulario form .form-group::before {
         background-image: url(../icons/vineta-input.svg);
         background-repeat: no-repeat;
@@ -988,6 +993,10 @@ section.home-servicios-interna .content {
         font-family: var(--fuente-Ubuntu); }
         .formulario form .checkbox-box p a {
           color: #fff; }
+    .formulario form .checkbox-box.falto p {
+      color: var(--color-anaranjado); }
+      .formulario form .checkbox-box.falto p a {
+        color: var(--color-anaranjado); }
     .formulario form button {
       padding: 15px 50px;
       background-color: var(--color-anaranjado);
@@ -1353,6 +1362,8 @@ section.contact-page {
       width: 84%; }
       section.contact-page .content form .form-group span {
         background-color: var(--color-celeste); }
+      section.contact-page .content form .form-group span.falto {
+        background-color: var(--color-anaranjado); }
     section.contact-page .content label {
       color: var(--color-celeste); }
     section.contact-page .content input, section.contact-page .content textarea {
@@ -1364,6 +1375,10 @@ section.contact-page {
       padding-top: 0; }
       section.contact-page .content .checkbox-box P a {
         color: var(--color-gris); }
+    section.contact-page .content .checkbox-box.falto P {
+      color: var(--color-anaranjado); }
+      section.contact-page .content .checkbox-box.falto P a {
+        color: var(--color-anaranjado); }
     section.contact-page .content select {
       height: 48px;
       width: 100%;
