@@ -1,4 +1,6 @@
 AOS.init();
+const URLactual = window.location;
+
 function hoverStyle(event) {
     event.addEventListener("mousemove", (e) => {
         const { x, y } = event.getBoundingClientRect();
@@ -7,12 +9,23 @@ function hoverStyle(event) {
     });
 }
 
-
 var shiny = document.querySelectorAll('.shiny');
 shiny.forEach(function (shinyItem) {
     hoverStyle(shinyItem);
 });
 
+document.addEventListener("click", (e) => {
+    if (e.target.closest("li a")) {
+        localStorage.setItem('CatNovedad', "none");
+    }
+    if (e.target.closest(".formulario button") || e.target.closest("footer .part1 form button")) {
+        localStorage.setItem('url-actual', `${URLactual}`);
+    }
+    if ($('section.thanks-page .top').length > 0) {
+        var link = localStorage.getItem("url-actual");
+        $('.top a').attr("href", link);
+    }
+})
 
 MyApp = {
     scroll: {
@@ -536,31 +549,19 @@ if ($('.aliados').length > 0) {
     MyApp.slider_aliados.init();
 }
 
-document.addEventListener("click", (e) => {
-    if (e.target.closest("li a")) {
-        localStorage.setItem('CatNovedad', "none");
-    }
-})
 
 $('.slider-novedades').slick({
     infinite: true,
     speed: 300,
     dots: false,
     autoplay: true,
-    slidesToShow: 3,
+    slidesToShow: 3.5,
     slidesToScroll: 1,
     responsive: [
         {
-            breakpoint: 1601,
+            breakpoint: 1441,
             settings: {
-                slidesToShow: 3,/* 1.94 */
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 1440,
-            settings: {
-                slidesToShow: 2,
+                slidesToShow: 3.03,/* 1.94 */
                 slidesToScroll: 1,
             }
         },

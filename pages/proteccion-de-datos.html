@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+    <link  rel="icon"   href="../img/favicon.png" type="image/png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>ITG | Colaboración y productividad</title>
 </head>
@@ -69,13 +71,15 @@
             <img class="fondo" src="../img/lineas-fondo.png" alt="">
             <div class="container">
                 <div class="content">
-                    <h1>Protección de datos</h1>
-                    <p>Al completar este formulario o encuesta alojada en la página de ITG SOLUTIONS, aceptas y autorizas de manera expresa, libre y consciente al titular de ITG SOLUTIONS y su representada a utilizar los datos consignados por ti en dicho formulario para fines informativos y/o publicitarios de los productos y/o actividades que ITG SOLUTIONS realice.
+                    <h1 data-aos="fade-right" data-aos-once="true">Protección de datos</h1>
+                    <div data-aos="fade-left" data-aos-once="true">                        
+                    <p >Al completar este formulario o encuesta alojada en la página de ITG SOLUTIONS, aceptas y autorizas de manera expresa, libre y consciente al titular de ITG SOLUTIONS y su representada a utilizar los datos consignados por ti en dicho formulario para fines informativos y/o publicitarios de los productos y/o actividades que ITG SOLUTIONS realice.
                     </p>
                     <p>ITG SOLUTIONS queda a su vez facultado a mantener dicha información en su base de datos para actividades propias de la empresa y/o de su Servicio al Cliente, garantizando todos los esfuerzos disponibles según el estado del arte para no comprometer la seguridad y privacidad de la misma. En caso de que el suscrito en el formulario brinde información falsa será de su entera responsabilidad.
                     </p>
                     <p>En el momento en que el suscrito desee que sus datos sean eliminados de la base de datos, deberá comunicarlo por escrito al correo servicioalcliente@itgsolutions.com.pe, entendiendo que si en la base de datos se encuentran consignados los suyos en una pluralidad de oportunidades podría ser que al eliminar sus datos queden todavía estos mismos consignados también en una pluralidad de espacios; por lo tanto, es responsabilidad del participante comunicar cuántas veces y de qué formas se ha registrado.
                     </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -86,9 +90,9 @@
         </div>
         <div class="container">
             <div class="content">
-                <div class="part1">
+                <div class="part1" data-aos="fade-right" data-aos-once="true">
                     <h2>¿Interesado? Déjanos tu correo y conversemos</h2>
-                    <form action="">
+                    <form action="thanks.html" method="">
                         <div class="form-group">                            
                             <input required="true" type="email" name="email" id="email">
                             <label for="email">Email</label>
@@ -96,7 +100,7 @@
                         <button type="submit"><img src="../icons/flecha-enviar.svg" alt=""></button>
                     </form>
                 </div>
-                <div class="part2">
+                <div class="part2" data-aos="fade-left" data-aos-once="true">
                     <ul>
                         <li>Socios</li>
                         <li>Soluciones
@@ -111,7 +115,7 @@
                         <li>Trabaja con nosotros</li>
                     </ul>
                 </div>
-                <div class="part3">
+                <div class="part3" data-aos="fade-left" data-aos-once="true">
                     <ul>
                         <li>Datos de contacto</li>
                     </ul>
@@ -135,16 +139,12 @@
         <div class="pie">
             <div class="container">
                 <div class="content">
-                    <p>2022 Todos lo derechos reservados </p>
-                    <div class="redes">
-                        <a href="#" target="_blank">
-                            <img src="../icons/facebook.svg" alt="">
-                        </a>
-                        <a href="https://www.linkedin.com/company/itg-solutions/" target="_blank">
-                            <img src="../icons/linkedin.svg" alt="">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="../icons/twitter.svg" alt="">
+                    <p data-aos="fade-right" data-aos-once="true" data-aos-offset="10">2022 Todos lo derechos reservados </p>
+                    <div class="creditos" data-aos="fade-left" data-aos-once="true" data-aos-offset="10">
+                        <p>Hecho con amor</p>
+                        <img class="corazon" src="../icons/corazon.svg" alt="">
+                        <a href="https://www.nerdmedia.pe/" target="_blank">
+                            <img src="../icons/logonerd.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -160,6 +160,7 @@
     defer=""
     src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
   ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/leafo/sticky-kit@v1.1.2/jquery.sticky-kit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>

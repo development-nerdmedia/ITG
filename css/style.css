@@ -93,7 +93,7 @@ p {
   line-height: 139.4%; }
 
 .container {
-  width: 95%;
+  width: 85%;
   max-width: 1500px;
   margin: 0 auto; }
 
@@ -365,7 +365,8 @@ section.confian {
       display: flex;
       justify-content: center; }
       section.confian .grid-empresas .item img {
-        transition: 0.2s linear; }
+        transition: 0.2s linear;
+        max-width: 100%; }
       section.confian .grid-empresas .item:hover img {
         transform: translateY(-10px); }
 
@@ -492,7 +493,6 @@ section.novedades {
   section.novedades .slider-novedades {
     padding-left: 180px; }
     section.novedades .slider-novedades .item {
-      width: 425px !important;
       border: 2px solid #338ECD;
       border-radius: 10px;
       padding: 30px;
@@ -608,10 +608,11 @@ footer {
       footer .part1 h2::before {
         content: none; }
     footer .part1 form {
-      width: fit-content;
+      width: 100%;
       position: relative; }
       footer .part1 form input {
         width: 510px;
+        width: 100%;
         height: 58px;
         border-radius: 10px;
         border: 2px solid var(--color-celeste);
@@ -875,6 +876,15 @@ section.home-servicios-interna .content {
       margin-bottom: 25px;
       margin-left: 50px;
       position: relative; }
+      .formulario form .form-group::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #ffffff33;
+        border-radius: 15px; }
       .formulario form .form-group span {
         font-weight: inherit;
         background-color: #fff;
@@ -935,8 +945,6 @@ section.home-servicios-interna .content {
         border: 0;
         outline: none !important;
         appearance: none;
-        -webkit-box-shadow: inset 0 -4px 0 0 rgba(255, 255, 255, 0.2);
-        box-shadow: inset 0 -4px 0 0 rgba(255, 255, 255, 0.2);
         background-color: transparent; }
       .formulario form .form-group textarea {
         padding-top: 10px;
@@ -950,9 +958,18 @@ section.home-servicios-interna .content {
         font-size: 20px;
         width: 100%;
         color: #fff;
-        -webkit-box-shadow: inset 0 -4px 0 0 rgba(255, 255, 255, 0.2);
-        box-shadow: inset 0 -4px 0 0 rgba(255, 255, 255, 0.2);
         height: 130px; }
+    .formulario form .form-group.formmensaje::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #ffffff33;
+      border-radius: 15px; }
+    .formulario form .form-group.archivo::after {
+      content: none; }
     .formulario form .formmensaje span {
       bottom: 4px; }
     .formulario form .form-group.focusin label,
@@ -1162,7 +1179,7 @@ section.respaldo {
         height: auto;
         width: auto;
         margin: auto auto 50px auto;
-        width: 85.153%; }
+        width: 79.153%; }
 
 section.aliados {
   padding: 70px 0; }
@@ -1179,6 +1196,8 @@ section.aliados {
       margin: 0 !important; }
     section.aliados .marquee-with-options .item {
       margin: 0 45px; }
+      section.aliados .marquee-with-options .item img {
+        width: 90%; }
 
 section.competencias {
   padding: 70px 0; }
@@ -1192,9 +1211,9 @@ section.competencias {
       border: 2px solid var(--color-celeste);
       padding: 30px 0; }
       section.competencias .slider-competencias .item img {
-        padding: 0 30px;
         padding-bottom: 30px;
-        width: 100%; }
+        width: 80%;
+        margin: 0 auto; }
       section.competencias .slider-competencias .item .info {
         padding: 30px;
         padding-bottom: 0;
@@ -1360,6 +1379,9 @@ section.contact-page {
     section.contact-page .content form {
       margin-top: 20px;
       width: 84%; }
+      section.contact-page .content form .form-group::after {
+        background-color: rgba(51, 142, 205, 0.39);
+        z-index: -2; }
       section.contact-page .content form .form-group span {
         background-color: var(--color-celeste); }
       section.contact-page .content form .form-group span.falto {
@@ -1367,9 +1389,7 @@ section.contact-page {
     section.contact-page .content label {
       color: var(--color-celeste); }
     section.contact-page .content input, section.contact-page .content textarea {
-      color: var(--color-celeste);
-      -webkit-box-shadow: inset 0 -4px 0 0 rgba(51, 142, 205, 0.39);
-      box-shadow: inset 0 -4px 0 0 rgba(51, 142, 205, 0.39); }
+      color: var(--color-celeste); }
     section.contact-page .content .checkbox-box P {
       color: var(--color-gris);
       padding-top: 0; }
@@ -1385,8 +1405,6 @@ section.contact-page {
       border: 0;
       appearance: none;
       outline: none !important;
-      -webkit-box-shadow: inset 0 -4px 0 0 rgba(51, 142, 205, 0.39);
-      box-shadow: inset 0 -4px 0 0 rgba(51, 142, 205, 0.39);
       font-family: var(--fuente-Ubuntu);
       font-weight: 400;
       font-size: 20px;
@@ -1395,9 +1413,9 @@ section.contact-page {
       background-color: transparent; }
       section.contact-page .content select option {
         padding-left: 10px !important; }
-    section.contact-page .content .formmotivo, section.contact-page .content .formasunto {
+    section.contact-page .content .formmotivo div, section.contact-page .content .formasunto div {
       position: relative; }
-      section.contact-page .content .formmotivo::after, section.contact-page .content .formasunto::after {
+      section.contact-page .content .formmotivo div::after, section.contact-page .content .formasunto div::after {
         content: '';
         background-image: url("../icons/flecha-select.svg");
         position: absolute;
@@ -1407,7 +1425,7 @@ section.contact-page {
         height: 12px;
         z-index: -2;
         transform: rotate(-180deg); }
-    section.contact-page .content .formmotivo.open::after, section.contact-page .content .formasunto.open::after {
+    section.contact-page .content .formmotivo.open div::after, section.contact-page .content .formasunto.open div::after {
       transform: rotate(0deg); }
     section.contact-page .content .btn {
       display: flex;
@@ -1671,3 +1689,52 @@ section.blog {
       section.blog .content .paginacion ul li.select a {
         text-decoration: initial;
         border-bottom: 3px solid var(--color-celeste); }
+
+@media (max-width: 1680px) {
+  section.home .content h1 {
+    font-size: 60px; } }
+
+@media (max-width: 1550px) {
+  section.home .content h1 {
+    font-size: 55px; } }
+
+@media (max-width: 1440px) {
+  h2 {
+    font-size: 35px; }
+    h2::before {
+      bottom: 11px; }
+  header nav .logo img {
+    width: 164px; }
+  section.home .content h1 {
+    font-size: 50px; }
+  section.home {
+    height: 54vw;
+    position: relative; }
+    section.home::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      background-color: #e7f3fa; }
+  section.home lottie-player {
+    margin-top: 50px; }
+  section.home .content {
+    padding-top: 75px; }
+  section.confian .grid-empresas {
+    grid-template-columns: repeat(4, 1fr); }
+  section.socios .content .card {
+    width: 276px; }
+  section.soluciones .grid-soluciones {
+    grid-template-columns: repeat(3, 1fr); }
+  section.soluciones .grid-soluciones .item img,
+  section.soluciones .grid-soluciones .item lottie-player {
+    width: 60% !important; }
+  section.soluciones .grid-soluciones .item a img {
+    width: auto !important; }
+  section.novedades .slider-novedades {
+    padding-left: 87px; }
+  section.novedades .slider-novedades .item {
+    margin: 0 16px;
+    padding: 25px; }
+  footer .part1 {
+    max-width: 400px; } }
