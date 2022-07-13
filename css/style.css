@@ -93,7 +93,7 @@ p {
   line-height: 139.4%; }
 
 .container {
-  width: 85%;
+  width: 90%;
   max-width: 1500px;
   margin: 0 auto; }
 
@@ -183,6 +183,8 @@ header {
             opacity: 1; }
           header nav .navigation ul li.contacto button:hover::before {
             opacity: 1; }
+      header nav .navigation ul li.menu-mobile {
+        display: none; }
       header nav .navigation ul li.fex {
         position: relative; }
         header nav .navigation ul li.fex::after {
@@ -299,7 +301,7 @@ header::before {
 
 section.home {
   height: 50vw; }
-  section.home lottie-player {
+  section.home lottie-player.escritorio {
     position: absolute !important;
     width: 100% !important;
     height: auto !important;
@@ -322,7 +324,7 @@ section.home {
   section.home .content {
     margin: auto 0;
     width: 60%;
-    transform: translateY(-12px); }
+    transform: translateY(12px); }
     section.home .content h1 {
       font-family: var(--fuente-Exo);
       font-weight: 700;
@@ -596,6 +598,8 @@ footer {
     z-index: -3; }
     footer .bg-footer img {
       width: 100%; }
+  footer .container {
+    overflow: hidden; }
   footer .content {
     display: flex;
     justify-content: space-between;
@@ -708,7 +712,8 @@ footer {
       padding-bottom: 0; }
   footer .pie {
     display: flex;
-    border-top: 1px solid var(--color-celeste); }
+    border-top: 1px solid var(--color-celeste);
+    overflow: hidden; }
     footer .pie .content {
       padding: 10px 0; }
       footer .pie .content p {
@@ -1690,15 +1695,53 @@ section.blog {
         text-decoration: initial;
         border-bottom: 3px solid var(--color-celeste); }
 
+.animation-responsive {
+  display: none; }
+
 @media (max-width: 1680px) {
+  section.novedades .slider-novedades .slick-next {
+    right: 90px; }
+  section.novedades .slider-novedades .slick-prev {
+    right: 180px; }
+  section.home {
+    height: 51.5vw; }
   section.home .content h1 {
-    font-size: 60px; } }
+    font-size: 60px; }
+  section.home lottie-player.escritorio {
+    margin-top: 20px; }
+  section.home::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #e7f3fa; }
+  section.home .content {
+    transform: translateY(38px); } }
 
 @media (max-width: 1550px) {
   section.home .content h1 {
-    font-size: 55px; } }
+    font-size: 55px; }
+  section.home lottie-player.escritorio {
+    margin-top: 35px; }
+  section.home .content {
+    transform: translateY(59px); }
+  section.home {
+    height: 53vw; } }
 
 @media (max-width: 1440px) {
+  section.soluciones .grid-soluciones {
+    padding: 0 56px; }
+  section.soluciones .grid-soluciones .item h3 {
+    padding-top: 20px; }
+  section.soluciones .grid-soluciones .item p {
+    padding-top: 20px;
+    padding-bottom: 15px; }
+  section.soluciones .grid-soluciones {
+    grid-row-gap: 100px; }
+  section.home .content p {
+    width: 73%; }
+  section.home .content {
+    width: 55%; }
   h2 {
     font-size: 35px; }
     h2::before {
@@ -1716,10 +1759,8 @@ section.blog {
       width: 100%;
       height: 50px;
       background-color: #e7f3fa; }
-  section.home lottie-player {
+  section.home lottie-player.escritorio {
     margin-top: 50px; }
-  section.home .content {
-    padding-top: 75px; }
   section.confian .grid-empresas {
     grid-template-columns: repeat(4, 1fr); }
   section.socios .content .card {
@@ -1732,9 +1773,242 @@ section.blog {
   section.soluciones .grid-soluciones .item a img {
     width: auto !important; }
   section.novedades .slider-novedades {
-    padding-left: 87px; }
+    padding-left: 48px; }
   section.novedades .slider-novedades .item {
     margin: 0 16px;
-    padding: 25px; }
+    padding: 20px; }
+  section.novedades .slider-novedades .item p {
+    padding-bottom: 40px; }
   footer .part1 {
-    max-width: 400px; } }
+    max-width: 400px; }
+  section.somos {
+    padding: 170px 0;
+    padding-bottom: 100px; }
+  section.confian {
+    padding: 100px 0; }
+  section.confian .grid-empresas {
+    padding: 0 30px;
+    padding-top: 20px; }
+  section.socios {
+    padding: 100px 0;
+    padding-bottom: 50px; }
+  section.soluciones {
+    padding: 50px 0; }
+  section.novedades {
+    padding: 50px 0; }
+  footer {
+    padding-top: 90px; } }
+
+@media (max-width: 1310px) {
+  header nav .navigation ul {
+    display: flex;
+    align-items: center; }
+  header nav .navigation ul li {
+    display: none; }
+  header nav .navigation ul li.contacto,
+  header nav .navigation ul li.menu-mobile {
+    display: block; }
+  header nav .navigation ul li.menu-mobile {
+    padding-right: 0;
+    display: flex; } }
+
+@media (max-width: 1280px) {
+  footer .content {
+    display: block; }
+  footer .part1 {
+    width: 100%;
+    max-width: 100%; }
+  footer .part1 form {
+    max-width: 410px; }
+  footer .part2 {
+    margin-right: 12vw; }
+  footer .part2,
+  footer .part3 {
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 40px; }
+  footer .pie .content {
+    display: flex; }
+  section.soluciones .grid-soluciones .item p {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  section.soluciones .grid-soluciones .item img {
+    margin-bottom: 19px; }
+  section.soluciones .grid-soluciones .item lottie-player {
+    margin-bottom: 20px; }
+  section.socios .content .animation {
+    margin: 0 45px;
+    position: relative; }
+  section.soluciones .grid-soluciones .item p {
+    font-size: 20px; }
+  h2 {
+    font-size: 30px; }
+  h2::before {
+    bottom: 3px; }
+  section.home .content h1 {
+    font-size: 45px; }
+  section.home {
+    height: 56vw; }
+  p {
+    font-size: 18px; }
+  section.home::before {
+    height: 72px; }
+  section.home lottie-player.escritorio {
+    margin-top: 65px; }
+  section.home .content {
+    transform: translateY(76px); } }
+
+@media (max-width: 1140px) {
+  section.home lottie-player.escritorio {
+    width: 120% !important;
+    right: 0; }
+  section.home {
+    height: 66vw; }
+  section.somos {
+    padding: 100px 0;
+    padding-bottom: 100px; } }
+
+@media (max-width: 1024px) {
+  section.confian .grid-empresas {
+    grid-template-columns: repeat(3, 1fr); }
+  section.soluciones .grid-soluciones {
+    grid-template-columns: repeat(2, 1fr); }
+  section.novedades .slider-novedades {
+    padding-left: 19px; }
+  footer .part1 h2 {
+    font-size: 30px; }
+  section.socios .content .card {
+    width: 100%; }
+  section.socios .content .card {
+    flex-direction: row;
+    margin-bottom: 30px;
+    padding: 34px 30px; }
+  section.socios .content .card p {
+    text-align: initial;
+    padding-left: 30px; }
+  section.socios .content .card img {
+    margin-bottom: 0;
+    width: 197px;
+    padding-right: 30px; }
+  section.socios .content .card p::after {
+    content: '';
+    background-color: var(--color-verde);
+    width: 6px;
+    height: 61px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 3; }
+  section.socios .content .card:nth-child(1) {
+    order: 1; }
+  section.socios .content .animation {
+    order: 3;
+    margin-top: 20px; }
+  section.socios .content .card:nth-child(n+1) {
+    order: 2; }
+  section.socios .content .animation lottie-player {
+    width: 453px;
+    margin: 0 auto; }
+  section.socios .content {
+    flex-direction: column; }
+  section.home .content h1 {
+    font-size: 40px; }
+  section.home .content p {
+    padding: 30px 0; }
+  header nav .navigation ul li.contacto button {
+    font-size: 18px; }
+  a.contacto button {
+    font-size: 18px; }
+  section.home .content {
+    width: 50%; }
+  section.home .content p {
+    width: 90%; } }
+
+@media (max-width: 950px) {
+  section.home lottie-player.escritorio {
+    margin-top: 100px; }
+  section.home::before {
+    height: 100px; }
+  section.home .content {
+    width: 58%; }
+  section.home lottie-player.escritorio {
+    width: 110% !important;
+    right: 0; } }
+
+@media (max-width: 768px) {
+  section.soluciones .grid-soluciones {
+    grid-row-gap: 72px; }
+  footer {
+    padding-top: 40px; }
+  header nav .logo img,
+  header nav .logo lottie-player {
+    width: 130px; }
+  header nav .navigation ul li.contacto button {
+    padding: 11px 25px; }
+  section.home .content h1 {
+    font-size: 35px; }
+  section.home .content {
+    width: 100%;
+    margin-top: 80px; }
+  section.home .content div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+  a.contacto button {
+    padding: 11px 25px; }
+  section.home .content p {
+    width: 80%; }
+  section.home {
+    height: auto; }
+  section.home lottie-player.escritorio {
+    display: none; }
+  .animation-responsive {
+    position: relative;
+    height: 65vw;
+    display: block; }
+  .animation-responsive lottie-player {
+    position: relative;
+    width: 130%;
+    position: absolute;
+    height: auto;
+    right: 0; }
+  section.home .content {
+    transform: translateY(0px); }
+  section.home .content {
+    margin-top: 160px; }
+  section.home {
+    background-color: #e7f3fa; }
+  section.home::before {
+    content: none; }
+  section.somos {
+    padding: 80px 0; }
+  section.confian {
+    padding: 80px 0; }
+  section.socios {
+    padding: 80px 0;
+    padding-bottom: 40px; }
+  section.soluciones {
+    padding: 40px 0; }
+  section.novedades {
+    padding: 40px 0; } }
+
+@media (max-width: 425px) {
+  header nav .logo img,
+  header nav .logo lottie-player {
+    width: 130px; }
+  header nav .navigation ul li.contacto {
+    display: none; }
+  section.home .content h1 {
+    font-size: 30px; }
+  p {
+    font-size: 16px; }
+  .animation-responsive lottie-player {
+    width: 160%; }
+  header::before {
+    height: 97.33px; }
+  .animation-responsive {
+    height: 81vw; } }
