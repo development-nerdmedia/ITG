@@ -549,19 +549,57 @@ if ($('.aliados').length > 0) {
     MyApp.slider_aliados.init();
 }
 
+$('.slider-empresas').slick({
+    infinite: true,
+    speed: 300,
+    dots: false,
+    // autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+        // {
+        //     breakpoint: 1700,
+        //     settings: {
+        //         slidesToShow: 3.3,/* 1.94 */
+        //         slidesToScroll: 1,
+        //     }
+        // }
+    ]
+});
 
 $('.slider-novedades').slick({
     infinite: true,
     speed: 300,
     dots: false,
-    // autoplay: true,
+    autoplay: true,
     slidesToShow: 3.5,
     slidesToScroll: 1,
     responsive: [
         {
+            breakpoint: 1700,
+            settings: {
+                slidesToShow: 3.3,/* 1.94 */
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 1611,
+            settings: {
+                slidesToShow: 3,/* 1.94 */
+                slidesToScroll: 1,
+            }
+        },
+        {
             breakpoint: 1441,
             settings: {
                 slidesToShow: 3.03,/* 1.94 */
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 1305,
+            settings: {
+                slidesToShow: 3,/* 1.94 */
                 slidesToScroll: 1,
             }
         },
@@ -574,6 +612,20 @@ $('.slider-novedades').slick({
         }
         ,
         {
+            breakpoint: 1287,
+            settings: {
+                slidesToShow: 2,/* 1.94 */
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 1250,
+            settings: {
+                slidesToShow: 2.5,/* 1.94 */
+                slidesToScroll: 1,
+            }
+        },
+        {
             breakpoint: 1025,
             settings: {
                 slidesToShow: 2,/* 1.94 */
@@ -582,6 +634,13 @@ $('.slider-novedades').slick({
         },
         {
             breakpoint: 769,
+            settings: {
+                slidesToShow: 1,/* 1.94 */
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 426,
             settings: {
                 slidesToShow: 1,/* 1.94 */
                 slidesToScroll: 1,
