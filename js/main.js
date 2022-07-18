@@ -24,6 +24,12 @@ document.addEventListener("click", (e) => {
     if ($('section.thanks-page .top').length > 0) {
         var link = localStorage.getItem("url-actual");
         $('.top a').attr("href", link);
+    }    
+    if (e.target.closest(".form-group")) {
+        // togglePortfolioPopup();
+        // document.body.classList.toggle("hide-scrolling");
+        // portfolioItemDetails(e.target.parentElement);
+        console.log(e.target.parentElement)
     }
 })
 
@@ -43,13 +49,25 @@ MyApp = {
     labelcontactopage: {
         init: function () {
             document.addEventListener("click", function (e) {
+                if (e.target.closest(".form-group")) {
+                    animacion(e.target.parentElement);
+                    console.log(e.target.parentElement)
+                    if (e.target.parentElement) {
+                        
+                    }
+                }
+                function animacion(formItem) {
+                    // document.querySelector(".formname").classList.add("focusin");
+                    formItem.classList.add("focusin");
+                    formItem.querySelector("span").classList.add("animacion");
+                }
                 if (e.target.closest(".formname")) {
-                    document.querySelector(".formname").classList.add("focusin");
-                    document.querySelector(".formname span").classList.add("animacion");
+                    // document.querySelector(".formname").classList.add("focusin");
+                    // document.querySelector(".formname span").classList.add("animacion");
                 } else {
-                    document.querySelector(".formname").classList.remove("focusin");
+                    // document.querySelector(".formname").classList.remove("focusin");
                     nombre = document.getElementById('name').value;
-                    document.querySelector(".formname span").classList.remove("animacion");
+                    // document.querySelector(".formname span").classList.remove("animacion");
                     if (!nombre) {
                         document.querySelector(".formname").classList.remove("ok");
                     } else {
@@ -557,13 +575,6 @@ $('.slider-empresas').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
-        // {
-        //     breakpoint: 1700,
-        //     settings: {
-        //         slidesToShow: 3.3,/* 1.94 */
-        //         slidesToScroll: 1,
-        //     }
-        // }
     ]
 });
 
@@ -645,7 +656,7 @@ $('.slider-competencias').slick({
     infinite: true,
     speed: 300,
     dots: false,
-    autoplay: true,
+    // autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
@@ -659,14 +670,7 @@ $('.slider-competencias').slick({
         {
             breakpoint: 1440,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 1025,
-            settings: {
-                slidesToShow: 2,
+                slidesToShow: 3,
                 slidesToScroll: 1,
             }
         },
@@ -674,15 +678,7 @@ $('.slider-competencias').slick({
             breakpoint: 769,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 650,
-            settings: {
-                slidesToShow: 1,
                 slidesToScroll: 1,
-                dots: true,
             }
         },
         {
