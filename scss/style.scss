@@ -23,9 +23,9 @@ section.blog .content .item:hover, section.blog .content .item a:hover{
     cursor: url(../img/leermas.png) 52 52, pointer !important;
 }
 
-li.fex{
-    display: none;
-}
+// li.fex{
+//     display: none;
+// }
 
 /*boton de contactanos*/
 a.contacto{
@@ -246,10 +246,9 @@ header{
                     }
                     ul{
                         opacity: 0;
-                        display: flex;
                         position: absolute;
                         list-style: none;
-                        // display: flex;
+                        display: flex;
                         left: 50%;
                         transform: translateX(-44%) translateY(15px);
                         transition: 0.3s linear;
@@ -257,6 +256,11 @@ header{
                         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
                         pointer-events: none;
                         // animation: animacionMenu 1s;
+                        // display: none;
+                        align-items: stretch;
+                        animation-name: animacionMenu;
+                        animation-duration: 1s;
+                        animation-fill-mode: forwards;
                         li{                            
                             background-color: #fff;
                             display: inline-block;
@@ -312,16 +316,18 @@ header{
                             pointer-events: initial;
                         }
                     }
-                    // @keyframes animacionMenu {
-                    //     0%{
-                    //         display: none;
-                    //     }100%{
-                    //         display: flex;
-                    //     }
-                    // }
                 }
             }
         }
+    }
+}
+
+
+@keyframes animacionMenu {    
+    0%{
+        // display: none;
+    }100%{
+        // display: flex !important;
     }
 }
 
