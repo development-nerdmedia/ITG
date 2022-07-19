@@ -557,7 +557,7 @@ section.soluciones{
         .item{            
             img{
                 width: 80%;
-                margin-bottom: 9px;
+                margin-bottom: 10px;
                 position: relative;
             }
             lottie-player{
@@ -894,6 +894,10 @@ footer{
                     left: -20px;
                     background-color: var(--color-verde);
                     border-radius: 10px;
+                }
+                a{
+                    text-decoration: none;
+                    color: var(--color-celeste);
                 }
                 ul{
                     list-style: none;
@@ -2361,6 +2365,7 @@ section.beneficios .content .part2 .mostrar{
 
 .menupage{
     // height: 100vh;
+    display: none;
     position: fixed;
     padding: 45px 0;
     z-index: 20;
@@ -2573,6 +2578,9 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 1440px) {
+    section.respaldo .content .part1{
+        align-items: center;
+    }
     section.respaldo {
         padding-top: 140px;
         padding-bottom: 50px;
@@ -2625,6 +2633,7 @@ section.fondo-socios lottie-player.responsive{
     }
     section.home-nosotros .content .part1{
         width: 50%;
+        padding-right: 0px;
     }
     section.home-nosotros .content .part2 lottie-player{
         width: 79%;
@@ -2826,6 +2835,9 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 1180px) {
+    .menupage{
+        display: block;
+    }
     header nav .navigation ul li{
         display: none;
     }
@@ -3539,6 +3551,81 @@ section.fondo-socios lottie-player.responsive{
     }
 }
 
+@media (max-width: 900px) {
+    section.home-servicios-interna .content .part1 p,
+    section.home-servicios-interna .content .part1 h1 {
+        text-align: center;
+    }
+    section.home-servicios-interna .content .part1 h1{
+        width: 100%;
+    }
+    section.home-servicios-interna .content .part1 p{
+        padding-top: 30px;
+    }
+    .fondo-interna.home-nosotros{
+        height: auto;
+    }
+    section.home-nosotros .content {
+        flex-direction: column;
+    }
+    section.home-nosotros .content .part1 {
+        width: 100%;
+    }
+    section.home-nosotros .content .part2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    section.home-nosotros .content .part2 lottie-player {
+        margin-top: 50px;
+        float: initial;
+    }
+    section.home-nosotros .content .part1 p, section.home-nosotros .content .part1 h1 {
+        text-align: center;
+    }
+    section.home-servicios-interna .content {
+        flex-direction: column;
+    }
+    section.home-servicios-interna .content .part1, section.beneficios .content .part1 {
+        width: 100%;
+        padding-right: 0px;
+    }
+    section.home-servicios-interna .content .part2 {
+        width: 100%;
+        margin-top: 50px;
+    }
+    section.home-servicios-interna .content .part1 .contenido {
+        max-width: 630px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fondo-interna.home-servicios-interna{
+        height: auto;
+    }
+    section.beneficios .content {
+        flex-direction: column;
+    }
+    section.beneficios .content .part2 {
+        width: 100%;
+        padding-left: 46px;
+    }
+    section.beneficios .content .part1 lottie-player {
+        display: none;
+    }
+    section.beneficios .content .part2 .mostrar {
+        display: block;
+        max-width: 370px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    section.beneficios .content .part1 h2 {
+        margin-bottom: 50px;
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 865px) {
     section.fondo-interna {
         height: auto;
@@ -3859,6 +3946,12 @@ section.fondo-socios lottie-player.responsive{
     }
 }
 
+@media (max-width: 600px) {
+    section.competencias .slider-competencias .item img {
+        width: 60%;
+    }
+}
+
 @media (max-width: 578px) {
     .slider-empresas .slick-prev, .slider-empresas .slick-next {
         top: -79.5px;
@@ -3964,6 +4057,12 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 425px) {
+    section.competencias .slider-competencias .item img {
+        width: 70%;
+    }
+    section.competencias .slider-competencias .slick-prev{
+        right: 55px;
+    }
     section.aliados .marquee-with-options .item {
         margin: 0 0px;
         display: flex;
@@ -4061,7 +4160,8 @@ section.fondo-socios lottie-player.responsive{
     header nav .navigation ul li.contacto{
         display: none;
     }
-    section.home .content h1 {
+    section.home .content h1,
+    section.home-servicios-interna .content .part1 h1 {
         font-size: 30px;
     }
     p {
