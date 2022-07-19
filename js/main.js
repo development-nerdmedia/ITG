@@ -31,6 +31,21 @@ document.addEventListener("click", (e) => {
         // portfolioItemDetails(e.target.parentElement);
         console.log(e.target.parentElement)
     }
+    if (e.target.closest(".menu-mobile")) {
+        document.querySelector(".menupage").classList.toggle("open");
+        // jQuery('body').addClass('scrollhidden');
+    }
+    if (e.target.closest(".container-submenu")) {
+        const submenu = document.querySelector(".submenu-movil");
+        const height = submenu.scrollHeight;
+        if (submenu.classList.contains("desplegar")) {
+            submenu.classList.remove("desplegar");
+            submenu.removeAttribute("style");
+        } else {
+            submenu.classList.add("desplegar");
+            submenu.style.height = (height + 20) + "px";
+        }
+    }
 })
 
 MyApp = {
@@ -49,25 +64,25 @@ MyApp = {
     labelcontactopage: {
         init: function () {
             document.addEventListener("click", function (e) {
-                if (e.target.closest(".form-group")) {
-                    animacion(e.target.parentElement);
-                    console.log(e.target.parentElement)
-                    if (e.target.parentElement) {
+                // if (e.target.closest(".form-group")) {
+                //     animacion(e.target.parentElement);
+                //     console.log(e.target.parentElement)
+                //     if (e.target.parentElement) {
                         
-                    }
-                }
-                function animacion(formItem) {
-                    // document.querySelector(".formname").classList.add("focusin");
-                    formItem.classList.add("focusin");
-                    formItem.querySelector("span").classList.add("animacion");
-                }
+                //     }
+                // }
+                // function animacion(formItem) {
+                //     // document.querySelector(".formname").classList.add("focusin");
+                //     formItem.classList.add("focusin");
+                //     formItem.querySelector("span").classList.add("animacion");
+                // }
                 if (e.target.closest(".formname")) {
-                    // document.querySelector(".formname").classList.add("focusin");
-                    // document.querySelector(".formname span").classList.add("animacion");
+                    document.querySelector(".formname").classList.add("focusin");
+                    document.querySelector(".formname span").classList.add("animacion");
                 } else {
-                    // document.querySelector(".formname").classList.remove("focusin");
+                    document.querySelector(".formname").classList.remove("focusin");
                     nombre = document.getElementById('name').value;
-                    // document.querySelector(".formname span").classList.remove("animacion");
+                    document.querySelector(".formname span").classList.remove("animacion");
                     if (!nombre) {
                         document.querySelector(".formname").classList.remove("ok");
                     } else {
