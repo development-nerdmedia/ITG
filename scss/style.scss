@@ -22,7 +22,9 @@
 section.blog .content .item:hover, section.blog .content .item a:hover{
     cursor: url(../img/leermas.png) 52 52, pointer !important;
 }
-
+header nav .navigation ul li.fex ul{
+    opacity: 0;
+}
 // li.fex{
 //     display: none;
 // }
