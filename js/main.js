@@ -533,15 +533,27 @@ MyApp = {
             })
         }
     },
-    slider_aliados: {
+    slider_aliados: {        
         init: function () {
-            $('.marquee-with-options').marquee({
-                speed: 30000,
-                gap: 50,
-                delayBeforeStart: 0,
-                direction: 'left',
-                duplicated: true,
-            });
+            var mediaqueryList = window.matchMedia("(max-width: 768px)");
+            
+            if (mediaqueryList.matches) {
+                $('.marquee-with-options').marquee({
+                    speed: 8000,
+                    gap: 50,
+                    delayBeforeStart: 0,
+                    direction: 'left',
+                    duplicated: true,
+                });
+            } else{
+                $('.marquee-with-options').marquee({
+                    speed: 30000,
+                    gap: 50,
+                    delayBeforeStart: 0,
+                    direction: 'left',
+                    duplicated: true,
+                });
+            }
         }
     },
 }
@@ -586,7 +598,7 @@ $('.slider-empresas').slick({
     infinite: true,
     speed: 300,
     dots: false,
-    // autoplay: true,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
@@ -688,6 +700,12 @@ $('.slider-competencias').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
             }
+        },{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
         },
         {
             breakpoint: 769,
@@ -697,11 +715,10 @@ $('.slider-competencias').slick({
             }
         },
         {
-            breakpoint: 426,
+            breakpoint: 601,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                dots: true,
             }
         }
     ]
