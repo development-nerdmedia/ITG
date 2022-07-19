@@ -1634,7 +1634,7 @@ section.main-article {
         padding-bottom: 35px; }
 
 section.blog {
-  height: auto;
+  height: auto !important;
   padding-bottom: 70px; }
   section.blog .fondo {
     top: -350px; }
@@ -1767,18 +1767,28 @@ section.beneficios .content .part2 .mostrar {
 .menupage {
   position: fixed;
   padding: 45px 0;
-  z-index: 100;
+  z-index: 20;
   width: 100%;
   height: 100vh;
   background-image: url(../img/fondomenu.jpg);
-  background-position: bottom; }
+  background-position: bottom;
+  overflow: hidden;
+  transition: transform 0.5s linear;
+  transform: translateX(100%); }
+  .menupage .container {
+    height: 100%;
+    position: relative; }
   .menupage .content {
     display: flex;
-    align-items: center; }
+    height: 100%;
+    flex-direction: column;
+    justify-content: center; }
   .menupage .top {
+    position: absolute;
     width: 46px;
     right: 0;
-    top: 0; }
+    top: 0;
+    cursor: pointer; }
   .menupage ul {
     padding-left: 40px; }
     .menupage ul li {
@@ -1787,21 +1797,51 @@ section.beneficios .content .part2 .mostrar {
       font-weight: 700;
       font-size: 35px;
       position: relative;
-      padding: 25px 0;
-      padding-left: 30px; }
+      margin: 30px 0;
+      margin-left: 12px;
+      color: var(--color-celeste);
+      padding: 10px 23px; }
       .menupage ul li::before {
         background-image: url(../icons/vineta-input-menu.svg);
         background-repeat: no-repeat;
         position: absolute;
-        top: 50%;
-        left: -46px;
-        transform: translateY(-50%);
+        top: 22px;
+        left: -58px;
         width: 46px;
         height: 17px;
         content: ''; }
       .menupage ul li a {
         text-decoration: none;
         color: var(--color-celeste); }
+      .menupage ul li ul {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s; }
+        .menupage ul li ul li {
+          font-weight: 500;
+          font-size: 25px;
+          margin: 14px 0; }
+          .menupage ul li ul li::before {
+            content: none; }
+        .menupage ul li ul li:last-child {
+          margin-bottom: 0; }
+      .menupage ul li ul.desplegar {
+        padding-top: 20px; }
+      .menupage ul li img {
+        margin-left: 10px; }
+    .menupage ul li.select {
+      background-color: var(--color-verde);
+      border-radius: 30px;
+      width: fit-content;
+      color: #fff; }
+      .menupage ul li.select a {
+        color: #fff; }
+
+.menupage.open {
+  transform: translateX(0%); }
+
+section.fondo-socios lottie-player.responsive {
+  display: none; }
 
 @media (max-width: 1870px) {
   section.novedades .slider-novedades {
@@ -2057,6 +2097,9 @@ section.beneficios .content .part2 .mostrar {
     display: flex; } }
 
 @media (max-width: 1280px) {
+  section.respaldo {
+    padding-top: 100px;
+    padding-bottom: 50px; }
   section.competencias .slider-competencias .item h3 {
     font-size: 22px; }
   section.aliados .marquee-with-options .item {
@@ -2535,28 +2578,42 @@ section.beneficios .content .part2 .mostrar {
     right: 0; } }
 
 @media (max-width: 960px) {
+  section.fondo-socios lottie-player.default {
+    display: none; }
+  section.fondo-socios lottie-player.responsive {
+    display: block; }
+  div.responsive {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    height: 559px;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: -2; }
+  section.fondo-socios lottie-player {
+    width: 960px !important;
+    top: 0px;
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%); }
   section.fondo-socios {
-    height: 745px; }
+    height: 559px; }
   section.fondo-socios::before {
-    height: 214px; }
+    height: 60px; }
   section.fondo-socios .content .part2 {
     width: 0%; }
   section.fondo-socios .content .part1 {
     width: 100%;
-    text-align: center; }
-  section.fondo-socios lottie-player {
-    width: 177vw !important;
-    top: 214px; } }
+    text-align: center; } }
+
+@media (max-width: 865px) {
+  section.fondo-interna {
+    height: auto; } }
 
 @media (max-width: 835px) {
   section.home .content h1 {
     font-size: 35px; } }
-
-@media (max-width: 800px) {
-  section.fondo-socios lottie-player {
-    top: 222px; }
-  section.fondo-socios::before {
-    height: 222px; } }
 
 @media (max-width: 779px) {
   footer .bg-footer {
@@ -2752,17 +2809,43 @@ section.home-servicios-interna .content .part2 {
   section.novedades {
     padding: 40px 0; } }
 
-@media (max-width: 650px) {
-  section.fondo-socios lottie-player {
-    top: 245px; }
-  section.fondo-socios::before {
-    height: 245px; } }
+@media (max-width: 630px) {
+  .menupage ul li {
+    font-size: 30px;
+    margin: 15px 0;
+    margin-left: 12px; }
+  .menupage ul li::before {
+    top: 18px; }
+  .menupage ul li ul.desplegar {
+    padding-top: 0; }
+  .menupage ul li ul {
+    padding-left: 0; }
+  .menupage ul li.container-submenu {
+    margin-bottom: 0; } }
 
 @media (max-width: 578px) {
   .slider-empresas .slick-prev, .slider-empresas .slick-next {
     top: -79.5px; } }
 
 @media (max-width: 550px) {
+  section.fondo-socios {
+    height: 504px; }
+  section.fondo-socios::before {
+    height: 108px; }
+  div.responsive {
+    top: 108px; }
+  section.fondo-socios lottie-player {
+    width: 760px !important;
+    left: 52%; }
+  .menupage ul li img {
+    width: 20px; }
+  .menupage ul li {
+    font-size: 25px;
+    padding: 10px 17px; }
+  .menupage ul li ul li {
+    font-size: 20px; }
+  .menupage ul li::before {
+    top: 16px; }
   section.blog .content .categorias ul li {
     margin-bottom: 10px; }
   section.blog .content .categorias {
@@ -2808,6 +2891,10 @@ section.home-servicios-interna .content .part2 {
   section.footer-contacto .pie .content {
     flex-direction: column;
     align-items: center; } }
+
+@media (max-width: 440px) {
+  .menupage ul li ul li {
+    font-size: 18px; } }
 
 @media (max-width: 425px) {
   section.aliados .marquee-with-options .item {
