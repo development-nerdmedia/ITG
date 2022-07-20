@@ -510,7 +510,8 @@ section.novedades {
     margin-bottom: 50px; }
   section.novedades .slider-novedades {
     padding-left: 204px;
-    padding-left: 11vw; }
+    padding-left: 9vw;
+    /*11*/ }
     section.novedades .slider-novedades .item {
       border: 2px solid #338ECD;
       border-radius: 10px;
@@ -1872,6 +1873,16 @@ section.beneficios .content .part2 .mostrar {
 section.fondo-socios lottie-player.responsive {
   display: none; }
 
+@media (min-width: 1920px) {
+  footer .bg-footer {
+    height: 1660px; }
+  footer .bg-footer img {
+    bottom: -408px; }
+  section.fondo-interna .bg-interna img {
+    top: -860px; }
+  section.fondo-interna .bg-interna {
+    height: calc(100% + -87px); } }
+
 @media (max-width: 1870px) {
   section.novedades .slider-novedades {
     padding-left: 9.5vw; }
@@ -1881,8 +1892,9 @@ section.fondo-socios lottie-player.responsive {
     right: 264px; } }
 
 @media (max-width: 1870px) and (max-width: 1800px) {
-  section.novedades .slider-novedades {
-    padding-left: 8vw; }
+  s
+section.novedades .slider-novedades {
+    padding-left: 7.5vw; }
   section.novedades .slider-novedades .slick-next {
     right: 147px; }
   section.novedades .slider-novedades .slick-prev {
@@ -1894,7 +1906,7 @@ section.fondo-socios lottie-player.responsive {
   section.fondo-socios {
     height: 647px; }
   section.novedades .slider-novedades {
-    padding-left: 6.5vw; }
+    padding-left: 6vw; }
   section.novedades .slider-novedades .slick-next {
     right: 112px; }
   section.novedades .slider-novedades .slick-prev {
@@ -2136,6 +2148,8 @@ section.fondo-socios lottie-player.responsive {
     display: flex; } }
 
 @media (max-width: 1280px) {
+  section.valores {
+    padding-bottom: 100px; }
   h2::before {
     bottom: 6px; }
   section.home-servicios-interna .content {

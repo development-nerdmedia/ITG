@@ -17,6 +17,10 @@
     --color-verde: #83C441;
 }
 
+// section{
+//     max-width: 1920px;
+// }
+
 header nav .navigation ul li.fex ul,
 header nav .navigation ul li.fex::after{
     display: none;
@@ -2501,6 +2505,22 @@ section.beneficios .content .part2 .mostrar{
 }
 section.fondo-socios lottie-player.responsive{
     display: none;
+}
+
+
+@media (min-width: 1920px) {
+    footer .bg-footer{
+        height: 1660px;
+    }
+    footer .bg-footer img{
+        bottom: -408px;
+    }
+    section.fondo-interna .bg-interna img{
+        top: -860px;
+    }
+    section.fondo-interna .bg-interna{
+        height: calc(100% + -87px);
+    }
 }
 
 @media (max-width: 1870px) {
