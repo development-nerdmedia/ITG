@@ -17,13 +17,15 @@
     --color-verde: #83C441;
 }
 
+// header nav .navigation ul li.fex ul,
+// header nav .navigation ul li.fex::after{
+//     display: none;
+// }
+
 /* globales */
 
 section.blog .content .item:hover, section.blog .content .item a:hover{
     cursor: url(../img/leermas.png) 52 52, pointer !important;
-}
-header nav .navigation ul li.fex ul{
-    opacity: 0;
 }
 // li.fex{
 //     display: none;
@@ -154,6 +156,16 @@ header{
         }
         .navigation{
             ul{
+                // &:hover{
+                //     li.fex{
+                //         ul{
+                //             display: flex;
+                //         }
+                //     }
+                //     li.fex::after{
+                //         content: '';
+                //     }
+                // }
                 list-style: none;
                 li{
                     display: inline-block;
@@ -2742,7 +2754,8 @@ section.fondo-socios lottie-player.responsive{
             bottom: 11px;
         }
     }
-    header nav .logo img{
+    header nav .logo img,
+    header nav .logo lottie-player{
         width: 164px;
     }
     section.home .content h1{
@@ -2867,6 +2880,9 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 1280px) {
+    section.home-servicios-interna .content{
+        align-items: flex-start;
+    }
     section.respaldo {
         padding-top: 100px;
         padding-bottom: 50px;
@@ -3183,6 +3199,13 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 1024px) {
+    section.blog .content .destacado{
+        grid-gap: 30px;
+        grid-row-gap: 60px;
+    }
+    section.blog .content .items-category{
+        grid-template-columns: repeat(2, 1fr);
+    }
     section.respaldo .content .part1 div:first-child {
         padding-right: 45px;
     }
@@ -3544,7 +3567,7 @@ section.fondo-socios lottie-player.responsive{
         top: 60px;
         height: 559px;
         width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
         z-index: -2;
     }
     section.fondo-socios lottie-player {
@@ -3672,6 +3695,9 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 768px) {
+    section.novedades .slider-novedades{
+        padding: 0 40px;
+    }
     section.beneficios .content .part2 .mostrar{
         display: block;
         max-width: 370px;
@@ -3942,6 +3968,9 @@ section.fondo-socios lottie-player.responsive{
     // section.fondo-socios::before {
     //     height: 245px;
     // }
+    section.competencias .slider-competencias .item img {
+        width: 60%;
+    }
 }
 
 @media (max-width: 630px) {

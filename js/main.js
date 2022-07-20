@@ -46,6 +46,9 @@ document.addEventListener("click", (e) => {
             submenu.style.height = (height + 20) + "px";
         }
     }
+    // if (e.target.closest("li.contacto")) {
+    //     console.log("click en contacto");
+    // }
 })
 
 MyApp = {
@@ -628,7 +631,7 @@ $('.slider-novedades').slick({
     infinite: true,
     speed: 300,
     dots: false,
-    autoplay: true,
+    // autoplay: true,
     slidesToShow: 3.65,
     slidesToScroll: 1,
     responsive: [
@@ -734,7 +737,7 @@ $('.slider-competencias').slick({
             }
         },
         {
-            breakpoint: 601,
+            breakpoint: 651,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
