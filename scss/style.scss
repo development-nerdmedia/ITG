@@ -670,7 +670,7 @@ section.novedades{
     }
     .slider-novedades{
         padding-left: 204px;
-        padding-left: 11vw;
+        padding-left: 9vw;/*11*/
         // padding-top: 20px;
         .item{
             // width: 425px !important;
@@ -2513,9 +2513,9 @@ section.fondo-socios lottie-player.responsive{
     section.novedades .slider-novedades .slick-prev{
         right: 264px;
     }
-    @media (max-width: 1800px) {
+    @media (max-width: 1800px) {s
         section.novedades .slider-novedades{
-            padding-left: 8vw;
+            padding-left: 7.5vw;
         }
         section.novedades .slider-novedades .slick-next{
             right: 147px;
@@ -2533,7 +2533,7 @@ section.fondo-socios lottie-player.responsive{
             height: 647px;
         }
         section.novedades .slider-novedades{
-            padding-left: 6.5vw;
+            padding-left: 6vw;
         }
         section.novedades .slider-novedades .slick-next{
             right: 112px;
@@ -2896,6 +2896,9 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 1280px) {
+    section.valores{
+        padding-bottom: 100px;
+    }
     h2::before {
         bottom: 6px;
     }
