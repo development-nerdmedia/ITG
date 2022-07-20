@@ -649,6 +649,8 @@ footer {
         font-size: 20px;
         color: var(--color-celeste);
         padding-top: 6px; }
+      footer .part1 form input.falto2 {
+        border: 2px solid var(--color-anaranjado); }
       footer .part1 form label {
         position: absolute;
         left: 20px;
@@ -706,6 +708,8 @@ footer {
           line-height: 1.5; }
           footer ul li ul li::after {
             content: none; }
+          footer ul li ul li:hover a {
+            text-decoration: underline; }
     footer ul li:last-child {
       padding-bottom: 0; }
   footer .part3 {
@@ -2903,6 +2907,10 @@ section.home-servicios-interna .content .part2 {
   .slider-empresas .slick-prev, .slider-empresas .slick-next {
     top: -79.5px; } }
 
+@media (max-width: 572px) {
+  section.valores .grid-valores {
+    grid-template-columns: repeat(1, 1fr); } }
+
 @media (max-width: 550px) {
   section.fondo-socios {
     height: 504px; }
@@ -2962,17 +2970,27 @@ section.home-servicios-interna .content .part2 {
   section.soluciones .grid-soluciones {
     padding: 0 31px; } }
 
+@media (max-width: 500px) {
+  section.competencias .slider-competencias .slick-prev {
+    right: 61px; } }
+
 @media (max-width: 530px) {
   footer .pie .content,
   section.footer-contacto .pie .content {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center; }
+  section.novedades h2 {
+    width: 50%; }
+  section.novedades.articulo .slider-novedades .slick-prev, section.novedades.articulo .slider-novedades .slick-next {
+    top: -111.5px; } }
 
 @media (max-width: 440px) {
   .menupage ul li ul li {
     font-size: 18px; } }
 
 @media (max-width: 425px) {
+  section.novedades.articulo .slider-novedades .slick-prev, section.novedades.articulo .slider-novedades .slick-next {
+    top: -92.5px; }
   section.competencias .slider-competencias .item img {
     width: 70%; }
   section.competencias .slider-competencias .slick-prev {

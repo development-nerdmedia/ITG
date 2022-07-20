@@ -844,6 +844,9 @@ footer{
                 color: var(--color-celeste);
                 padding-top: 6px;
             }
+            input.falto2{
+                border: 2px solid var(--color-anaranjado);
+            }
             label{
                 position: absolute;
                 left: 20px;
@@ -916,8 +919,13 @@ footer{
                         &::after{
                             content: none;
                         }
+                        &:hover{
+                            a{
+                                text-decoration: underline;
+                            }
+                        }
                     }
-                }
+                }                
             }
             li:last-child{
                 padding-bottom: 0;
@@ -987,6 +995,8 @@ footer{
         }
     }
 }
+
+
 
 section.fondo-interna{    
     // height: 62vw;
@@ -3966,6 +3976,12 @@ section.fondo-socios lottie-player.responsive{
     }
 }
 
+@media (max-width: 572px) {
+    section.valores .grid-valores {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media (max-width: 550px) {
     section.fondo-socios {
         height: 504px;
@@ -4050,11 +4066,23 @@ section.fondo-socios lottie-player.responsive{
     }
 }
 
+@media (max-width: 500px) {
+    section.competencias .slider-competencias .slick-prev{
+        right: 61px;
+    }
+}
+
 @media (max-width: 530px) {
     footer .pie .content,
     section.footer-contacto .pie .content {
         flex-direction: column;
         align-items: center;
+    }
+    section.novedades h2 {
+        width: 50%;
+    }
+    section.novedades.articulo .slider-novedades .slick-prev, section.novedades.articulo .slider-novedades .slick-next {
+        top: -111.5px;
     }
 }
 
@@ -4065,6 +4093,9 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 425px) {
+    section.novedades.articulo .slider-novedades .slick-prev, section.novedades.articulo .slider-novedades .slick-next {
+        top: -92.5px;
+    }
     section.competencias .slider-competencias .item img {
         width: 70%;
     }

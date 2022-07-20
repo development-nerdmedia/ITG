@@ -556,6 +556,21 @@ MyApp = {
             }
         }
     },
+    inputFooter: {
+        init: function () {
+            document.addEventListener("click", function (e) {
+                if (e.target.closest("button")) {
+                    if (!document.getElementById('email2').value) {
+                        document.getElementById('email2').classList.add("falto2");
+                        e.preventDefault();              
+                    }else{
+                        document.querySelector("footer form").submit();    
+                        document.querySelector("footer form").reset();  
+                    }
+                }
+            })
+        }
+    }
 }
 
 if ($('header').length > 0) {
@@ -592,6 +607,10 @@ if ($('.slider-novedades').length > 0 || $('.main-article').length > 0) {
 
 if ($('.aliados').length > 0) {
     MyApp.slider_aliados.init();
+}
+
+if ($('footer').length > 0) {
+    MyApp.inputFooter.init();
 }
 
 $('.slider-empresas').slick({
