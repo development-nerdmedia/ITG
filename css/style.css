@@ -791,7 +791,7 @@ section.fondo-interna.trabajo {
     position: absolute;
     left: 0;
     top: 0;
-    height: calc(100% + 134px);
+    height: calc(100% + 190px);
     width: 100%;
     overflow: hidden;
     z-index: -3; }
