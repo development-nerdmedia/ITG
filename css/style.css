@@ -785,6 +785,9 @@ section.fondo-interna {
       z-index: -3;
       min-width: 100%; }
 
+.interna-solution footer {
+  margin-bottom: 0px; }
+
 section.fondo-interna.trabajo {
   height: 50.5vw; }
   section.fondo-interna.trabajo .bg-interna {
