@@ -17,10 +17,10 @@
     --color-verde: #83C441;
 }
 
-// header nav .navigation ul li.fex ul,
-// header nav .navigation ul li.fex::after{
-//     display: none;
-// }
+header nav .navigation ul li.fex ul,
+header nav .navigation ul li.fex::after{
+    display: none;
+}
 
 /* globales */
 
@@ -160,16 +160,16 @@ header{
         }
         .navigation{
             ul{
-                // &:hover{
-                //     li.fex{
-                //         ul{
-                //             display: flex;
-                //         }
-                //     }
-                //     li.fex::after{
-                //         content: '';
-                //     }
-                // }
+                &:hover{
+                    li.fex{
+                        ul{
+                            display: flex;
+                        }
+                    }
+                    li.fex::after{
+                        display: block;
+                    }
+                }
                 list-style: none;
                 li{
                     display: inline-block;
@@ -266,7 +266,7 @@ header{
                         opacity: 0;
                         position: absolute;
                         list-style: none;
-                        display: flex;
+                        // display: flex;
                         left: 50%;
                         transform: translateX(-44%) translateY(15px);
                         transition: 0.3s linear;
@@ -1014,8 +1014,6 @@ footer{
         }
     }
 }
-
-
 
 section.fondo-interna{    
     // height: 62vw;
@@ -1817,10 +1815,11 @@ section.trabajo{
     height: auto !important;
     img.fondo{
         top: -197px;
-    }
+    }    
     .content{
         padding: 250px 0;
         display: flex;
+        padding-bottom: 140px;
         .part1{
             width: 50%;
             padding-right: 100px;
@@ -2399,6 +2398,7 @@ section.trabajo .content .part3{
 section.beneficios .content .part2 .mostrar{
     display: none;
 }
+
 
 .menupage{
     // height: 100vh;
@@ -3680,6 +3680,12 @@ section.fondo-socios lottie-player.responsive{
         margin-bottom: 50px;
         max-width: 100%;
     }
+    section.beneficios .content .part2{
+        padding-left: 0;
+    }
+    section.beneficios .content .part2 ul{
+        padding-left: 46px;
+    }
 }
 
 @media (max-width: 865px) {
@@ -3735,7 +3741,7 @@ section.fondo-socios lottie-player.responsive{
     }
     section.beneficios .content .part2 {
         width: 100%;
-        padding-left: 46px;
+        // padding-left: 46px;
     }
     section.beneficios .content{
         flex-direction: column;
@@ -4037,6 +4043,9 @@ section.fondo-socios lottie-player.responsive{
     section.valores .grid-valores {
         grid-template-columns: repeat(1, 1fr);
     }
+    section.valores .grid-valores .item lottie-player {
+        width: 50%;
+    }
 }
 
 @media (max-width: 550px) {
@@ -4124,6 +4133,9 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 500px) {
+    section.novedades .slider-novedades {
+        padding: 0 24px;
+    }
     section.competencias .slider-competencias .slick-prev{
         right: 61px;
     }
@@ -4272,7 +4284,7 @@ section.fondo-socios lottie-player.responsive{
         margin-left: 0px;
     }
     section.novedades .slider-novedades {
-        padding-left: 0px;
+        padding: 0px;
     }
     header nav .logo img,
     header nav .logo lottie-player {
