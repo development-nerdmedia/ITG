@@ -18,6 +18,9 @@
 section.blog .content .item:hover, section.blog .content .item a:hover {
   cursor: url(../img/leermas.png) 52 52, pointer !important; }
 
+.btn-contacto {
+  display: none; }
+
 /*boton de contactanos*/
 a.contacto span {
   position: relative;
@@ -613,6 +616,8 @@ footer {
       left: 50%;
       bottom: 0%;
       transform: translateX(-50%); }
+    footer .bg-footer img.responsive {
+      display: none; }
   footer .container {
     overflow: hidden; }
   footer .content {
@@ -1935,6 +1940,8 @@ section.fondo-socios lottie-player.responsive {
     height: 53vw; } }
 
 @media (max-width: 1440px) {
+  section.beneficios .content .part1 h2:before {
+    bottom: -2px; }
   section.respaldo .content .part1 {
     align-items: center; }
   section.respaldo {
@@ -2034,7 +2041,9 @@ section.fondo-socios lottie-player.responsive {
   h2 {
     font-size: 35px; }
     h2::before {
-      bottom: 11px; }
+      bottom: 11px;
+      transform: scale(0.8);
+      left: -26px; }
   header nav .logo img,
   header nav .logo lottie-player {
     width: 164px; }
@@ -2116,6 +2125,8 @@ section.fondo-socios lottie-player.responsive {
     display: flex; } }
 
 @media (max-width: 1280px) {
+  h2::before {
+    bottom: 6px; }
   section.home-servicios-interna .content {
     align-items: flex-start; }
   section.respaldo {
@@ -2698,7 +2709,11 @@ section.fondo-socios lottie-player.responsive {
 
 @media (max-width: 779px) {
   footer .bg-footer {
-    height: 1928px; } }
+    height: 1030px; }
+  footer .bg-footer img.default {
+    display: none; }
+  footer .bg-footer img.responsive {
+    display: block; } }
 
 @media (max-width: 768px) {
   section.novedades .slider-novedades {
@@ -2892,6 +2907,10 @@ section.home-servicios-interna .content .part2 {
   section.novedades {
     padding: 40px 0; } }
 
+@media (max-width: 726px) {
+  footer .bg-footer {
+    height: 1198px; } }
+
 @media (max-width: 650px) {
   section.competencias .slider-competencias .item img {
     width: 60%; } }
@@ -2947,8 +2966,6 @@ section.home-servicios-interna .content .part2 {
     padding-bottom: 40px; }
   section.blog .content .items-category {
     grid-template-columns: repeat(1, 1fr); }
-  footer .bg-footer {
-    height: 1909px; }
   .formulario form .checkbox-box p {
     font-size: 16px; }
   .formulario form .checkbox-box {
@@ -2983,7 +3000,28 @@ section.home-servicios-interna .content .part2 {
 
 @media (max-width: 500px) {
   section.competencias .slider-competencias .slick-prev {
-    right: 61px; } }
+    right: 61px; }
+  header nav .navigation ul li.contacto {
+    display: none; }
+  .btn-contacto {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    background-color: var(--color-anaranjado);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    font-family: var(--fuente-Ubuntu);
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none; }
+  footer {
+    margin-bottom: 52px; } }
 
 @media (max-width: 530px) {
   footer .pie .content,

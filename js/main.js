@@ -46,9 +46,9 @@ document.addEventListener("click", (e) => {
             submenu.style.height = (height + 20) + "px";
         }
     }
-    // if (e.target.closest("li.contacto")) {
-    //     console.log("click en contacto");
-    // }
+    if (e.target.closest("li.contacto")) {
+        console.log("click en contacto");
+    }
 })
 
 MyApp = {
@@ -562,7 +562,7 @@ MyApp = {
     inputFooter: {
         init: function () {
             document.addEventListener("click", function (e) {
-                if (e.target.closest("button")) {
+                if (e.target.closest("footer button")) {
                     if (!document.getElementById('email2').value) {
                         document.getElementById('email2').classList.add("falto2");
                         e.preventDefault();              
