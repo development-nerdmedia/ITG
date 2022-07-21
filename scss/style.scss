@@ -144,10 +144,10 @@ header{
         justify-content: space-between;
         .logo{
             img{
-                width: 80%;
+                width: 95%;
             }
             lottie-player{
-                width: 80%;
+                width: 95%;
                 display: none;
             }
             a{
@@ -366,7 +366,7 @@ header::before {
     position: fixed;
     left: 0;
     top: 0;
-    height: 112.8px;
+    height: 121.69px;
     width: 100%;
     background: #fff;
     z-index: -2;
@@ -2508,7 +2508,7 @@ section.fondo-socios lottie-player.responsive{
 }
 
 
-@media (min-width: 1920px) {
+@media (min-width: 2000px) {
     footer .bg-footer{
         height: 1660px;
     }
@@ -2639,6 +2639,9 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 1440px) {
+    header::before{
+        height: 112.33px;
+    }
     section.beneficios .content .part1 h2:before {
         bottom: -2px;
     }
