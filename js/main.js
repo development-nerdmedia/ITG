@@ -632,13 +632,13 @@ $('.slider-novedades').slick({
     speed: 300,
     dots: false,
     // autoplay: true,
-    slidesToShow: 3.65,
+    slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
         {
             breakpoint: 1700,
             settings: {
-                slidesToShow: 3.3,/* 1.94 */
+                slidesToShow: 3,/* 1.94 */
                 slidesToScroll: 1,
             }
         },
@@ -652,7 +652,7 @@ $('.slider-novedades').slick({
         {
             breakpoint: 1441,
             settings: {
-                slidesToShow: 3.03,/* 1.94 */
+                slidesToShow: 3,/* 1.94 */
                 slidesToScroll: 1,
             }
         },
@@ -666,21 +666,21 @@ $('.slider-novedades').slick({
         {
             breakpoint: 1281,
             settings: {
-                slidesToShow: 2.67,/* 1.94 */
+                slidesToShow: 2,/* 1.94 */
                 slidesToScroll: 1,
             }
         },
         {
             breakpoint: 1167,
             settings: {
-                slidesToShow: 2.2,
+                slidesToShow: 2,
                 slidesToScroll: 1,
             }
         },
         {
             breakpoint: 1025,
             settings: {
-                slidesToShow: 2.02,/* 1.94 */
+                slidesToShow: 2,/* 1.94 */
                 slidesToScroll: 1,
             }
         },
