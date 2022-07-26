@@ -117,10 +117,12 @@ header {
     align-items: center;
     justify-content: space-between; }
     header nav .logo img {
-      width: 95%; }
+      width: 100%;
+      transition: 0.2s linear; }
     header nav .logo lottie-player {
-      width: 95%;
-      display: none; }
+      width: 100%;
+      display: none;
+      transition: 0.2s linear; }
     header nav .logo a {
       display: flex; }
     header nav .logo a:hover img {
@@ -268,6 +270,10 @@ header {
 
 header.sticky {
   padding: 20px 0; }
+  header.sticky nav .logo img {
+    width: 90%; }
+  header.sticky nav .logo lottie-player {
+    width: 90%; }
 
 header.sticky::before {
   transform: translateY(0%); }
@@ -277,7 +283,7 @@ header::before {
   position: fixed;
   left: 0;
   top: 0;
-  height: 121.69px;
+  height: 117px;
   width: 100%;
   background: #fff;
   z-index: -2;
@@ -389,8 +395,7 @@ section.confian {
         transform: translateY(-10px); }
 
 section.socios {
-  padding: 140px 0;
-  padding-bottom: 70px; }
+  padding: 140px 0; }
   section.socios h2 {
     margin-bottom: 50px; }
   section.socios .content {
@@ -405,7 +410,10 @@ section.socios {
       align-items: center;
       flex-direction: column; }
       section.socios .content .card img {
-        margin-bottom: 70px; }
+        margin-bottom: 70px;
+        transition: 0.2s linear; }
+        section.socios .content .card img:hover {
+          transform: translateY(-10px); }
       section.socios .content .card p {
         color: #fff;
         text-align: center;
@@ -634,107 +642,77 @@ footer {
     padding-bottom: 30px; }
   footer .part1 {
     max-width: 510px; }
-    footer .part1 h2 {
-      margin-left: 0;
-      font-size: 35px;
-      margin-bottom: 5px; }
-      footer .part1 h2::before {
-        content: none; }
-    footer .part1 form {
-      width: 100%;
-      position: relative; }
-      footer .part1 form input {
-        width: 510px;
-        width: 100%;
-        height: 58px;
-        border-radius: 10px;
-        border: 2px solid var(--color-celeste);
-        background-color: transparent;
-        outline: none !important;
-        appearance: none;
-        padding-left: 17px;
-        padding-right: 46px;
+    footer .part1 ul {
+      list-style: none;
+      padding-left: 20px; }
+      footer .part1 ul li {
         font-family: var(--fuente-Ubuntu);
-        font-weight: 500;
-        font-size: 20px;
-        color: var(--color-celeste);
-        padding-top: 6px; }
-      footer .part1 form input.falto2 {
-        border: 2px solid var(--color-anaranjado); }
-      footer .part1 form label {
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-family: var(--fuente-Ubuntu);
-        font-weight: 500;
-        font-size: 20px;
-        transition: 0.2s linear; }
-      footer .part1 form .form-group {
+        font-weight: 700;
+        font-size: 18px;
+        padding: 13px 0;
         position: relative; }
-      footer .part1 form .form-group.focusin label,
-      footer .part1 form .form-group.ok label {
-        font-size: 14px;
-        top: 14px; }
-      footer .part1 form button {
-        border: none;
-        position: absolute;
-        background-color: transparent;
-        right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer; }
-        footer .part1 form button img {
-          transition: 0.2s linear; }
-        footer .part1 form button:hover img {
-          transform: scale(0.7); }
+        footer .part1 ul li::after {
+          content: '';
+          position: absolute;
+          width: 12px;
+          height: 3px;
+          top: 23px;
+          left: -20px;
+          background-color: var(--color-verde);
+          border-radius: 10px; }
+        footer .part1 ul li a {
+          text-decoration: none;
+          color: var(--color-celeste); }
+        footer .part1 ul li ul {
+          list-style: none; }
+          footer .part1 ul li ul li {
+            padding: 0;
+            font-weight: 500;
+            line-height: 1.5; }
+            footer .part1 ul li ul li::after {
+              content: none; }
+            footer .part1 ul li ul li:hover a {
+              text-decoration: underline; }
+      footer .part1 ul li:last-child {
+        padding-bottom: 0; }
   footer .part2 {
-    max-width: 290px; }
-  footer ul {
-    list-style: none; }
-    footer ul li {
+    max-width: 330px; }
+    footer .part2 a {
+      text-decoration: none; }
+    footer .part2 p {
+      color: var(--color-celeste);
       font-family: var(--fuente-Ubuntu);
-      font-weight: 700;
+      font-weight: 500;
       font-size: 18px;
       padding: 13px 0;
       position: relative; }
-      footer ul li::after {
+    footer .part2 p:first-child {
+      font-weight: 700;
+      position: relative; }
+      footer .part2 p:first-child::after {
         content: '';
         position: absolute;
         width: 12px;
         height: 3px;
-        top: 23px;
+        top: 25px;
         left: -20px;
         background-color: var(--color-verde);
         border-radius: 10px; }
-      footer ul li a {
-        text-decoration: none;
-        color: var(--color-celeste); }
-      footer ul li ul {
-        list-style: none; }
-        footer ul li ul li {
-          padding: 0;
-          font-weight: 500;
-          line-height: 1.5; }
-          footer ul li ul li::after {
-            content: none; }
-          footer ul li ul li:hover a {
-            text-decoration: underline; }
-    footer ul li:last-child {
-      padding-bottom: 0; }
-  footer .part3 {
-    max-width: 380px; }
-    footer .part3 ul li {
-      padding: 13px 0; }
-    footer .part3 .redes {
-      display: flex; }
-      footer .part3 .redes a {
-        margin: 0 27px;
+    footer .part2 .redes {
+      margin-top: 5px; }
+      footer .part2 .redes a {
+        margin: 0 10px;
         transition: 0.2s linear; }
-      footer .part3 .redes a:first-child {
+        footer .part2 .redes a:hover {
+          transform: translateY(-5px); }
+      footer .part2 .redes a:first-child {
         margin-left: 0; }
-      footer .part3 .redes a:hover {
+      footer .part2 .redes a:last-child {
+        margin-right: 0; }
+      footer .part2 .redes a:hover {
         transform: translateY(-5px); }
+  footer .part3 {
+    max-width: 240px; }
     footer .part3 p {
       font-family: var(--fuente-Ubuntu);
       font-weight: 500;
@@ -743,9 +721,35 @@ footer {
       padding: 13px 0;
       line-height: 139.4%; }
     footer .part3 p:first-child {
-      padding-top: 0; }
-    footer .part3 p:last-child {
-      padding-bottom: 0; }
+      font-weight: 700;
+      position: relative; }
+      footer .part3 p:first-child::after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 3px;
+        top: 25px;
+        left: -20px;
+        background-color: var(--color-verde);
+        border-radius: 10px; }
+    footer .part3 a {
+      display: block;
+      margin-top: 13px;
+      text-decoration: none;
+      color: var(--color-celeste);
+      font-family: var(--fuente-Ubuntu);
+      font-weight: 700;
+      font-size: 18px;
+      position: relative; }
+      footer .part3 a::after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 3px;
+        top: 11px;
+        left: -20px;
+        background-color: var(--color-verde);
+        border-radius: 10px; }
   footer .pie {
     display: flex;
     border-top: 1px solid var(--color-celeste);
@@ -845,7 +849,8 @@ section.filosofia {
     padding-bottom: 0px; }
 
 section.mision-vision {
-  padding: 70px 0; }
+  padding: 140px 0;
+  padding-bottom: 70px; }
   section.mision-vision .container .content {
     margin: 0 auto;
     display: flex;
@@ -874,6 +879,19 @@ section.mision-vision {
       height: 100%; }
       section.mision-vision .container .content .part2 lottie-player {
         width: 79.1%; }
+
+section.video-youtube {
+  padding: 70px 0; }
+  section.video-youtube .content {
+    display: flex;
+    justify-content: center; }
+  section.video-youtube h2 {
+    margin-bottom: 50px; }
+  section.video-youtube iframe {
+    width: 100%;
+    max-width: 1000px;
+    height: 554px !important;
+    margin: 0 50px; }
 
 section.valores {
   padding: 70px 0;
@@ -1974,6 +1992,8 @@ section.novedades .slider-novedades {
     height: 53vw; } }
 
 @media (max-width: 1440px) {
+  section.video-youtube {
+    padding: 50px 0; }
   header::before {
     height: 112.33px; }
   section.beneficios .content .part1 h2:before {
@@ -2007,7 +2027,8 @@ section.novedades .slider-novedades {
     padding: 140px 0;
     padding-bottom: 50px; }
   section.mision-vision {
-    padding: 50px 0; }
+    padding: 140px 0;
+    padding-bottom: 50px; }
   section.fondo-interna .bg-interna img {
     top: -256px; }
   section.fondo-interna {
@@ -2083,6 +2104,11 @@ section.novedades .slider-novedades {
   header nav .logo img,
   header nav .logo lottie-player {
     width: 164px; }
+  header.sticky nav .logo img,
+  header.sticky nav .logo lottie-player {
+    width: 150px; }
+  header::before {
+    height: 106px; }
   section.home .content h1 {
     font-size: 50px; }
   section.home {
@@ -2114,8 +2140,6 @@ section.novedades .slider-novedades {
     padding: 20px; }
   section.novedades .slider-novedades .item p {
     padding-bottom: 40px; }
-  footer .part1 {
-    max-width: 400px; }
   section.somos {
     padding: 170px 0;
     padding-bottom: 100px; }
@@ -2125,8 +2149,8 @@ section.novedades .slider-novedades {
     padding: 0 30px;
     padding-top: 20px; }
   section.socios {
-    padding: 100px 0;
-    padding-bottom: 50px; }
+    padding: 170px 0;
+    padding-bottom: 100px; }
   section.soluciones {
     padding: 50px 0; }
   section.novedades {
@@ -2217,6 +2241,9 @@ section.novedades .slider-novedades {
   section.valores .grid-valores .item h3 {
     font-size: 22px; }
   section.filosofia {
+    padding: 100px 0;
+    padding-bottom: 50px; }
+  section.mision-vision {
     padding: 100px 0;
     padding-bottom: 50px; }
   section.fondo-interna .bg-interna img {
@@ -2319,22 +2346,6 @@ section.novedades .slider-novedades {
       transition: background-image 0.2s linear !important; }
     .slider-empresas .slick-prev, .slider-empresas .slick-next {
       top: -62.5px; }
-  footer .content {
-    display: block; }
-  footer .part1 {
-    width: 100%;
-    max-width: 100%; }
-  footer .part1 form {
-    max-width: 410px; }
-  footer .part2 {
-    margin-right: 12vw; }
-  footer .part2,
-  footer .part3 {
-    display: inline-block;
-    padding-left: 20px;
-    padding-top: 40px; }
-  footer .pie .content {
-    display: flex; }
   section.soluciones .grid-soluciones .item p {
     padding-top: 15px;
     padding-bottom: 15px; }
@@ -2419,7 +2430,22 @@ section.novedades .slider-novedades {
     height: 66vw; }
   section.somos {
     padding: 100px 0;
-    padding-bottom: 100px; } }
+    padding-bottom: 100px; }
+  section.socios {
+    padding: 100px 0;
+    padding-bottom: 100px; }
+  footer .part1 {
+    max-width: 100%;
+    width: 50%; }
+  footer .part2 {
+    max-width: 100%;
+    width: 50%; }
+  footer .part3 {
+    padding-left: 20px;
+    margin-top: 50px;
+    max-width: 100%; }
+  footer .content {
+    flex-wrap: wrap; } }
 
 @media (max-width: 1032px) {
   section.fondo-socios {
@@ -2429,6 +2455,10 @@ section.novedades .slider-novedades {
     top: 106px; } }
 
 @media (max-width: 1024px) {
+  footer .part3 {
+    margin-top: 30px; }
+  section.video-youtube iframe {
+    height: 462px !important; }
   section.blog .content .destacado {
     grid-gap: 30px;
     grid-row-gap: 60px; }
@@ -2551,8 +2581,6 @@ section.novedades .slider-novedades {
     grid-template-columns: repeat(2, 1fr); }
   section.novedades .slider-novedades {
     padding-left: 36px; }
-  footer .part1 h2 {
-    font-size: 30px; }
   section.socios .content .card {
     width: 100%; }
   section.socios .content .card {
@@ -2774,7 +2802,9 @@ section.novedades .slider-novedades {
 
 @media (max-width: 865px) {
   section.fondo-interna {
-    height: auto; } }
+    height: auto; }
+  section.video-youtube iframe {
+    height: 383px !important; } }
 
 @media (max-width: 835px) {
   section.home .content h1 {
@@ -2809,14 +2839,23 @@ section.novedades .slider-novedades {
     text-align: center; } }
 
 @media (max-width: 779px) {
-  footer .bg-footer {
-    height: 1030px; }
   footer .bg-footer img.default {
     display: none; }
   footer .bg-footer img.responsive {
     display: block; } }
 
 @media (max-width: 768px) {
+  footer .content {
+    flex-direction: column; }
+  footer .part1 {
+    width: 100%; }
+  footer .part2 {
+    margin-top: 30px;
+    padding-left: 20px;
+    width: 100%; }
+  footer .part3 {
+    margin-top: 30px;
+    width: 100%; }
   section.novedades .slider-novedades {
     padding: 0 40px; }
   section.beneficios .content .part2 .mostrar {
@@ -2877,8 +2916,11 @@ section.home-servicios-interna .content .part2 {
   section.filosofia {
     padding: 40px 0;
     padding-top: 80px; }
-  section.mision-vision {
+  section.video-youtube {
     padding: 40px 0; }
+  section.mision-vision {
+    padding: 40px 0;
+    padding-top: 80px; }
   section.fondo-interna {
     height: auto; }
   section.home-nosotros .content {
@@ -2955,7 +2997,12 @@ section.home-servicios-interna .content .part2 {
     padding-top: 40px; }
   header nav .logo img,
   header nav .logo lottie-player {
-    width: 130px; }
+    width: 140px; }
+  header.sticky nav .logo img,
+  header.sticky nav .logo lottie-player {
+    width: 140px; }
+  header::before {
+    height: 101px; }
   header nav .navigation ul li.contacto button {
     padding: 11px 25px; }
   section.home .content h1 {
@@ -3000,8 +3047,7 @@ section.home-servicios-interna .content .part2 {
   section.confian {
     padding: 80px 0; }
   section.socios {
-    padding: 80px 0;
-    padding-bottom: 40px; }
+    padding: 80px 0; }
   section.soluciones {
     padding: 40px 0; }
   section.novedades {
@@ -3009,7 +3055,9 @@ section.home-servicios-interna .content .part2 {
 
 @media (max-width: 726px) {
   footer .bg-footer {
-    height: 1198px; } }
+    height: 1198px; }
+  section.video-youtube iframe {
+    height: 311px !important; } }
 
 @media (max-width: 650px) {
   section.competencias .slider-competencias .item img {
@@ -3031,7 +3079,9 @@ section.home-servicios-interna .content .part2 {
 
 @media (max-width: 600px) {
   section.competencias .slider-competencias .item img {
-    width: 60%; } }
+    width: 60%; }
+  section.video-youtube iframe {
+    margin: 0; } }
 
 @media (max-width: 578px) {
   .slider-empresas .slick-prev, .slider-empresas .slick-next {
@@ -3101,6 +3151,13 @@ section.home-servicios-interna .content .part2 {
     padding: 0 31px; } }
 
 @media (max-width: 500px) {
+  footer .part2 .redes a img {
+    width: 40px;
+    height: 30px; }
+  footer .part2 .redes a {
+    margin: 0 5px; }
+  section.video-youtube iframe {
+    height: 246px !important; }
   footer .bg-footer {
     height: 1226px; }
   section.home-servicios-interna .content .part1 lottie-player {
@@ -3132,7 +3189,6 @@ section.home-servicios-interna .content .part2 {
     margin-bottom: 52px; } }
 
 @media (max-width: 530px) {
-  footer .pie .content,
   section.footer-contacto .pie .content {
     flex-direction: column;
     align-items: center; }
@@ -3146,6 +3202,8 @@ section.home-servicios-interna .content .part2 {
     font-size: 18px; } }
 
 @media (max-width: 425px) {
+  section.video-youtube iframe {
+    height: 213px !important; }
   footer .bg-footer {
     height: 1198px; }
   section.novedades.articulo .slider-novedades .slick-prev, section.novedades.articulo .slider-novedades .slick-next {
@@ -3215,14 +3273,16 @@ section.home-servicios-interna .content .part2 {
     right: 81px; }
   section.novedades .slider-novedades .slick-prev, section.novedades .slider-novedades .slick-next {
     top: -75.5px; }
-  footer .part1 h2 {
-    font-size: 25px;
-    margin-left: 0px; }
   section.novedades .slider-novedades {
     padding: 0px; }
   header nav .logo img,
   header nav .logo lottie-player {
     width: 130px; }
+  header.sticky nav .logo img,
+  header.sticky nav .logo lottie-player {
+    width: 130px; }
+  header::before {
+    height: 101px; }
   header nav .navigation ul li.contacto {
     display: none; }
   section.home .content h1,

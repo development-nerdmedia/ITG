@@ -150,22 +150,24 @@
                 <form action="thanks.html" method="">
                   <div class="form-group formname">
                     <label for="name">Nombres y Apellidos:</label>
-                    <input type="text" required="true" name="name" id="name" />
+                    <input class="form-input" type="text" required="true" name="name" id="name" />
                     <span></span>
                   </div>
                   <div class="form-group formaempresa">
                     <label for="name-empresa">Empresa:</label>
                     <input
+                    class="form-input"
                       type="text"
                       required="true"
                       name="name-empresa"
                       id="name-empresa"
                     />
-                    <span></span>
+                    <span class="raya"></span>
                   </div>
                   <div class="form-group formcorreo">
                     <label for="email">Email:</label>
                     <input
+                    class="form-input"
                       type="text"
                       required="true"
                       name="email"
@@ -176,6 +178,7 @@
                   <div class="form-group formtel">
                     <label for="telephone">Teléfono:</label>
                     <input
+                    class="form-input"
                       type="text"
                       required="true"
                       name="telephone"
@@ -284,23 +287,6 @@
       <div class="container">
         <div class="content">
           <div class="part1" data-aos="fade-right" data-aos-once="true">
-            <h2>¿Interesado? Déjanos tu correo y conversemos</h2>
-            <form action="thanks.html" method="">
-              <div class="form-group formemail">
-                <input
-                  required="true"
-                  type="email2"
-                  name="email2"
-                  id="email2"
-                />
-                <label for="email2">Email</label>
-              </div>
-              <button type="submit">
-                <img src="../icons/flecha-enviar.svg" alt="" />
-              </button>
-            </form>
-          </div>
-          <div class="part2" data-aos="fade-left" data-aos-once="true">
             <ul>
                 <li><a href="socios.html">Socios</a></li>
                 <li>Soluciones
@@ -315,31 +301,34 @@
                 <li><a href="trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
             </ul>
         </div>
-          <div class="part3" data-aos="fade-left" data-aos-once="true">
-            <ul>
-              <li>Datos de contacto</li>
-            </ul>
-            <div class="redes">
-              <a href="#" target="_blank">
-                <img src="../icons/facebook.svg" alt="" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/itg-solutions/"
-                target="_blank"
-              >
-                <img src="../icons/linkedin.svg" alt="" />
-              </a>
-              <a href="#" target="_blank">
-                <img src="../icons/twitter.svg" alt="" />
-              </a>
-            </div>
+        <div class="part2" data-aos="fade-left" data-aos-once="true">
+            <p>Datos de contacto</p>
             <p>servicioalcliente@itgsolutions.com.pe</p>
-            <p>
-              Av. Canaval y Moreyra 230 Of. 3B <br />
-              San Isidro, Lima – Perú
-            </p>
+            <p>Av. Canaval y Moreyra 230 Of. 3B San Isidro, Lima – Perú</p>
             <p>(01) 628-1404</p>
-          </div>
+            <div class="redes">
+                <a href="#" target="_blank">
+                    <img src="../icons/facebook.svg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/company/itg-solutions/" target="_blank">
+                    <img src="../icons/linkedin.svg" alt="">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="../icons/twitter.svg" alt="">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="../icons/youtube.svg" alt="">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="../icons/tiktok.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="part3" data-aos="fade-left" data-aos-once="true">
+            <p>Soporte</p>
+            <p>986 649 371 <br> Atención 24/7</p>
+            <a href="../pages/proteccion-de-datos.html">Términos y condiciones </a>
+        </div>
         </div>
       </div>
       <div class="pie">
@@ -347,8 +336,7 @@
           <div class="content">
             <p data-aos="fade-right" data-aos-once="true" data-aos-offset="10">2022 Todos lo derechos reservados</p>
             <div class="creditos" data-aos="fade-left" data-aos-once="true" data-aos-offset="10">
-              <p>Hecho con amor</p>
-              <img class="corazon" src="../icons/corazon.svg" alt="" />
+              <p>Realizado por</p>
               <a href="https://www.nerdmedia.pe/" target="_blank">
                 <img src="../icons/logonerd.svg" alt="" />
               </a>

@@ -119,32 +119,32 @@
                             <form action="thanks.html" method="">
                                 <div class="form-group formname">
                                     <label for="name">Nombres y Apellidos:</label>
-                                    <input type="text" required="true" name="name" id="name">
+                                    <input class="form-input" type="text" required="true" name="name" id="name">
                                     <span></span>
                                 </div>
                                 <div class="form-group formcorreo">
                                     <label for="email">Email:</label>
-                                    <input type="text" required="true" name="email" id="email">
+                                    <input class="form-input" type="text" required="true" name="email" id="email">
                                     <span></span>
                                 </div>
                                 <div class="form-group formtel">
                                     <label for="telephone">Teléfono:</label>
-                                    <input type="text" required="true" name="telephone" id="telephone">
+                                    <input class="form-input" type="text" required="true" name="telephone" id="telephone">
                                     <span></span>
                                 </div>
                                 <div class="form-group formmensaje">
                                     <label for="mensaje">Mensaje:</label>
                                     <!-- <input type="text" required="true" name="telephone" id="telephone"> -->
-                                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                                    <textarea class="form-input" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
                                     <span></span>
                                 </div>
                                 <div class="form-group archivo">
                                     <p>Adjuntar CV(.pdf):</p>
-                                    <input type="file" name="file" id="file" class="inputfile">
+                                    <input class="form-input" required="true" type="file" name="file" id="file" class="inputfile">
                                     <!-- <button type="file" name="file" id="file" class="inputfile"></button> -->
                                 </div>
                                 <div class="checkbox-box">                        
-                                    <input checked type="checkbox" required="" id="terminos"> 
+                                    <input checked type="checkbox" required="true" id="terminos"> 
                                     <p>Acepto los <a href="proteccion-de-datos.html">términos y condiciones</a> legales.</p>
                                 </div> 
                                 <button class="shiny enviar" type="submit"><span>Enviar</span></button>

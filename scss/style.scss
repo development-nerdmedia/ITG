@@ -144,11 +144,13 @@ header{
         justify-content: space-between;
         .logo{
             img{
-                width: 95%;
+                width: 100%;
+                transition: 0.2s linear;
             }
             lottie-player{
-                width: 95%;
+                width: 100%;
                 display: none;
+                transition: 0.2s linear;
             }
             a{
                 display: flex;
@@ -355,6 +357,12 @@ header{
 
 header.sticky{
     padding: 20px 0;
+    nav .logo img{
+        width: 90%;
+    }
+    nav .logo lottie-player{
+        width: 90%;
+    }
 }
 
 header.sticky::before {
@@ -366,7 +374,7 @@ header::before {
     position: fixed;
     left: 0;
     top: 0;
-    height: 121.69px;
+    height: 117px;
     width: 100%;
     background: #fff;
     z-index: -2;
@@ -517,7 +525,7 @@ section.confian{
 
 section.socios{
     padding: 140px 0;
-    padding-bottom: 70px;
+    // padding-bottom: 70px;
     h2{
         margin-bottom: 50px;
     }
@@ -534,7 +542,11 @@ section.socios{
             align-items: center;
             flex-direction: column;
             img{
-                margin-bottom: 70px;               
+                margin-bottom: 70px;     
+                transition: 0.2s linear;         
+                &:hover{
+                    transform: translateY(-10px);
+                } 
             }
             p{
                 color: #fff;
@@ -839,80 +851,9 @@ footer{
     }
     .part1{     
         max-width: 510px;
-        h2{
-            margin-left: 0;
-            font-size: 35px;
-            margin-bottom: 5px;
-            &::before{
-                content: none;
-            }
-        }
-        form{
-            width: 100%;
-            position: relative;
-            input{
-                width: 510px;
-                width: 100%;
-                height: 58px;
-                border-radius: 10px;
-                border: 2px solid var(--color-celeste);
-                background-color: transparent;
-                outline: none !important;
-                appearance: none;
-                padding-left: 17px;
-                padding-right: 46px;
-                font-family: var(--fuente-Ubuntu);
-                font-weight: 500;
-                font-size: 20px;
-                color: var(--color-celeste);
-                padding-top: 6px;
-            }
-            input.falto2{
-                border: 2px solid var(--color-anaranjado);
-            }
-            label{
-                position: absolute;
-                left: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                font-family: var(--fuente-Ubuntu);
-                font-weight: 500;
-                font-size: 20px;
-                transition: 0.2s linear;
-            }
-            .form-group{
-                position: relative;
-            }
-            .form-group.focusin label,
-            .form-group.ok label{
-                font-size: 14px;
-                // left: 20px;
-                top: 14px;
-            }
-            button{
-                border: none;
-                position: absolute;
-                background-color: transparent;
-                right: 12px;
-                top: 50%;
-                transform: translateY(-50%);
-                cursor: pointer;
-                img{
-                    transition: 0.2s linear;                    
-                }
-                &:hover{
-                    img{
-                        transform: scale(0.7);
-                    }
-                }
-            }
-        }
-    }
-    .part2{
-        max-width: 290px;
-    }
         ul{
             list-style: none;
+            padding-left: 20px;
             li{
                 font-family: var(--fuente-Ubuntu);
                 font-weight: 700;
@@ -954,24 +895,56 @@ footer{
                 padding-bottom: 0;
             }
         }
-    .part3{
-        max-width: 380px;
-        ul li{
+    }
+    .part2{
+        max-width: 330px;        
+        a{
+            text-decoration: none;
+        }
+        p{
+            color: var(--color-celeste);
+            font-family: var(--fuente-Ubuntu);
+            font-weight: 500;
+            font-size: 18px;
             padding: 13px 0;
+            position: relative;
+        }
+        p:first-child{
+            font-weight: 700;
+            position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 12px;
+                    height: 3px;
+                    top: 25px;
+                    left: -20px;
+                    background-color: var(--color-verde);
+                    border-radius: 10px;
+                }
         }
         .redes{
-            display: flex;
+            margin-top: 5px;
             a{
-                margin: 0 27px;
+                margin: 0 10px;
                 transition: 0.2s linear;
+                &:hover{
+                    transform: translateY(-5px);
+                }
             }
             a:first-child{
                 margin-left: 0;
+            }
+            a:last-child{
+                margin-right: 0;
             }
             a:hover{
                 transform: translateY(-5px);
             }
         }
+    }
+    .part3{
+        max-width: 240px;
         p{
             font-family: var(--fuente-Ubuntu);
             font-weight: 500;
@@ -981,10 +954,38 @@ footer{
             line-height: 139.4%;
         }
         p:first-child{
-            padding-top: 0;
+            font-weight: 700;
+            position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 12px;
+                    height: 3px;
+                    top: 25px;
+                    left: -20px;
+                    background-color: var(--color-verde);
+                    border-radius: 10px;
+                }
         }
-        p:last-child{
-            padding-bottom: 0;
+        a{
+            display: block;
+            margin-top: 13px;
+            text-decoration: none;
+            color: var(--color-celeste);
+            font-family: var(--fuente-Ubuntu);
+            font-weight: 700;
+            font-size: 18px;
+            position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 12px;
+                    height: 3px;
+                    top: 11px;
+                    left: -20px;
+                    background-color: var(--color-verde);
+                    border-radius: 10px;
+                }
         }
     }
 
@@ -1123,7 +1124,8 @@ section.filosofia{
 }
 
 section.mision-vision{
-    padding: 70px 0;
+    padding: 140px 0;
+    padding-bottom: 70px;
     .container{
         // width: 65%;
         .content{
@@ -1161,6 +1163,23 @@ section.mision-vision{
                 }
             }
         }
+    }
+}
+
+section.video-youtube{
+    padding: 70px 0;
+    .content{
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+        margin-bottom: 50px;
+    }
+    iframe{
+        width: 100%;
+        max-width: 1000px;
+        height: 554px !important;
+        margin: 0 50px;
     }
 }
 
@@ -2657,6 +2676,10 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 1440px) {
+
+    section.video-youtube {
+        padding: 50px 0;
+    }
     header::before{
         height: 112.33px;
     }
@@ -2704,7 +2727,8 @@ section.fondo-socios lottie-player.responsive{
         padding-bottom: 50px;
     }
     section.mision-vision {
-        padding: 50px 0;
+        padding: 140px 0;
+        padding-bottom: 50px;
     }
     section.fondo-interna{
         .bg-interna{
@@ -2815,6 +2839,13 @@ section.fondo-socios lottie-player.responsive{
     header nav .logo lottie-player{
         width: 164px;
     }
+    header.sticky nav .logo img,
+    header.sticky nav .logo lottie-player {
+        width: 150px;
+    }
+    header::before {
+        height: 106px;
+    }
     section.home .content h1{
         font-size: 50px;
     }
@@ -2862,9 +2893,9 @@ section.fondo-socios lottie-player.responsive{
     section.novedades .slider-novedades .item p{
         padding-bottom: 40px;
     }
-    footer .part1 {
-        max-width: 400px;
-    }
+    // footer .part1 {
+    //     max-width: 400px;
+    // }
     section.somos {
         padding: 170px 0;
         padding-bottom: 100px;
@@ -2877,8 +2908,8 @@ section.fondo-socios lottie-player.responsive{
         padding-top: 20px;
     }
     section.socios {
-        padding: 100px 0;
-        padding-bottom: 50px;
+        padding: 170px 0;
+        padding-bottom: 100px;
     }
     section.soluciones {
         padding: 50px 0;
@@ -3019,6 +3050,10 @@ section.fondo-socios lottie-player.responsive{
         padding: 100px 0;
         padding-bottom: 50px;
     }
+    section.mision-vision {
+        padding: 100px 0;
+        padding-bottom: 50px;
+    }
     section.fondo-interna .bg-interna img {
         top: -321px;
     }
@@ -3153,28 +3188,28 @@ section.fondo-socios lottie-player.responsive{
         }
     }
 
-    footer .content{
-        display: block;
-    }
-    footer .part1 {
-        width: 100%;
-        max-width: 100%;
-    }
-    footer .part1 form{
-        max-width: 410px;
-    }
-    footer .part2{
-        margin-right: 12vw;
-    }
-    footer .part2,
-    footer .part3{
-        display: inline-block;
-        padding-left: 20px;
-        padding-top: 40px;
-    }
-    footer .pie .content{
-        display: flex;
-    }
+    // footer .content{
+    //     display: block;
+    // }
+    // footer .part1 {
+    //     width: 100%;
+    //     max-width: 100%;
+    // }
+    // footer .part1 form{
+    //     max-width: 410px;
+    // }
+    // footer .part2{
+    //     margin-right: 12vw;
+    // }
+    // footer .part2,
+    // footer .part3{
+    //     display: inline-block;
+    //     padding-left: 20px;
+    //     padding-top: 40px;
+    // }
+    // footer .pie .content{
+    //     display: flex;
+    // }
     section.soluciones .grid-soluciones .item p {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -3292,6 +3327,26 @@ section.fondo-socios lottie-player.responsive{
         padding: 100px 0;
         padding-bottom: 100px;
     }
+    section.socios {
+        padding: 100px 0;
+        padding-bottom: 100px;
+    }
+    footer .part1{
+        max-width: 100%;
+        width: 50%;
+    }
+    footer .part2{
+        max-width: 100%;
+        width: 50%;
+    }
+    footer .part3{
+        padding-left: 20px;
+        margin-top: 50px;
+        max-width: 100%;
+    }
+    footer .content{
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 1032px) {
@@ -3305,6 +3360,12 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 1024px) {
+    footer .part3 {
+        margin-top: 30px;
+    }
+    section.video-youtube iframe{
+        height: 462px !important;
+    }
     section.blog .content .destacado{
         grid-gap: 30px;
         grid-row-gap: 60px;
@@ -3477,9 +3538,9 @@ section.fondo-socios lottie-player.responsive{
     section.novedades .slider-novedades {
         padding-left: 36px;
     }
-    footer .part1 h2 {
-        font-size: 30px;
-    }
+    // footer .part1 h2 {
+    //     font-size: 30px;
+    // }
     section.socios .content .card {
         width: 100%;
     }
@@ -3783,6 +3844,9 @@ section.fondo-socios lottie-player.responsive{
     section.fondo-interna {
         height: auto;
     }
+    section.video-youtube iframe {
+        height: 383px !important;
+    }
 }
 
 @media (max-width: 835px) {
@@ -3837,10 +3901,10 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 779px) {
-    footer .bg-footer {
-        // height: 1928px;
-        height: 1030px;
-    }
+    // footer .bg-footer {
+    //     // height: 1928px;
+    //     height: 1030px;
+    // }
     footer .bg-footer img.default{
         display: none;
     }
@@ -3850,6 +3914,21 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 768px) {
+    footer .content{
+        flex-direction: column;
+    }
+    footer .part1{
+        width: 100%;
+    }
+    footer .part2 {
+        margin-top: 30px;
+        padding-left: 20px;
+        width: 100%;
+    }
+    footer .part3 {
+        margin-top: 30px;
+        width: 100%;
+    }
     section.novedades .slider-novedades{
         padding: 0 40px;
     }
@@ -3932,8 +4011,12 @@ section.fondo-socios lottie-player.responsive{
         padding: 40px 0;
         padding-top: 80px;
     }
+    section.video-youtube{
+        padding: 40px 0;
+    }
     section.mision-vision{
         padding: 40px 0;
+        padding-top: 80px;
     }
     section.fondo-interna {
         height: auto;
@@ -4042,7 +4125,14 @@ section.fondo-socios lottie-player.responsive{
     }
     header nav .logo img,
     header nav .logo lottie-player {
-        width: 130px;
+        width: 140px;
+    }
+    header.sticky nav .logo img,
+    header.sticky nav .logo lottie-player {
+        width: 140px;
+    }
+    header::before {
+        height: 101px;
     }
     header nav .navigation ul li.contacto button{
         padding: 11px 25px;
@@ -4106,7 +4196,6 @@ section.fondo-socios lottie-player.responsive{
     }
     section.socios {
         padding: 80px 0;
-        padding-bottom: 40px;
     }
     section.soluciones {
         padding: 40px 0;
@@ -4119,6 +4208,9 @@ section.fondo-socios lottie-player.responsive{
 @media (max-width: 726px) {
     footer .bg-footer {
         height: 1198px;
+    }
+    section.video-youtube iframe {
+        height: 311px !important;
     }
 }
 
@@ -4157,6 +4249,9 @@ section.fondo-socios lottie-player.responsive{
 @media (max-width: 600px) {
     section.competencias .slider-competencias .item img {
         width: 60%;
+    }
+    section.video-youtube iframe{
+        margin: 0;        
     }
 }
 
@@ -4260,6 +4355,16 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 500px) {
+    footer .part2 .redes a img{
+        width: 40px;
+        height: 30px;
+    }
+    footer .part2 .redes a {
+        margin: 0 5px;
+    }
+    section.video-youtube iframe {
+        height: 246px !important;
+    }
     footer .bg-footer {
         height: 1226px;
     }
@@ -4300,7 +4405,7 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 530px) {
-    footer .pie .content,
+    // footer .pie .content,
     section.footer-contacto .pie .content {
         flex-direction: column;
         align-items: center;
@@ -4320,6 +4425,9 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 425px) {
+    section.video-youtube iframe {
+        height: 213px !important;
+    }
     footer .bg-footer {
         height: 1198px;
     }
@@ -4415,16 +4523,23 @@ section.fondo-socios lottie-player.responsive{
     section.novedades .slider-novedades .slick-prev, section.novedades .slider-novedades .slick-next {
         top: -75.5px;
     }
-    footer .part1 h2{
-        font-size: 25px;
-        margin-left: 0px;
-    }
+    // footer .part1 h2{
+    //     font-size: 25px;
+    //     margin-left: 0px;
+    // }
     section.novedades .slider-novedades {
         padding: 0px;
     }
     header nav .logo img,
     header nav .logo lottie-player {
         width: 130px;
+    }
+    header.sticky nav .logo img,
+    header.sticky nav .logo lottie-player {
+        width: 130px;
+    }
+    header::before {
+        height: 101px;
     }
     header nav .navigation ul li.contacto{
         display: none;
