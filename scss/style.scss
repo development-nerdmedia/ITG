@@ -927,9 +927,8 @@ footer{
             margin-top: 5px;
             a{
                 margin: 0 10px;
-                transition: 0.2s linear;
-                &:hover{
-                    transform: translateY(-5px);
+                img{
+                    transition: 0.2s linear;
                 }
             }
             a:first-child{
@@ -938,7 +937,7 @@ footer{
             a:last-child{
                 margin-right: 0;
             }
-            a:hover{
+            a:hover img{
                 transform: translateY(-5px);
             }
         }
@@ -1437,6 +1436,9 @@ section.home-servicios-interna{
             display: flex;
             flex-direction: column;
             // align-items: center;
+            span{
+                transform: scaleX(0) !important;
+            }
             p{
                 font-family: var(--fuente-Ubuntu);
                 font-weight: 400;
@@ -1454,6 +1456,11 @@ section.home-servicios-interna{
                 // background: linear-gradient(180deg, #FFFFFF 0%, #DEDEDE 100%);
                 // color: var(--color-gris);      
                 // border-radius: 10px;
+            }
+        }
+        .archivo.error{
+            input{
+                color: var(--color-anaranjado);
             }
         }
         .checkbox-box{
@@ -1537,9 +1544,9 @@ section.home-servicios-interna{
 section.beneficios{
     padding-top: 140px;
     padding-bottom: 70px;
-    .container{
+    // .container{
         // width: 69%;
-    }
+    // }
     .content{
         display: flex;
         margin: 0 auto;
@@ -2083,6 +2090,15 @@ section.contact-page{
         }
     }
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
 
 section.footer-contacto{
     padding-top: 70px;

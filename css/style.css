@@ -701,15 +701,14 @@ footer {
     footer .part2 .redes {
       margin-top: 5px; }
       footer .part2 .redes a {
-        margin: 0 10px;
-        transition: 0.2s linear; }
-        footer .part2 .redes a:hover {
-          transform: translateY(-5px); }
+        margin: 0 10px; }
+        footer .part2 .redes a img {
+          transition: 0.2s linear; }
       footer .part2 .redes a:first-child {
         margin-left: 0; }
       footer .part2 .redes a:last-child {
         margin-right: 0; }
-      footer .part2 .redes a:hover {
+      footer .part2 .redes a:hover img {
         transform: translateY(-5px); }
   footer .part3 {
     max-width: 240px; }
@@ -1080,6 +1079,8 @@ section.home-servicios-interna .content {
     .formulario form .archivo {
       display: flex;
       flex-direction: column; }
+      .formulario form .archivo span {
+        transform: scaleX(0) !important; }
       .formulario form .archivo p {
         font-family: var(--fuente-Ubuntu);
         font-weight: 400;
@@ -1093,6 +1094,8 @@ section.home-servicios-interna .content {
         -webkit-box-shadow: none;
         box-shadow: none;
         height: auto; }
+    .formulario form .archivo.error input {
+      color: var(--color-anaranjado); }
     .formulario form .checkbox-box {
       display: flex;
       margin-left: 28px;
@@ -1547,6 +1550,14 @@ section.contact-page {
     section.contact-page .content .btn {
       display: flex;
       justify-content: center; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number] {
+  -moz-appearance: textfield; }
 
 section.footer-contacto {
   padding-top: 70px;
