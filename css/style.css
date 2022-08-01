@@ -664,6 +664,8 @@ footer {
         footer .part1 ul li a {
           text-decoration: none;
           color: var(--color-celeste); }
+          footer .part1 ul li a:hover {
+            text-decoration: underline; }
         footer .part1 ul li ul {
           list-style: none; }
           footer .part1 ul li ul li {
@@ -681,6 +683,8 @@ footer {
     /*367*/ }
     footer .part2 a {
       text-decoration: none; }
+      footer .part2 a:hover {
+        text-decoration: underline; }
     footer .part2 p {
       color: var(--color-celeste);
       font-family: var(--fuente-Ubuntu);
@@ -760,6 +764,8 @@ footer {
         left: -20px;
         background-color: var(--color-verde);
         border-radius: 10px; }
+      footer .part3 a:hover {
+        text-decoration: underline; }
   footer .pie {
     display: flex;
     border-top: 1px solid var(--color-celeste);
@@ -1582,9 +1588,9 @@ section.footer-contacto {
     font-family: var(--fuente-Ubuntu);
     font-weight: 700;
     font-size: 18px;
-    color: var(--color-celeste);
     position: relative;
-    padding-bottom: 13px; }
+    padding-bottom: 13px;
+    color: var(--color-gris); }
     section.footer-contacto h3::before {
       content: '';
       position: absolute;
@@ -1602,20 +1608,20 @@ section.footer-contacto {
     section.footer-contacto .flex p {
       padding-top: 20px;
       font-size: 18px;
-      color: var(--color-celeste);
       font-family: var(--fuente-Ubuntu);
       font-weight: 500;
       padding: 13px 0;
-      position: relative; }
+      position: relative;
+      color: var(--color-gris); }
     section.footer-contacto .flex .soporte a {
       display: block;
       margin-top: 13px;
       text-decoration: none;
-      color: var(--color-celeste);
       font-family: var(--fuente-Ubuntu);
       font-weight: 700;
       font-size: 18px;
-      position: relative; }
+      position: relative;
+      color: var(--color-gris); }
       section.footer-contacto .flex .soporte a::after {
         content: '';
         position: absolute;
@@ -1625,11 +1631,12 @@ section.footer-contacto {
         left: -20px;
         background-color: var(--color-verde);
         border-radius: 10px; }
+      section.footer-contacto .flex .soporte a:hover {
+        text-decoration: underline; }
     section.footer-contacto .flex .soporte p {
       font-family: var(--fuente-Ubuntu);
       font-weight: 500;
       font-size: 18px;
-      color: var(--color-celeste);
       padding: 13px 0;
       line-height: 139.4%; }
     section.footer-contacto .flex .oficina {
@@ -1653,6 +1660,8 @@ section.footer-contacto {
             margin-right: 0; }
           section.footer-contacto .flex .oficina .redes .item a:first-child {
             margin-left: 0; }
+          section.footer-contacto .flex .oficina .redes .item a:hover img {
+            transform: translateY(-5px); }
   section.footer-contacto .pie {
     display: flex;
     border-top: 1px solid var(--color-celeste); }

@@ -873,6 +873,9 @@ footer{
                 a{
                     text-decoration: none;
                     color: var(--color-celeste);
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
                 ul{
                     list-style: none;
@@ -920,6 +923,9 @@ footer{
         max-width: 366px;    /*367*/ 
         a{
             text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
         }
         p{
             color: var(--color-celeste);
@@ -1014,6 +1020,9 @@ footer{
                     left: -20px;
                     background-color: var(--color-verde);
                     border-radius: 10px;
+                }
+                &:hover{
+                    text-decoration: underline;
                 }
         }
     }
@@ -2143,9 +2152,9 @@ section.footer-contacto{
         font-family: var(--fuente-Ubuntu);
         font-weight: 700;
         font-size: 18px;
-        color: var(--color-celeste);
         position: relative;
         padding-bottom: 13px;
+        color: var(--color-gris);
         &::before{
             content: '';
             position: absolute;
@@ -2167,22 +2176,22 @@ section.footer-contacto{
         p{
             padding-top: 20px;
             font-size: 18px;
-            color: var(--color-celeste);
             font-family: var(--fuente-Ubuntu);
             font-weight: 500;
             padding: 13px 0;
             position: relative;
+            color: var(--color-gris);
         }
         .soporte{
             a {
                 display: block;
                 margin-top: 13px;
                 text-decoration: none;
-                color: var(--color-celeste);
                 font-family: var(--fuente-Ubuntu);
                 font-weight: 700;
                 font-size: 18px;
                 position: relative;
+                color: var(--color-gris);
                 &::after {
                     content: '';
                     position: absolute;
@@ -2193,12 +2202,14 @@ section.footer-contacto{
                     background-color: var(--color-verde);
                     border-radius: 10px;
                 }
+                &:hover{
+                    text-decoration: underline;
+                }
             }
             p {
                 font-family: var(--fuente-Ubuntu);
                 font-weight: 500;
                 font-size: 18px;
-                color: var(--color-celeste);
                 padding: 13px 0;
                 line-height: 139.4%;
             }
@@ -2227,6 +2238,9 @@ section.footer-contacto{
                     }
                     a:first-child {
                         margin-left: 0;
+                    }
+                    a:hover img {
+                        transform: translateY(-5px);
                     }
                 }
             }
