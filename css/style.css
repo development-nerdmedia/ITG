@@ -2353,8 +2353,6 @@ section.novedades .slider-novedades {
     padding-left: 0px; }
   section.fondo-interna img {
     left: 55%; }
-  footer .bg-footer {
-    height: 1333px; }
   section.blog .content .categorias ul li a,
   section.blog .content .item .img span {
     font-size: 18px; }
@@ -3159,7 +3157,7 @@ section.home-servicios-interna .content .part2 {
 
 @media (max-width: 726px) {
   footer .bg-footer {
-    height: 1198px; }
+    height: 1432px; }
   section.video-youtube iframe {
     height: 311px !important; } }
 
@@ -3258,6 +3256,10 @@ section.home-servicios-interna .content .part2 {
   section.soluciones .grid-soluciones {
     padding: 0 31px; } }
 
+@media (max-width: 538px) {
+  footer .bg-footer {
+    height: 1475px; } }
+
 @media (max-width: 500px) {
   section.footer-contacto .flex .oficina .redes {
     grid-template-columns: repeat(6, 1fr); }
@@ -3269,7 +3271,7 @@ section.home-servicios-interna .content .part2 {
   section.video-youtube iframe {
     height: 246px !important; }
   footer .bg-footer {
-    height: 1226px; }
+    height: 1496px; }
   section.home-servicios-interna .content .part1 lottie-player {
     width: 170px !important; }
   section.novedades .slider-novedades {
@@ -3278,6 +3280,8 @@ section.home-servicios-interna .content .part2 {
     right: 61px; }
   header nav .navigation ul li.contacto {
     display: none; }
+  footer .part3 {
+    margin-top: 10px; }
   .btn-contacto {
     position: fixed;
     bottom: 0;
@@ -3315,7 +3319,7 @@ section.home-servicios-interna .content .part2 {
   section.video-youtube iframe {
     height: 213px !important; }
   footer .bg-footer {
-    height: 1198px; }
+    height: 1476px; }
   section.novedades.articulo .slider-novedades .slick-prev, section.novedades.articulo .slider-novedades .slick-next {
     top: -92.5px; }
   section.competencias .slider-competencias .item img {
