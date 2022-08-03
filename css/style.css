@@ -442,7 +442,8 @@ section.socios {
         white-space: nowrap; }
 
 section.soluciones {
-  padding: 70px 0; }
+  padding: 70px 0;
+  padding-top: 140px; }
   section.soluciones h2 {
     margin-bottom: 50px; }
   section.soluciones .grid-soluciones {
@@ -2220,7 +2221,8 @@ section.novedades .slider-novedades {
     padding: 170px 0;
     padding-bottom: 100px; }
   section.soluciones {
-    padding: 50px 0; }
+    padding: 50px 0;
+    padding-top: 100px; }
   section.novedades {
     padding: 50px 0; }
   footer {
@@ -3151,7 +3153,8 @@ section.home-servicios-interna .content .part2 {
   section.socios {
     padding: 80px 0; }
   section.soluciones {
-    padding: 40px 0; }
+    padding: 40px 0;
+    padding-top: 80px; }
   section.novedades {
     padding: 40px 0; } }
 
@@ -3304,8 +3307,7 @@ section.home-servicios-interna .content .part2 {
 
 @media (max-width: 530px) {
   section.footer-contacto .pie .content {
-    flex-direction: column;
-    align-items: center; }
+    flex-direction: column; }
   section.novedades h2 {
     width: 50%; }
   section.novedades.articulo .slider-novedades .slick-prev, section.novedades.articulo .slider-novedades .slick-next {
