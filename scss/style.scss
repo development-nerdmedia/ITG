@@ -2379,6 +2379,7 @@ section.main-article{
                 }
                 img{
                     transition: 0.2s linear;
+                    width: 43px;
                 }   
                 a{
                     margin-top: 20px;
@@ -3051,27 +3052,40 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 1310px) {   
-    footer .bg-footer{
-        height: 1589px;
+    footer .bg-footer {
+        height: 2161px;
     }
     footer .content {
         flex-wrap: wrap;
+        flex-direction: column;
+    }
+    footer .pie .content{
+        flex-direction: row;
+    }
+    footer .part2 {
+        margin-top: 30px;
+        padding-left: 20px;
+        width: 100%;
+        max-width: 100%;
     }
     footer .part1 {
         max-width: 100%;
-        width: 50%;
+        width: 100%;
     }
-    footer .part2 {
-        max-width: 100%;
-        width: 50%;
-    }
+    footer .part1 {
+        width: 100%;
+    }   
     footer .part2 .redes{
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(14, 1fr);
     }
     footer .part3 {
         padding-left: 20px;
         margin-top: 50px;
         max-width: 100%;
+        width: 100%;
+    }
+    footer .part3 {
+        margin-top: 30px;
         width: 100%;
     }
     section.fondo-socios {
@@ -3112,6 +3126,12 @@ section.fondo-socios lottie-player.responsive{
 @media (max-width: 1180px) {
     .menupage{
         display: block;
+    }
+    section.thanks-page .top {
+        width: 46px;
+    }
+    section.thanks-page {
+        padding: 30.07px 0;
     }
     header nav .navigation ul li{
         display: none;
@@ -3228,9 +3248,6 @@ section.fondo-socios lottie-player.responsive{
     section.tarjeta-contacto .content{
         padding: 45px 60px;
     }
-    section.main-article .content2 .part1 .redes img{
-        width: 48px;
-    }
     section.main-article .content .part2{
         padding-left: 0px;
     }
@@ -3255,9 +3272,6 @@ section.fondo-socios lottie-player.responsive{
     }
     section.footer-contacto .flex .oficina{
         width: auto;
-    }
-    section.thanks-page .top{
-        width: 63px;
     }
     .formulario form .form-group input,
     .formulario form .form-group label,
@@ -3488,10 +3502,6 @@ section.fondo-socios lottie-player.responsive{
         max-width: 100%;
         width: 50%;
     }
-    footer .part2{
-        max-width: 100%;
-        width: 50%;
-    }
     footer .part3{
         padding-left: 20px;
         margin-top: 50px;
@@ -3515,6 +3525,9 @@ section.fondo-socios lottie-player.responsive{
 @media (max-width: 1024px) {
     section.footer-contacto .flex .oficina{
         margin-right: 0px;
+    }
+    footer .part2 .redes {
+        grid-template-columns: repeat(12, 1fr);
     }
     section.footer-contacto .flex .oficina .redes {
         grid-template-columns: repeat(11, 1fr);
@@ -3767,6 +3780,9 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 980px) {
+    section.main-article .content2 .part1 .redes img{
+        width: 34px;
+    }
     section.main-article .content2{
         flex-direction: column-reverse;
     }
@@ -3784,7 +3800,7 @@ section.fondo-socios lottie-player.responsive{
     }
     section.main-article .content2 .part1 .redes a {
         margin-top: 0px;
-        margin: 0 13px;
+        margin: 0 10px;
         display: flex;
     }
     section.main-article .content2 .part1 .redes p {
@@ -3918,9 +3934,6 @@ section.fondo-socios lottie-player.responsive{
 }
 
 @media (max-width: 900px) {
-    footer .part2 .redes {
-        grid-template-columns: repeat(6, 1fr);
-    }
     section.home-servicios-interna .content .part1 p,
     section.home-servicios-interna .content .part1 h1 {
         text-align: center;
@@ -4020,6 +4033,9 @@ section.fondo-socios lottie-player.responsive{
     section.footer-contacto .flex .oficina .redes {
         grid-template-columns: repeat(9, 1fr);
     }
+    footer .part2 .redes {
+        grid-template-columns: repeat(11, 1fr);
+    }
 }
 
 @media (max-width: 820px) {
@@ -4077,6 +4093,9 @@ section.fondo-socios lottie-player.responsive{
     }
     footer .bg-footer img.responsive {
         display: block;
+    }
+    footer .bg-footer {
+        height: 1401px;
     }
 }
 
@@ -4248,9 +4267,6 @@ section.fondo-socios lottie-player.responsive{
     }
     section.tarjeta-contacto .content .part1 h3{
         margin-bottom: 30px;
-    }
-    section.main-article .content2 .part1 .redes img {
-        width: 39px;
     }
     header::before{
         height: 97.33px;
@@ -4604,7 +4620,10 @@ section.fondo-socios lottie-player.responsive{
     }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 530px) {    
+    footer .pie .content{
+        flex-direction: column;
+    }
     // footer .pie .content,
     section.footer-contacto .pie .content {
         flex-direction: column;
@@ -4691,9 +4710,6 @@ section.fondo-socios lottie-player.responsive{
     section.trabajo .content .part1 h1,
     section.home-nosotros .content .part1 h1 {
         font-size: 30px;
-    }
-    section.thanks-page{
-        padding: 40px 0;
     }
     section.thanks-page .top {
         width: 44px;
