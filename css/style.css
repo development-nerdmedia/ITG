@@ -999,7 +999,7 @@ section.home-servicios-interna .content {
         height: 4px;
         background-color: #ffffff33;
         border-radius: 15px; }
-      .formulario form .form-group span {
+      .formulario form .form-group span.span-animation {
         font-weight: inherit;
         background-color: #fff;
         bottom: 0;
@@ -1021,7 +1021,7 @@ section.home-servicios-interna .content {
         transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1), -webkit-transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
         font-style: inherit;
         border-radius: 20px; }
-      .formulario form .form-group span.falto {
+      .formulario form .form-group span.span-animation.falto {
         background-color: var(--color-anaranjado);
         -ms-transform: scaleX(1);
         transform: scaleX(1);
@@ -1041,6 +1041,7 @@ section.home-servicios-interna .content {
         color: #fff;
         position: absolute;
         top: 13px;
+        left: 0;
         transition: 0.1s linear;
         font-family: var(--fuente-Ubuntu); }
       .formulario form .form-group input {
@@ -1084,7 +1085,7 @@ section.home-servicios-interna .content {
       border-radius: 15px; }
     .formulario form .form-group.archivo::after {
       content: none; }
-    .formulario form .formmensaje span {
+    .formulario form .formmensaje span.span-animation {
       bottom: 4px; }
     .formulario form .form-group.focusin label,
     .formulario form .form-group.ok label {
@@ -1097,7 +1098,7 @@ section.home-servicios-interna .content {
     .formulario form .archivo {
       display: flex;
       flex-direction: column; }
-      .formulario form .archivo span {
+      .formulario form .archivo span.span-animation {
         transform: scaleX(0) !important; }
       .formulario form .archivo p {
         font-family: var(--fuente-Ubuntu);
@@ -1520,9 +1521,9 @@ section.contact-page {
       section.contact-page .content form .form-group::after {
         background-color: rgba(51, 142, 205, 0.39);
         z-index: -2; }
-      section.contact-page .content form .form-group span {
+      section.contact-page .content form .form-group span.span-animation {
         background-color: var(--color-celeste); }
-      section.contact-page .content form .form-group span.falto {
+      section.contact-page .content form .form-group span.span-animation.falto {
         background-color: var(--color-anaranjado); }
     section.contact-page .content label {
       color: var(--color-celeste); }

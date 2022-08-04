@@ -232,9 +232,9 @@ MyApp = {
             function inputcheck(){
                 for (let i = 0; i < formespacioinput.length; i++) {
                         if (!formespacioinput[i].value) {                            
-                            formespacioinput[i].parentElement.classList.remove("ok");                           
+                            formespacioinput[i].parentElement.parentElement.classList.remove("ok");                           
                         }else{
-                            formespacioinput[i].parentElement.classList.add("ok");   
+                            formespacioinput[i].parentElement.parentElement.classList.add("ok");   
                         }
                 }   
             }        
@@ -242,8 +242,8 @@ MyApp = {
             function validateInput(e){
                 for (let y = 0; y < formespacioinput.length; y++) {
                     if (!formespacioinput[y].value) {
-                        formespacioinput[y].parentElement.querySelector("span").classList.add("falto");
-                        formespacioinput[y].parentElement.classList.add("error");
+                        formespacioinput[y].parentElement.parentElement.querySelector("span.span-animation").classList.add("falto");
+                        formespacioinput[y].parentElement.parentElement.classList.add("error");
                         e.preventDefault();              
                     }
                 }
@@ -260,7 +260,7 @@ MyApp = {
             function validateSelect(e){
                 for (let y = 0; y < formespacioselect.length; y++) {
                     if (formespacioselect[y].value == "0") {
-                        formespacioselect[y].parentElement.parentElement.querySelector("span").classList.add("falto");
+                        formespacioselect[y].parentElement.parentElement.parentElement.querySelector("span.span-animation").classList.add("falto");
                         e.preventDefault();              
                     }              
                 }
@@ -270,10 +270,10 @@ MyApp = {
                 if (e.target.closest(".form-input")) {
                     formespacio.forEach(function (shinyItem) {
                         shinyItem.classList.remove("focusin");
-                        shinyItem.querySelector("span").classList.remove("animacion");  
+                        shinyItem.querySelector("span.span-animation").classList.remove("animacion");  
                     });
-                    e.target.parentElement.classList.add("focusin"); 
-                    e.target.parentElement.querySelector("span").classList.add("animacion");                     
+                    e.target.parentElement.parentElement.classList.add("focusin"); 
+                    e.target.parentElement.parentElement.querySelector("span.span-animation").classList.add("animacion");                     
                 }else{
                     formespacio.forEach(function (shinyItem) {
                         shinyItem.classList.remove("focusin");
@@ -282,16 +282,16 @@ MyApp = {
                 if (e.target.closest("form select")) {
                     console.log(formespacioselect);
                     formespacioselect.forEach(function (shinyItem2) {
-                        shinyItem2.parentElement.parentElement.classList.remove("open");  
-                        shinyItem2.parentElement.parentElement.classList.remove("focusin");  
-                        shinyItem2.parentElement.parentElement.querySelector("span").classList.remove("animacion");  
+                        shinyItem2.parentElement.parentElement.parentElement.classList.remove("open");  
+                        shinyItem2.parentElement.parentElement.parentElement.classList.remove("focusin");  
+                        shinyItem2.parentElement.parentElement.parentElement.querySelector("span.span-animation").classList.remove("animacion");  
                     });
-                    e.target.parentElement.parentElement.classList.add("open");
-                    e.target.parentElement.parentElement.classList.add("focusin");
-                    e.target.parentElement.parentElement.querySelector("span").classList.add("animacion");
+                    e.target.parentElement.parentElement.parentElement.classList.add("open");
+                    e.target.parentElement.parentElement.parentElement.classList.add("focusin");
+                    e.target.parentElement.parentElement.parentElement.querySelector("span.span-animation").classList.add("animacion");
                 }else{
                     formespacioselect.forEach(function (shinyItem2) {
-                        shinyItem2.parentElement.parentElement.classList.remove("open");  
+                        shinyItem2.parentElement.parentElement.parentElement.classList.remove("open");  
                     });
                 }
                 inputcheck() 

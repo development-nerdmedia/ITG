@@ -1347,7 +1347,7 @@ section.home-servicios-interna{
                     background-color: #ffffff33;
                     border-radius: 15px;
                 }
-            span {
+            span.span-animation {
                 font-weight: inherit;
                 background-color: #fff;
                 bottom: 0;
@@ -1370,7 +1370,7 @@ section.home-servicios-interna{
                 font-style: inherit;
                 border-radius: 20px;
             }
-            span.falto{
+            span.span-animation.falto{
                 background-color: var(--color-anaranjado);
                 -ms-transform: scaleX(1);
                 transform: scaleX(1);
@@ -1393,6 +1393,7 @@ section.home-servicios-interna{
                 color: #fff;
                 position: absolute;
                 top: 13px;
+                left: 0;
                 // transform: translateY(-50%);
                 transition: 0.1s linear;
                 font-family: var(--fuente-Ubuntu);
@@ -1456,7 +1457,7 @@ section.home-servicios-interna{
             }
         }
         .formmensaje{
-            span{
+            span.span-animation{
                 bottom: 4px;
             }
         }
@@ -1476,7 +1477,7 @@ section.home-servicios-interna{
             display: flex;
             flex-direction: column;
             // align-items: center;
-            span{
+            span.span-animation{
                 transform: scaleX(0) !important;
             }
             p{
@@ -2055,10 +2056,10 @@ section.contact-page{
                     z-index: -2;
                 }
             }
-            .form-group span{
+            .form-group span.span-animation{
                 background-color: var(--color-celeste);
             }
-            .form-group span.falto{
+            .form-group span.span-animation.falto{
                 background-color: var(--color-anaranjado);
             }
         }

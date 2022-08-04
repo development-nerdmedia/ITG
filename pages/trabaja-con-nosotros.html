@@ -118,34 +118,39 @@
                             <h3>Estamos para ayudarte</h3>
                             <form action="thanks.html" method="">
                                 <div class="form-group formname">
+                                    <span><input class="form-input" type="text" required="true" name="name" id="name">
+                                    </span>
                                     <label for="name">Nombres y Apellidos:</label>
-                                    <input class="form-input" type="text" required="true" name="name" id="name">
-                                    <span></span>
+                                    <span class="span-animation"></span>
                                 </div>
                                 <div class="form-group formcorreo">
+                                    <span><input class="form-input" type="text" required="true" name="email" id="email">
+                                    </span>
                                     <label for="email">Email:</label>
-                                    <input class="form-input" type="text" required="true" name="email" id="email">
-                                    <span></span>
+                                    <span class="span-animation"></span>
                                 </div>
                                 <div class="form-group formtel">
+                                    <span><input class="form-input" type="number" required="true" name="telephone" id="telephone">
+                                    </span>
                                     <label for="telephone">Celular:</label>
-                                    <input class="form-input" type="number" required="true" name="telephone" id="telephone">
-                                    <span></span>
+                                    <span class="span-animation"></span>
                                 </div>
                                 <div class="form-group formmensaje">
-                                    <label for="mensaje">Mensaje:</label>
-                                    <!-- <input type="text" required="true" name="telephone" id="telephone"> -->
-                                    <textarea class="form-input" maxlength="250" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-                                    <span></span>
+                                    <span><textarea class="form-input" maxlength="250" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                                    </span>
+                                    <label for="mensaje">Mensaje:</label>                                    
+                                    <span class="span-animation"></span>
                                 </div>
                                 <div class="form-group archivo">
                                     <p>Adjuntar CV(.pdf):</p>
-                                    <input class="form-input" required="true" type="file" name="file" id="file" class="inputfile">
+                                    <span>
+                                        <input class="form-input" required="true" type="file" name="file" id="file" class="inputfile"></span>
                                     <!-- <button type="file" name="file" id="file" class="inputfile"></button> -->
-                                    <span></span>
+                                    <span class="span-animation"></span>
                                 </div>
-                                <div class="checkbox-box">                        
-                                    <input checked type="checkbox" required="true" id="terminos"> 
+                                <div class="checkbox-box">               
+                                    <span><input checked type="checkbox" required="true" id="terminos"> </span>         
+                                    
                                     <p>Acepto los <a href="proteccion-de-datos.html">términos y condiciones</a> legales.</p>
                                 </div> 
                                 <button class="shiny enviar" type="submit"><span>Enviar</span></button>

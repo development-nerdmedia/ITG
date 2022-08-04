@@ -108,43 +108,59 @@
                     <div class="formulario" data-aos="fade-left" data-aos-once="true">
                         <form action="thanks.html" method="">
                             <div class="form-group formname">
+                                <!-- eliminar este span antes de mandar al back -->
+                                <span>                             
+                                    <input class="form-input" type="text" required="true" name="name" id="name">
+                                </span>                                
                                 <label for="name">Nombres y Apellidos:</label>
-                                <input class="form-input" type="text" required="true" name="name" id="name">
-                                <span></span>
+                                <span class="span-animation"></span>
                             </div>
-                            <div class="form-group formaempresa">
+                            <div class="form-group formaempresa">        
+                                <span>
+                                    <input class="form-input" type="text" required="true" name="name-empresa" id="name-empresa">
+                                </span>                      
+                                <span class="span-animation"></span>
                                 <label for="name-empresa">Empresa:</label>
-                                <input class="form-input" type="text" required="true" name="name-empresa" id="name-empresa">
-                                <span></span>
                             </div>
                             <div class="form-group formcargo">
+                                <span>
+                                    <input class="form-input" type="text" required="true" name="cargo" id="cargo">
+                                </span>                                
                                 <label for="cargo">Cargo:</label>
-                                <input class="form-input" type="text" required="true" name="cargo" id="cargo">
-                                <span></span>
+                                <span class="span-animation"></span>
                             </div>
                             <div class="form-group formcargo">
-                                <label for="pais">País:</label>
-                                <input class="form-input" type="text" required="true" name="cargo" id="cargo">
-                                <span></span>
+                                <span>
+                                    <input class="form-input" type="text" required="true" name="cargo" id="cargo">
+                                </span>
+                                <label for="pais">País:</label>                                
+                                <span class="span-animation"></span>
                             </div>
                             <div class="form-group formcorreo">
+                                <span>
+                                    <input class="form-input" type="text" required="true" name="email" id="email">
+                                </span>
                                 <label for="email">Email laboral:</label>
-                                <input class="form-input" type="text" required="true" name="email" id="email">
-                                <span></span>
+                                <span class="span-animation"></span>
                             </div>
                             <div class="form-group formcargo">
+                                <span>                                    
+                                    <input class="form-input" type="text" required="true" name="cargo" id="cargo">
+                                </span>
                                 <label for="pais">Código de país:</label>
-                                <input class="form-input" type="text" required="true" name="cargo" id="cargo">
-                                <span></span>
+                                <span class="span-animation"></span>
                             </div>
                             <div class="form-group formtel">
+                                <span>
+                                    <input class="form-input" type="number" required="true" name="telephone" id="telephone">
+                                </span>
                                 <label for="telephone">Celular:</label>
-                                <input class="form-input" type="number" required="true" name="telephone" id="telephone">
-                                <span></span>
+                                <span class="span-animation"></span>
                             </div>
                             
                             <div class="form-group formmotivo">
                                 <div>
+                                    <span>
                                     <select name="motivo" id="motivo">
                                         <option value="0">Solución:</option>
                                         <option value="Motivo1">Soluciones en la nuve</option>
@@ -153,11 +169,13 @@
                                         <option value="Motivo4">Ai & Analitica</option>
                                         <option value="Motivo5">Servicios geestionados</option>
                                     </select>
+                                    </span>
                                 </div>                                
-                                <span></span>
+                                <span class="span-animation"></span>
                             </div>
                             <div class="form-group formasunto">
                                 <div>
+                                    <span>
                                     <select name="asunto" id="asunto">
                                         <option value="0">Número de empleados:</option>
                                         <option value="Asunto1">1 - 49</option>
@@ -165,17 +183,21 @@
                                         <option value="Asunto3">250 - 999</option>
                                         <option value="Asunto4">1000+</option>
                                     </select>
+                                    </span>
                                 </div>                                
-                                <span></span>
+                                <span class="span-animation"></span>
                             </div>
                             <div class="form-group formmensaje">
-                                <label for="mensaje">Mensaje:</label>
-                                <!-- <input type="text" required="true" name="telephone" id="telephone"> -->
-                                <textarea class="form-input" maxlength="250" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-                                <span></span>
+                                <span>
+                                    <textarea class="form-input" maxlength="250" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                                </span>
+                                <label for="mensaje">Mensaje:</label>                                
+                                <span class="span-animation"></span>
                             </div>
-                            <div class="checkbox-box">                        
-                                <input checked type="checkbox" required="" id="terminos"> 
+                            <div class="checkbox-box">        
+                                <span>
+                                    <input checked type="checkbox" required="" id="terminos"> 
+                                </span>                
                                 <p>Acepto los <a href="proteccion-de-datos.html">términos y condiciones</a> legales.</p>
                             </div> 
                             <div class="btn">                                
