@@ -1435,8 +1435,6 @@ section.proteccion {
     bottom: -245px;
     z-index: -3;
     opacity: 0.5; }
-  section.proteccion .container {
-    max-width: 750px; }
   section.proteccion .content {
     padding-top: 241.39px; }
     section.proteccion .content h1 {
@@ -1446,8 +1444,35 @@ section.proteccion {
       color: var(--color-celeste);
       text-align: center; }
     section.proteccion .content p {
-      padding-top: 30px;
-      text-align: center; }
+      padding-top: 50px; }
+    section.proteccion .content h2 {
+      margin-bottom: 50px; }
+    section.proteccion .content .seccion {
+      padding-top: 140px; }
+      section.proteccion .content .seccion p:first-child {
+        padding-top: 0; }
+      section.proteccion .content .seccion ul {
+        list-style: none;
+        padding-left: 47px; }
+        section.proteccion .content .seccion ul li {
+          font-family: var(--fuente-Ubuntu);
+          font-weight: 400;
+          font-size: 20px;
+          color: var(--color-gris);
+          line-height: 139.4%;
+          margin-bottom: 50px;
+          position: relative; }
+          section.proteccion .content .seccion ul li::before {
+            content: '';
+            background-image: url(../icons/vineta-input.svg);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 7px;
+            left: -47px;
+            width: 31px;
+            height: 11.35px; }
+        section.proteccion .content .seccion ul li:last-child {
+          margin-bottom: 0; }
 
 section.thanks-page {
   padding: 73px 0;
@@ -2061,6 +2086,8 @@ section.novedades .slider-novedades {
     height: 53vw; } }
 
 @media (max-width: 1440px) {
+  section.proteccion .content .seccion {
+    padding-top: 100px; }
   section.footer-contacto .flex .oficina .redes {
     grid-template-columns: repeat(7, 1fr); }
   section.video-youtube {
@@ -2319,6 +2346,13 @@ section.novedades .slider-novedades {
     max-width: 450px; } }
 
 @media (max-width: 1280px) {
+  section.proteccion .content h2 {
+    margin-bottom: 30px; }
+  section.proteccion .content p {
+    padding-top: 30px; }
+  section.proteccion .content .seccion ul li {
+    font-size: 18px;
+    margin-bottom: 30px; }
   section.footer-contacto .flex .oficina .redes {
     grid-template-columns: repeat(6, 1fr); }
   section.valores {
@@ -2954,6 +2988,8 @@ section.novedades .slider-novedades {
     height: 1401px; } }
 
 @media (max-width: 768px) {
+  section.proteccion .content .seccion {
+    padding-top: 80px; }
   footer .part2 .redes {
     display: flex;
     grid-gap: 0px;
@@ -3333,6 +3369,8 @@ section.home-servicios-interna .content .part2 {
     font-size: 18px; } }
 
 @media (max-width: 425px) {
+  section.proteccion .content .seccion ul li {
+    font-size: 16px; }
   section.video-youtube iframe {
     height: 213px !important; }
   footer .bg-footer {
