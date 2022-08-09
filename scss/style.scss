@@ -2182,10 +2182,13 @@ section.proteccion{
             text-align: center;
         }
         p{
+            padding-top: 35px;
+        }
+        p:first-child{
             padding-top: 50px;
         }
         h2{
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
         .seccion{
             padding-top: 140px;
@@ -2201,7 +2204,7 @@ section.proteccion{
                     font-size: 20px;
                     color: var(--color-gris);
                     line-height: 139.4%;
-                    margin-bottom: 50px;
+                    margin-bottom: 35px;
                     position: relative;
                     &::before {
                         content: '';

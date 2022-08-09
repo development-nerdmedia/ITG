@@ -1606,9 +1606,11 @@ section.proteccion {
       color: var(--color-celeste);
       text-align: center; }
     section.proteccion .content p {
+      padding-top: 35px; }
+    section.proteccion .content p:first-child {
       padding-top: 50px; }
     section.proteccion .content h2 {
-      margin-bottom: 50px; }
+      margin-bottom: 30px; }
     section.proteccion .content .seccion {
       padding-top: 140px; }
       section.proteccion .content .seccion p:first-child {
@@ -1622,7 +1624,7 @@ section.proteccion {
           font-size: 20px;
           color: var(--color-gris);
           line-height: 139.4%;
-          margin-bottom: 50px;
+          margin-bottom: 35px;
           position: relative; }
           section.proteccion .content .seccion ul li::before {
             content: '';
