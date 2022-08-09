@@ -3326,14 +3326,13 @@ section.fondo-socios lottie-player.responsive{
     }
 }
 
-@media (max-width: 1310px) {   
+@media (max-width: 1310px) {  
     footer .bg-footer {
-        height: 2161px;
+        height: 1753px;
     }
     footer .content,
     .footer-contacto2 .content {
         flex-wrap: wrap;
-        flex-direction: column;
     }
     footer .pie .content,
     .footer-contacto2 .pie .content{
@@ -3341,35 +3340,26 @@ section.fondo-socios lottie-player.responsive{
     }
     footer .part2,
     .footer-contacto2 .part2 {
-        margin-top: 30px;
         padding-left: 20px;
-        width: 100%;
+        width: 50%;
         max-width: 100%;
+        width: 486px;
     }
     footer .part1,
     .footer-contacto2 .part1{
         max-width: 100%;
-        width: 100%;
-    }
-    footer .part1,
-    .footer-contacto2 .part1 {
-        width: 100%;
-    }   
+        width: 400px;
+    } 
     footer .part2 .redes,
     .footer-contacto2 .part2 .redes{
-        grid-template-columns: repeat(14, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
     footer .part3,
     .footer-contacto2 .part3 {
         padding-left: 20px;
         margin-top: 50px;
         max-width: 100%;
-        width: 100%;
-    }
-    footer .part3,
-    .footer-contacto2 .part3 {
-        margin-top: 30px;
-        width: 100%;
+        width: 50%;
     }
     section.fondo-socios {
         height: 505px;
@@ -3795,6 +3785,7 @@ section.fondo-socios lottie-player.responsive{
     .footer-contacto2 .part1{
         max-width: 100%;
         width: 50%;
+        width: 350px;
     }
     footer .part3,
     .footer-contacto2 .part3{
@@ -3818,9 +3809,12 @@ section.fondo-socios lottie-player.responsive{
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) {    
     section.footer-contacto .flex .oficina{
         margin-right: 0px;
+    }
+    footer .bg-footer {
+        height: 2161px;
     }
     footer .part2 .redes,
     .footer-contacto2 .part2 .redes {
@@ -3831,6 +3825,17 @@ section.fondo-socios lottie-player.responsive{
     }
     footer .part3,
     .footer-contacto2 .part3 {
+        margin-top: 30px;
+    }
+    footer .content, .footer-contacto2 .content{
+        flex-direction: column;
+    }
+    footer .part1, .footer-contacto2 .part1,
+    footer .part2, .footer-contacto2 .part2,
+    footer .part3, .footer-contacto2 .part3{
+        width: 100%;
+    }
+    footer .part2, .footer-contacto2 .part2{
         margin-top: 30px;
     }
     section.video-youtube iframe{
