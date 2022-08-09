@@ -270,10 +270,6 @@ header {
 
 header.sticky {
   padding: 20px 0; }
-  header.sticky nav .logo img {
-    width: 90%; }
-  header.sticky nav .logo lottie-player {
-    width: 90%; }
 
 header.sticky::before {
   transform: translateY(0%); }
@@ -283,7 +279,7 @@ header::before {
   position: fixed;
   left: 0;
   top: 0;
-  height: 117px;
+  height: 126px;
   width: 100%;
   background: #fff;
   z-index: -2;
@@ -2370,11 +2366,8 @@ section.novedades .slider-novedades {
   header nav .logo img,
   header nav .logo lottie-player {
     width: 164px; }
-  header.sticky nav .logo img,
-  header.sticky nav .logo lottie-player {
-    width: 150px; }
   header::before {
-    height: 106px; }
+    height: 112.33px; }
   section.home .content h1 {
     font-size: 50px; }
   section.home {
