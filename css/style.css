@@ -2449,7 +2449,7 @@ section.novedades .slider-novedades {
   footer .part3,
   .footer-contacto2 .part3 {
     padding-left: 20px;
-    margin-top: 50px;
+    margin-top: 13px;
     max-width: 100%;
     width: 50%; }
   section.fondo-socios {
@@ -2741,7 +2741,6 @@ section.novedades .slider-novedades {
   footer .part3,
   .footer-contacto2 .part3 {
     padding-left: 20px;
-    margin-top: 50px;
     max-width: 100%; }
   footer .content,
   .footer-contacto2 .content {
@@ -2766,7 +2765,7 @@ section.novedades .slider-novedades {
     grid-template-columns: repeat(11, 1fr); }
   footer .part3,
   .footer-contacto2 .part3 {
-    margin-top: 30px; }
+    margin-top: 13px; }
   footer .content, .footer-contacto2 .content {
     flex-direction: column; }
   footer .part1, .footer-contacto2 .part1,
@@ -2774,7 +2773,7 @@ section.novedades .slider-novedades {
   footer .part3, .footer-contacto2 .part3 {
     width: 100%; }
   footer .part2, .footer-contacto2 .part2 {
-    margin-top: 30px; }
+    margin-top: 13px; }
   section.video-youtube iframe {
     height: 462px !important; }
   section.blog .content .destacado {
