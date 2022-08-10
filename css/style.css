@@ -2487,16 +2487,12 @@ section.novedades .slider-novedades {
   /*----------*/
   section.home-servicios-interna .content .part1 lottie-player {
     width: 200px !important; }
-  .fondo-interna.home-servicios-interna {
-    height: auto;
-    padding-bottom: 140px; }
   section.home-servicios-interna .content {
     flex-direction: column; }
   section.home-servicios-interna .content .part1 {
     width: 100%;
     padding-right: 0px; }
   section.home-servicios-interna .content .part1 .contenido {
-    max-width: 630px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -2514,6 +2510,8 @@ section.novedades .slider-novedades {
     max-width: 450px; } }
 
 @media (max-width: 1280px) {
+  section.fondo-interna .bg-interna {
+    height: calc(100% + 679px); }
   section.proteccion .content h2 {
     margin-bottom: 30px; }
   section.proteccion .content p {
@@ -2556,7 +2554,7 @@ section.novedades .slider-novedades {
   section.fondo-interna .bg-interna img {
     top: -321px; }
   section.fondo-interna {
-    height: 714px; }
+    height: 808px; }
   section.home-nosotros .content .part2 lottie-player {
     width: 83.5%; }
   section.tarjeta-contacto .content .part1 {
@@ -2823,8 +2821,6 @@ section.novedades .slider-novedades {
     padding-left: 60px; }
   section.mision-vision .container .content .part1 {
     padding-right: 60px; }
-  section.fondo-interna {
-    height: 748px; }
   section.home-nosotros .content .part1 {
     padding-right: 0; }
   section.home-nosotros .content .part2 lottie-player {
@@ -3090,13 +3086,10 @@ section.novedades .slider-novedades {
     width: 100%;
     margin-top: 50px; }
   section.home-servicios-interna .content .part1 .contenido {
-    max-width: 630px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .fondo-interna.home-servicios-interna {
-    height: auto; }
   section.beneficios .content {
     flex-direction: column; }
   section.beneficios .content .part2 {
@@ -3118,8 +3111,6 @@ section.novedades .slider-novedades {
     padding-left: 46px; } }
 
 @media (max-width: 865px) {
-  section.fondo-interna {
-    height: auto; }
   section.video-youtube iframe {
     height: 383px !important; }
   section.footer-contacto .flex .oficina .redes {
@@ -3222,7 +3213,6 @@ section.novedades .slider-novedades {
     width: 100%;
     margin-top: 50px; }
   section.home-servicios-interna .content .part1 .contenido {
-    max-width: 630px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -3267,8 +3257,6 @@ section.home-servicios-interna .content .part2 {
   section.mision-vision {
     padding: 40px 0;
     padding-top: 80px; }
-  section.fondo-interna {
-    height: auto; }
   section.home-nosotros .content {
     flex-direction: column; }
   section.home-nosotros .content .part1 {
@@ -3443,8 +3431,6 @@ section.home-servicios-interna .content .part2 {
     width: 50%; } }
 
 @media (max-width: 550px) {
-  .fondo-interna.home-servicios-interna {
-    padding-bottom: 108px; }
   section.footer-contacto .flex .oficina .redes {
     grid-template-columns: repeat(7, 1fr); }
   section.fondo-socios {
